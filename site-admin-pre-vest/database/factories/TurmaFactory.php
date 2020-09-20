@@ -2,7 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Aluno;
+use App\Turma;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -17,11 +17,11 @@ use Illuminate\Support\Str;
 |
 */
 
-$factory->define(Aluno::class, function (Faker $faker) {
+$factory->define(Turma::class, function (Faker $faker) {
     return [
         'dataInicio' => $faker->date($format = 'd-m-Y', $max = 'now'),
         'dataFim' => $faker->date($format = 'd-m-Y', $max = 'now'),
-	'horario' => $faker->time($format = 'H:i', $max = 'now') + ' - ' + $faker->time($format = 'H:i', $max = 'now'),
+	'horario' => $faker->time($format = 'H:i:s', $max = 'now'),
         'nome' => $faker->lexify('Turma ?????')
     ];
 });

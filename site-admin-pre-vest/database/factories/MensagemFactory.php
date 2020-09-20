@@ -2,7 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Aluno;
+use App\Mensagem;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -17,9 +17,9 @@ use Illuminate\Support\Str;
 |
 */
 
-$factory->define(Aluno::class, function (Faker $faker) {
+$factory->define(Mensagem::class, function (Faker $faker) {
     return [
-		'aberta' => $faker->boolean(),
+	'aberta' => $faker->boolean(),
         'data_envio' => $faker->dateTime($format = 'd-m-Y', $timezone = 'GMT-3', $max = 'now'),
         'email' => $faker->unique()->safeEmail,
         'remetente' => $faker->name(),

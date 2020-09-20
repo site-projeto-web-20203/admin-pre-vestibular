@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Turma;
 
 class TurmaSeeder extends Seeder
 {
@@ -11,6 +12,6 @@ class TurmaSeeder extends Seeder
      */
     public function run()
     {
-	DB::table('turmas')->insert(factory(Turma::class, 5)->create());
+	factory(Turma::class, 5)->create();
     }
 }

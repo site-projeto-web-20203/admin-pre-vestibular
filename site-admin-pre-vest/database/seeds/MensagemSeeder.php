@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Mensagem;
 
 class MensagemSeeder extends Seeder
 {
@@ -11,6 +12,6 @@ class MensagemSeeder extends Seeder
      */
     public function run()
     {
-	DB::table('mensagems')->insert(factory(Mensagem::class, 5)->create());
+	factory(Mensagem::class, 5)->create();
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProfessorsTable extends Migration
+class CreateAlunosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateProfessorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('professors', function (Blueprint $table) {
+        Schema::create('alunos', function (Blueprint $table) {
             $table->id();
             $table->date('data_nascimento');
             $table->integer('tipo_usuario')->default(2);
@@ -40,6 +40,8 @@ class CreateProfessorsTable extends Migration
             $table->boolean('atuaRedacao');
             $table->boolean('atuaSociologia');
             $table->timestamps();
+            $table->integer('turma_id')->unsigned()->nullable();
+            $table->foreign('turma_id')->references('id')->on('turmas');
         });
     }
 
@@ -50,6 +52,6 @@ class CreateProfessorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('professors');
+        Schema::dropIfExists('alunos');
     }
 }

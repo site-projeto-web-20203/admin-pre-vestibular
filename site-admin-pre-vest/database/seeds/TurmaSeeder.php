@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Mensagem;
+use App\Turma;
 
-class MensagemSeeder extends Seeder
+class TurmaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +12,6 @@ class MensagemSeeder extends Seeder
      */
     public function run()
     {
-	factory(Mensagem::class, 5)->create();
+	factory(Turma::class, 5)->create();
     }
 }

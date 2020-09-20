@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Aluno;
 
 class AlunoSeeder extends Seeder
 {
@@ -11,6 +12,6 @@ class AlunoSeeder extends Seeder
      */
     public function run()
     {
-	DB::table('alunos')->insert(factory(Aluno::class, 5)->create());
+	factory(Aluno::class, 5)->create();
     }
 }

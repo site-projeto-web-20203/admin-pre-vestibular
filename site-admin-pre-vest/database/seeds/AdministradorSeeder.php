@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Administrador;
 
 class AdministradorSeeder extends Seeder
 {
@@ -11,6 +12,6 @@ class AdministradorSeeder extends Seeder
      */
     public function run()
     {
-	DB::table('administradors')->insert(factory(Administrador::class, 5)->create());
+	factory(Administrador::class, 5)->create();
     }
 }

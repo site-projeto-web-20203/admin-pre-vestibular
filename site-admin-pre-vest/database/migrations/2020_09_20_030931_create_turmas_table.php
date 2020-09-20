@@ -15,7 +15,14 @@ class CreateTurmasTable extends Migration
     {
         Schema::create('turmas', function (Blueprint $table) {
             $table->id();
+            $table->date('dataInicio');
+            $table->date('dataFim');
+            $table->string('horario');
+            $table->string('nome');
             $table->timestamps();
+            $table->integer('professor_id')->unsigned();
+            $table->foreign('professor_id')->references('id')->on('professors');
+
         });
     }
 

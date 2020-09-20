@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/listar/administradores', "AdministradorController@listar");
+
+Route::get('/listar/alunos', "AlunoController@listar");

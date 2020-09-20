@@ -15,33 +15,27 @@ class CreateAlunosTable extends Migration
     {
         Schema::create('alunos', function (Blueprint $table) {
             $table->id();
-            $table->date('data_nascimento');
-            $table->integer('tipo_usuario')->default(2);
-            $table->string('email')->unique();
-            $table->string('nome');
-            $table->string('senha')->default("12345");
-            $table->string('telefone');
-            $table->string('ehVoluntario');
-            $table->string('grauInstrucao');
-            $table->boolean('dispoManha');
-            $table->boolean('dispoTarde');
-            $table->boolean("dispoNoite");
-            $table->boolean('atuaBiologia');
-            $table->boolean('atuaEspanhol');
-            $table->boolean('atuaFilosofia');
-            $table->boolean('atuaFisica');
-            $table->boolean('atuaGeogragia');
-            $table->boolean('atuaHistoria');
-            $table->boolean('atuaIngles');
-            $table->boolean('atuaLiteratura');
-            $table->boolean('atuaMatematica');
-            $table->boolean('atuaPortugues');
-            $table->boolean('atuaQuimica');
-            $table->boolean('atuaRedacao');
-            $table->boolean('atuaSociologia');
-            $table->timestamps();
+			$table->boolean('fez_enem');
+			$table->boolean('tipo_escola');
+			$table->date('data_nascimento');
+			$table->integer('numero');
+			$table->integer('tipo_usuario')->default(1);
+			$table->string('ano_conclusao');
+			$table->string('bairro');
+			$table->string('cidade');
+			$table->string('complemento');
+			$table->string('email')->unique();
+			$table->string('email_responsavel');
+			$table->string('escola');
+			$table->string('nome');
+			$table->string('nome_responsavel');
+			$table->string('rua');
+			$table->string('senha')->default("12345");
+			$table->string('telefone');
+			$table->string('telefone_responsavel');
             $table->integer('turma_id')->unsigned()->nullable();
             $table->foreign('turma_id')->references('id')->on('turmas');
+            $table->timestamps();
         });
     }
 

@@ -15,6 +15,11 @@ class CreateMensagemsTable extends Migration
     {
         Schema::create('mensagems', function (Blueprint $table) {
             $table->id();
+			$table->boolean('aberta')->default(false);
+			$table->dateTime('data_envio');
+			$table->string('email');
+			$table->string('remetente');
+			$table->text('conteudo');
             $table->timestamps();
         });
     }

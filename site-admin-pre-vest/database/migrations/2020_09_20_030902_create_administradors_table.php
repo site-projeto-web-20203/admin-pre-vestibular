@@ -15,6 +15,12 @@ class CreateAdministradorsTable extends Migration
     {
         Schema::create('administradors', function (Blueprint $table) {
             $table->id();
+			$table->date('data_nascimento');
+			$table->integer('tipo_usuario')->default(3);
+			$table->string('email')->unique();
+			$table->string('nome');
+			$table->string('senha')->default("12345");
+			$table->string('telefone');
             $table->timestamps();
         });
     }

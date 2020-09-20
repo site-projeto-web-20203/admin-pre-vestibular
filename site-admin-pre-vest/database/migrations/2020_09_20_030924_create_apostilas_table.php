@@ -15,7 +15,14 @@ class CreateApostilasTable extends Migration
     {
         Schema::create('apostilas', function (Blueprint $table) {
             $table->id();
+			$table->dateTime('data_envio');
+			$table->string('disciplina');
+			$table->string('nome_arq');
             $table->timestamps();
+			$table->integer('professor_id')->unsigned()->nullable();
+			$table->foreign('professor_id')->references('id')->on('professors');
+			$table->integer('administrador_id')->unsigned()->nullable();
+			$table->foreign('administrador_id')->references('id')->on('administradors');
         });
     }
 

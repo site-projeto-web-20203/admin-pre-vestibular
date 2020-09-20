@@ -17,7 +17,7 @@ class CreateAlunosTable extends Migration
             $table->id();
 			$table->boolean('fez_enem');
 			$table->boolean('tipo_escola');
-			$table->integer('idade');
+			$table->date('data_nascimento');
 			$table->integer('numero');
 			$table->integer('tipo_usuario')->default(1);
 			$table->string('ano_conclusao');

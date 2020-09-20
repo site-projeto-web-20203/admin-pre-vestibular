@@ -1,11 +1,13 @@
-Projeto para a disciplina de Interação Humano-Computador, Ufape 2020.3
+Sistema para administração de curso pré vestibular desenvolvido com PHP e Laravel
 
-Professor: Rodrigo Andrade
+### Projeto:
+Sistema para administração de curso pré vestibular desenvolvido para a disciplina de Programação Web do curso de Ciência da Computação da UFAPE com a orientação do professor Igor Medeiros Vanderlei.
 
-Equipe de desenvolvimento:  
-  
-Álisson dos Santos Silva  
-Maria Eduarda Luna da Costa  
-Pedro Victor  
+### Equipe:
+[![](https://avatars3.githubusercontent.com/u/19420805?s=200&u=44f2700583e49622c1045e83192b966e93a52475&v=4)](https://github.com/alistos) |  [![](https://avatars2.githubusercontent.com/u/48771332?s=200&v=4)](https://github.com/eduardaluna) | [![](https://avatars2.githubusercontent.com/u/69857196?s=200&u=47783e2db5c7caf83b9ec5c6e46c59dc2f4bc659&v=4)](https://github.com/pedrovnsr)
+---|---|---
+[Álisson dos Santos Silva](https://github.com/alistos) | [Maria Eduarda Luna da Costa](https://github.com/eduardaluna) | [Pedro Victor](https://github.com/pedrovnsr)
 
-Sobre: Esse sistema tem por objetivo fazer uma adaptação da realidade já vivida na administração de um curso pré vestibular de forma a facilitá-la fazendo a integração de formulários de inscrição de alunos e professores voluntários, centralizando recursos administrativos como a aprovação ou reprovação desses alunos e professores, disponibilizando apostilas e outros materiais de estudo de forma a facilitar o acesso dos alunos a eles e criando e disponibilizando turmas e horários de aula de forma simples, por exemplo.
+### Documentos:
+
+* [Documento do Projeto](https://github.com/site-projeto-web-20203/admin-pre-vestibular/blob/master/DocProjeto.pdf)

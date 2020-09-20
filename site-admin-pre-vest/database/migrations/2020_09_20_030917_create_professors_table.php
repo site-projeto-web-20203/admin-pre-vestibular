@@ -40,8 +40,6 @@ class CreateProfessorsTable extends Migration
             $table->boolean('atuaRedacao');
             $table->boolean('atuaSociologia');
             $table->timestamps();
-            #$table->integer('turma_id')->unsigned()->nullable();
-            #$table->foreign('turma_id')->references('id')->on('turmas');
         });
     }
 

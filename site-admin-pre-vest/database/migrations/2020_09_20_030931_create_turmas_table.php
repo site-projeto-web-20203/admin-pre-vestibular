@@ -20,7 +20,7 @@ class CreateTurmasTable extends Migration
             $table->string('horario');
             $table->string('nome');
             $table->timestamps();
-                    });
+        });
     }
 
     /**

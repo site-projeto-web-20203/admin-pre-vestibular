@@ -2,7 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Mensagem;
+use App\Turma;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -17,12 +17,11 @@ use Illuminate\Support\Str;
 |
 */
 
-$factory->define(Mensagem::class, function (Faker $faker) {
+$factory->define(Turma::class, function (Faker $faker) {
     return [
-	'aberta' => $faker->boolean(),
-        'data_envio' => $faker->dateTime($format = 'd-m-Y', $timezone = 'GMT-3', $max = 'now'),
-        'email' => $faker->unique()->safeEmail,
-        'remetente' => $faker->name(),
-        'conteudo' => $faker->realText($maxNbChars = 200, $indexSize = 2)
+        'dataInicio' => $faker->date($format = 'd-m-Y', $max = 'now'),
+        'dataFim' => $faker->date($format = 'd-m-Y', $max = 'now'),
+	'horario' => $faker->time($format = 'H:i:s', $max = 'now'),
+        'nome' => $faker->lexify('Turma ?????')
     ];
 });

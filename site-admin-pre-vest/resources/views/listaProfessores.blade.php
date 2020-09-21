@@ -91,11 +91,7 @@
                     {{$professor->data_nascimento}}
                     </td>
                     <td>
-		    @if($professor->ehVoluntario == true)
-		        {{'Sim'}}
-		    @else
-			{{'Não'}}
-		    @endif
+                    {{$professor->ehVoluntario}}
                     </td>
                 </tr>
 	    </tbody>
@@ -112,17 +108,17 @@
                     {{$professor->grauInstrucao}}
                     </td>
                     <td>
-		    $cont = 0;
+		    <?php $cont = 0;?>
 		    @if($professor->dispoManha == true)
 		        {{'Manhã'}}
-			$cont = $cont + 1;
+			<?php $cont = $cont + 1; ?>
 		    @endif
 		    @if($professor->dispoTarde == true)
 			@if($cont > 0)
 		            {{', Tarde'}}
                         @else
                             {{'Tarde'}}
-			    $cont = $cont + 1;
+			    <?php $cont = $cont + 1; ?>
 			@endif
 		    @endif
 		    @if($professor->dispoNoite == true)
@@ -134,17 +130,17 @@
 		    @endif
                     </td>
                     <td>
-		    $cont = 0;
+		    <?php $cont = 0; ?>
 		    @if($professor->atuaBiologia == true)
 		        {{'Biologia'}}
-			$cont = $cont + 1;
+			<?php $cont = $cont + 1; ?>
 		    @endif
 		    @if($professor->atuaEspanhol == true)
 			@if($cont > 0)
 		            {{', Espanhol'}}
                         @else
                             {{'Espanhol'}}
-			    $cont = $cont + 1;
+			    <?php $cont = $cont + 1; ?>
 			@endif
 		    @endif
 		    @if($professor->atuaFilosofia == true)
@@ -152,7 +148,7 @@
 		            {{', Filosofia'}}
                         @else
                             {{'Filosofia'}}
-			    $cont = $cont + 1;
+			    <?php $cont = $cont + 1; ?>
 			@endif
 		    @endif
 		    @if($professor->atuaFisica == true)
@@ -160,15 +156,15 @@
 		            {{', Física'}}
                         @else
                             {{'Física'}}
-			    $cont = $cont + 1;
+			    <?php $cont = $cont + 1; ?>
 			@endif
 		    @endif
-		    @if($professor->atuaGeogragia == true)
+		    @if($professor->atuaGeografia == true)
 			@if($cont > 0)
 		            {{', Geografia'}}
                         @else
                             {{'Geografia'}}
-			    $cont = $cont + 1;
+			    <?php $cont = $cont + 1; ?>
 			@endif
 		    @endif
 		    @if($professor->atuaHistoria == true)
@@ -176,7 +172,7 @@
 		            {{', História'}}
                         @else
                             {{'História'}}
-			    $cont = $cont + 1;
+			    <?php $cont = $cont + 1; ?>
 			@endif
 		    @endif
 		    @if($professor->atuaIngles == true)
@@ -184,7 +180,7 @@
 		            {{', Inglês'}}
                         @else
                             {{'Inglês'}}
-			    $cont = $cont + 1;
+			    <?php $cont = $cont + 1; ?>
 			@endif
 		    @endif
 		    @if($professor->atuaLiteratura == true)
@@ -192,7 +188,7 @@
 		            {{', Literatura'}}
                         @else
                             {{'Literatura'}}
-			    $cont = $cont + 1;
+			    <?php $cont = $cont + 1; ?>
 			@endif
 		    @endif
 		    @if($professor->atuaMatematica == true)
@@ -200,7 +196,7 @@
 		            {{', Matemática'}}
                         @else
                             {{'Matemática'}}
-			    $cont = $cont + 1;
+			    <?php $cont = $cont + 1; ?>
 			@endif
 		    @endif
 		    @if($professor->atuaPortugues == true)
@@ -208,7 +204,7 @@
 		            {{', Português'}}
                         @else
                             {{'Português'}}
-			    $cont = $cont + 1;
+			    <?php $cont = $cont + 1; ?>
 			@endif
 		    @endif
 		    @if($professor->atuaQuimica == true)
@@ -216,7 +212,7 @@
 		            {{', Química'}}
                         @else
                             {{'Química'}}
-			    $cont = $cont + 1;
+			    <?php $cont = $cont + 1; ?>
 			@endif
 		    @endif
 		    @if($professor->atuaRedacao == true)
@@ -224,7 +220,7 @@
 		            {{', Redação'}}
                         @else
                             {{'Redação'}}
-			    $cont = $cont + 1;
+			    <?php $cont = $cont + 1; ?>
 			@endif
 		    @endif
 		    @if($professor->atuaSociologia == true)
@@ -234,34 +230,6 @@
                             {{'Sociologia'}}
 			@endif
 		    @endif
-                    </td>
-                </tr>
-	    </tbody>
-            <thead>
-                <tr>
-                    <th>Cidade</th>
-		    <th>Bairro</th>
-                    <th>Rua</th>
-                    <th>Número</th>
-                    <th>Complemento</th>
-               </tr>
-            </thead>
-            <tbody align="center">
-                <tr>
-                    <td>
-                    {{$aluno->cidade}}
-                    </td>
-                    <td>
-                    {{$aluno->bairro}}
-                    </td>
-                    <td>
-                    {{$aluno->rua}}
-                    </td>
-                    <td>
-                    {{$aluno->numero}}
-                    </td>
-                    <td>
-                    {{$aluno->complemento}}
                     </td>
                 </tr>
 	    </tbody>

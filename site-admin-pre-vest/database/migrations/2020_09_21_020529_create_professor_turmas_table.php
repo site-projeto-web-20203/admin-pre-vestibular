@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ProfessorTurma extends Migration
+class CreateProfessorTurmasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class ProfessorTurma extends Migration
      */
     public function up()
     {
-        Schema::create('professor_turma', function(Blueprint $table){
+        Schema::create('professor_turma', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->integer('turma_id')->unsigned()->nullable();

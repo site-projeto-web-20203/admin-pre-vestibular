@@ -20,9 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57e39bc3-e5da-4ad8-ace4-64e0d9a3eb88" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_20_030917_create_professors_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_20_030917_create_professors_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_20_141401_professor_turma.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_20_141401_professor_turma.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Apostila.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Apostila.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Professor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Professor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Turma.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Turma.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/AlunoFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/AlunoFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ApostilaFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ApostilaFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_20_141401_professor_turma.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/TurmaSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/TurmaSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +183,9 @@
       <option name="presentableId" value="Default" />
       <updated>1600596094107</updated>
       <workItem from="1600596095118" duration="12544000" />
-      <workItem from="1600634998791" duration="9777000" />
+      <workItem from="1600634998791" duration="15314000" />
+      <workItem from="1600652567604" duration="925000" />
+      <workItem from="1600653570444" duration="1485000" />
     </task>
     <servers />
   </component>

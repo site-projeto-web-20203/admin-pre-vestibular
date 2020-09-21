@@ -21,6 +21,10 @@ Route::get('/listar/administradores', "AdministradorController@listar");
 
 Route::get('/listar/alunos', "AlunoController@listar");
 
+Route::get('/listar/apostilas', "ApostilaController@listar");
+
 Route::get('/listar/mensagens', "MensagemController@listar");
+
+Route::get('/listar/professores', "ProfessorController@listar");
 
 Route::get('/listar/turmas', "TurmaController@listar");

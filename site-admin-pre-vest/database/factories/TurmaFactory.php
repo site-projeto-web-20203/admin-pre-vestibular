@@ -19,9 +19,9 @@ use Illuminate\Support\Str;
 
 $factory->define(Turma::class, function (Faker $faker) {
     return [
-        'dataInicio' => $faker->date($format = 'd-m-Y', $max = 'now'),
-        'dataFim' => $faker->date($format = 'd-m-Y', $max = 'now'),
-	'horario' => $faker->time($format = 'H:i:s', $max = 'now'),
+        'dataInicio' => ($faker->dateTimeBetween('-10 years', 'now'))->format('d/m/Y'),
+        'dataFim' => ($faker->dateTimeBetween('-10 years', 'now'))->format('d/m/Y'),
+	'horario' => $faker->time($format = 'H:i:s', $max = '20:00:00'),
         'nome' => $faker->lexify('Turma ?????')
     ];
 });

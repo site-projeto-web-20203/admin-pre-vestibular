@@ -19,9 +19,9 @@ use Illuminate\Support\Str;
 
 $factory->define(Administrador::class, function (Faker $faker) {
     return [
-            'data_nascimento' => $faker->date($format = 'd-m-Y', $max = '31-12-2005'),
+            'data_nascimento' => ($faker->dateTimeBetween('-100 years', '-18 years'))->format('d/m/Y'),
             'email' => $faker->unique()->safeEmail,
-			'nome' => $faker->name(),
+	    'nome' => $faker->name(),
             'telefone' => $faker->phoneNumber()
     ];
 });

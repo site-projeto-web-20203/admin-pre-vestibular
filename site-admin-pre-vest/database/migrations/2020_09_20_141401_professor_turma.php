@@ -30,6 +30,16 @@ class ProfessorTurma extends Migration
      */
     public function down()
     {
-        //
+        /*Schema::table('professor_turma', function($table){
+            $table->dropForeign(['professor_turma_turma_id_foreign']);
+            $table->dropColumn('turmas_id');
+        });*/
+
+        DB::statement('DROP TABLE turmas, professors CASCADE');
+        Schema::dropIfExists('professor_turma');
+
+        #Schema::drop('turmas');
+        #Schema::drop('professors');
+        #DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }

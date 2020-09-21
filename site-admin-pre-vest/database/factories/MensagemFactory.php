@@ -20,9 +20,9 @@ use Illuminate\Support\Str;
 $factory->define(Mensagem::class, function (Faker $faker) {
     return [
 	'aberta' => $faker->boolean(),
-        'data_envio' => $faker->dateTime($format = 'd-m-Y', $timezone = 'GMT-3', $max = 'now'),
+        'data_envio' => $faker->dateTimeBetween($startDate = '-3 years', $endDate = 'now', $timezone = null, $format = 'md-m-Y  H:i:s'),
         'email' => $faker->unique()->safeEmail,
         'remetente' => $faker->name(),
-        'conteudo' => $faker->realText($maxNbChars = 200, $indexSize = 2)
+        'conteudo' => $faker->realText($maxNbChars = 400, $indexSize = 2)
     ];
 });

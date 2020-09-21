@@ -21,10 +21,10 @@ $factory->define(Aluno::class, function (Faker $faker) {
     return [
         'fez_enem' => $faker->boolean(),
         'tipo_escola' => $faker->boolean(),
-        'data_nascimento' => $faker->date($format = 'd-m-Y', $max = '31-12-2007'),
+        'data_nascimento' => ($faker->dateTimeBetween('-100 years', '-13 years'))->format('d/m/Y'),
         'numero' => $faker->buildingNumber(),
         'ano_conclusao' => $faker->year($max = 'now'),
-        'bairro' => $faker->streetSuffix(),
+        'bairro' => $faker->lexify('????? ???????'),
         'cidade' => $faker->city(),
 	'complemento' => $faker->secondaryAddress(),
         'email' => $faker->unique()->safeEmail,

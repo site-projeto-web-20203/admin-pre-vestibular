@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Nome do Curso</title>
+        <title>Listar Mensagens</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -62,38 +62,34 @@
                 margin-bottom: 30px;
             }
         </style>
+	<h1 align="center">Listar Mensagens</h1>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Nome do Curso
-                </div>
-
-                <div class="links">
-                    <a href="{{ url('/') }}">Inicio</a>
-                    <a href="{{ url('listar/administradores') }}">Listar Administradores</a>
-                    <a href="{{ url('listar/alunos') }}">Listar Alunos</a>
-                    <a href="{{ url('listar/professores') }}">Listar Professores</a>
-                    <a href="{{ url('listar/turmas') }}">Listar Turmas</a>
-                    <a href="{{ url('listar/apostilas') }}">Listar Apostilas</a>
-                    <a href="{{ url('listar/mensagens') }}">Listar Mensagens</a>
-                </div>
-            </div>
-        </div>
+        @foreach($mensagens as $mensagem)
+        <table class="table table-striped", align="center", style="border-spacing: 0.5em">
+            <thead>
+                <tr>
+                    <th>Remetente</th>
+                    <th>E-mail</th>
+                    <th>Enviada Em</th>
+               </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                    {{$mensagem->remetente}}
+                    </td>
+                    <td>
+                    {{$mensagem->email}}
+                    </td>
+                    <td>
+                    {{$mensagem->data_envio}}
+                    </td>
+                </tr>
+	    </tbody>
+        </table>
+        <p style="padding: 0 8em 0 8em">{{$mensagem->conteudo}}</p>
+	<br><br>
+        @endforeach
     </body>
 </html>

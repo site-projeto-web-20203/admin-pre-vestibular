@@ -34,8 +34,9 @@ $factory->define(Aluno::class, function (Faker $faker) {
         'escola' => $faker->lexify('Escola ???? ??????'),
 	'rua' => $faker->streetName(),
         'telefone' => $faker->phoneNumber(),
-        'telefone_responsavel' => $faker->phoneNumber()
-        #$table->integer('turma_id')->unsigned()->nullable();
-        #$table->foreign('turma_id')->references('id')->on('turmas');
+        'telefone_responsavel' => $faker->phoneNumber(),
+        'turma_id' => function(){
+            return factory(App\Turma::class)->create()->id;
+        }
     ];
 });

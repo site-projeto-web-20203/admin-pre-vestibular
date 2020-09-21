@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 class Turma extends Model
 {
     public function aluno(){
-        return $this->hasMany('site-admin-pre-vest\Aluno');
+        return $this->hasMany('App\Aluno');
     }
 
-    public function professores(){
-        return $this->belongsToMany('site-admin-pre-vest\Professor');
+    public function professors(){
+        return $this->belongsToMany('App\Professor');
     }
 }

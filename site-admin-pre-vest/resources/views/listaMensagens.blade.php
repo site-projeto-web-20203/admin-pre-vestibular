@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Listar Administradores</title>
+        <title>Listar Mensagens</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -62,36 +62,34 @@
                 margin-bottom: 30px;
             }
         </style>
-	<h1 align="center">Listar Administradores</h1>
+	<h1 align="center">Listar Mensagens</h1>
     </head>
     <body>
+        @foreach($mensagens as $mensagem)
         <table class="table table-striped", align="center", style="border-spacing: 0.5em">
             <thead>
                 <tr>
-                    <th>Nome Completo</th>
+                    <th>Remetente</th>
                     <th>E-mail</th>
-                    <th>Telefone</th>
-                    <th>Data de Nascimento</th>
+                    <th>Enviada Em</th>
                </tr>
             </thead>
             <tbody>
-                @foreach($administradores as $administrador)
                 <tr>
                     <td>
-                    {{$administrador->nome}}
+                    {{$mensagem->remetente}}
                     </td>
                     <td>
-                    {{$administrador->email}}
+                    {{$mensagem->email}}
                     </td>
                     <td>
-                    {{$administrador->telefone}}
-                    </td>
-                    <td>
-                    {{$administrador->data_nascimento}}
+                    {{$mensagem->data_envio}}
                     </td>
                 </tr>
-	        @endforeach
 	    </tbody>
         </table>
+        <p style="padding: 0 8em 0 8em">{{$mensagem->conteudo}}</p>
+	<br><br>
+        @endforeach
     </body>
 </html>

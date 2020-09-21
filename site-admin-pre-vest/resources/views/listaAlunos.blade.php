@@ -66,11 +66,11 @@
     </head>
     <body>
         @foreach($alunos as $aluno)
-        <table class="table table-striped" align="center">
+        <table class="table table-striped", align="center", style="border-spacing: 0.5em">
             <thead>
                 <tr>
                     <th>Nome Completo</th>
-                    <th>Email</th>
+                    <th>E-mail</th>
                     <th>Telefone</th>
                     <th>Data de Nascimento</th>
                     <th>Já Fez ENEM?</th>
@@ -92,9 +92,9 @@
                     </td>
                     <td>
 		    @if($aluno->fez_enem == true)
-		        {{'sim'}}
+		        {{'Sim'}}
 		    @else
-			{{'não'}}
+			{{'Não'}}
 		    @endif
                     </td>
                 </tr>
@@ -116,9 +116,9 @@
                     </td>
                     <td>
 		    @if($aluno->tipo_escola == true)
-		        {{'publica'}}
+		        {{'Pública'}}
 		    @else
-			{{'particular'}}
+			{{'Particular'}}
 		    @endif
                     </td>
                     <td>
@@ -140,7 +140,7 @@
                     <th>Cidade</th>
 		    <th>Bairro</th>
                     <th>Rua</th>
-                    <th>Numero</th>
+                    <th>Número</th>
                     <th>Complemento</th>
                </tr>
             </thead>

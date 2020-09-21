@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/listar/administradores', "AdministradorController@listar");
 
 Route::get('/listar/alunos', "AlunoController@listar");
+
+Route::get('/listar/mensagens', "MensagemController@listar");
+
+Route::get('/listar/turmas', "TurmaController@listar");

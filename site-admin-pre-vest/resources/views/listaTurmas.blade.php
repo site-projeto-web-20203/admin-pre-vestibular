@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Listar Administradores</title>
+        <title>Listar Turmas</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -62,32 +62,32 @@
                 margin-bottom: 30px;
             }
         </style>
-	<h1 align="center">Listar Administradores</h1>
+	<h1 align="center">Listar Turmas</h1>
     </head>
     <body>
         <table class="table table-striped", align="center", style="border-spacing: 0.5em">
             <thead>
                 <tr>
-                    <th>Nome Completo</th>
-                    <th>E-mail</th>
-                    <th>Telefone</th>
-                    <th>Data de Nascimento</th>
+                    <th>Nome</th>
+                    <th>Data de Início</th>
+                    <th>Data de Término</th>
+                    <th>Horário</th>
                </tr>
             </thead>
             <tbody>
-                @foreach($administradores as $administrador)
+                @foreach($turmas as $turma)
                 <tr>
                     <td>
-                    {{$administrador->nome}}
+                    {{$turma->nome}}
                     </td>
                     <td>
-                    {{$administrador->email}}
+                    {{$turma->dataInicio}}
                     </td>
                     <td>
-                    {{$administrador->telefone}}
+                    {{$turma->dataFim}}
                     </td>
                     <td>
-                    {{$administrador->data_nascimento}}
+                    {{$turma->horario}}
                     </td>
                 </tr>
 	        @endforeach

@@ -20,7 +20,7 @@ use Illuminate\Support\Str;
 $factory->define(Mensagem::class, function (Faker $faker) {
     return [
 	'aberta' => $faker->boolean(),
-        'data_envio' => $faker->dateTimeBetween($startDate = '-3 years', $endDate = 'now', $timezone = null, $format = 'md-m-Y  H:i:s'),
+        'data_envio' => ($faker->dateTimeBetween('-10 years', 'now'))->format('d/m/Y'),
         'email' => $faker->unique()->safeEmail,
         'remetente' => $faker->name(),
         'conteudo' => $faker->realText($maxNbChars = 400, $indexSize = 2)

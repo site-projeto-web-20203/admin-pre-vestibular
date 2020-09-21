@@ -30,7 +30,7 @@ class CreateProfessorsTable extends Migration
             $table->boolean('atuaEspanhol');
             $table->boolean('atuaFilosofia');
             $table->boolean('atuaFisica');
-            $table->boolean('atuaGeogragia');
+            $table->boolean('atuaGeografia');
             $table->boolean('atuaHistoria');
             $table->boolean('atuaIngles');
             $table->boolean('atuaLiteratura');

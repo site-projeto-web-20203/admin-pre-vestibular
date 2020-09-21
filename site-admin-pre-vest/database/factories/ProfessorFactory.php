@@ -7,12 +7,12 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Professor::class, function (Faker $faker) {
     return [
-        'data_nascimento' => $faker->date($format = 'd-m-Y', $max = '31-12-2007'),
+        'data_nascimento' => ($faker->dateTimeBetween('-100 years', '-16 years'))->format('d/m/Y'),
         'email' => $faker->unique()->safeEmail,
         'nome' => $faker->name(),
         'telefone' => $faker->phoneNumber(),
-        'ehVoluntario' => $faker->randomElement(['sim', 'nao']),
-        'grauInstrucao' => $faker->randomElement(['fundamental', 'medio', 'superior']),
+        'ehVoluntario' => $faker->randomElement(['Sim', 'Não']),
+        'grauInstrucao' => $faker->randomElement(['Estudante de Graduação', 'Graduação', 'Pós Graduação', 'Mestrado', 'Doutorado']),
         'dispoManha' => $faker->boolean(),
         'dispoTarde' => $faker->boolean(),
         'dispoNoite' => $faker->boolean(),

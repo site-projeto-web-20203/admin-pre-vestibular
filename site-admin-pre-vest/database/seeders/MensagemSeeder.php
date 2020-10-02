@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Mensagem;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Mensagem;
 
 class MensagemSeeder extends Seeder
 {

@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Apostila;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Professor;
 
-class ApostilaSeeder extends Seeder
+class ProfessorSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +13,6 @@ class ApostilaSeeder extends Seeder
      */
     public function run()
     {
-    factory(App\Apostila::class, 5)->create();
+    factory(App\Professor::class, 5)->create();
     }
 }

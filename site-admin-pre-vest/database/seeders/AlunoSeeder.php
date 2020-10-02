@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Administrador;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Aluno;
 
-class AdministradorSeeder extends Seeder
+class AlunoSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +13,6 @@ class AdministradorSeeder extends Seeder
      */
     public function run()
     {
-	factory(Administrador::class, 5)->create();
+	factory(Aluno::class, 5)->create();
     }
 }

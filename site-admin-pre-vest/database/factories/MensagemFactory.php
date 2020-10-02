@@ -3,7 +3,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Mensagem;
-use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 /*
@@ -17,12 +17,19 @@ use Illuminate\Support\Str;
 |
 */
 
-$factory->define(Mensagem::class, function (Faker $faker) {
-    return [
-	'aberta' => $faker->boolean(),
-        'data_envio' => ($faker->dateTimeBetween('-10 years', 'now'))->format('d/m/Y'),
-        'email' => $faker->unique()->safeEmail,
-        'remetente' => $faker->name(),
-        'conteudo' => $faker->realText($maxNbChars = 400, $indexSize = 2)
-    ];
-});
+class MensagemFactory extends Factory{
+
+    protected $model = Mensagem::class;
+
+    public function definition()
+    {
+        // TODO: Implement definition() method.
+        return [
+            'aberta' => $this->faker->boolean(),
+            'data_envio' => ($this->faker->dateTimeBetween('-10 years', 'now'))->format('d/m/Y'),
+            'email' => $this->faker->unique()->safeEmail,
+            'remetente' => $this->faker->name(),
+            'conteudo' => $this->faker->realText($maxNbChars = 400, $indexSize = 2)
+        ];
+    }
+}

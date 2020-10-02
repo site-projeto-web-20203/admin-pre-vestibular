@@ -3,7 +3,7 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Aluno;
-use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 /*
@@ -16,27 +16,33 @@ use Illuminate\Support\Str;
 | model instances for testing / seeding your application's database.
 |
 */
+class AlunoFactory extends Factory{
 
-$factory->define(Aluno::class, function (Faker $faker) {
-    return [
-        'fez_enem' => $faker->boolean(),
-        'tipo_escola' => $faker->boolean(),
-        'data_nascimento' => ($faker->dateTimeBetween('-100 years', '-13 years'))->format('d/m/Y'),
-        'numero' => $faker->buildingNumber(),
-        'ano_conclusao' => $faker->year($max = 'now'),
-        'bairro' => $faker->lexify('????? ???????'),
-        'cidade' => $faker->city(),
-	'complemento' => $faker->secondaryAddress(),
-        'email' => $faker->unique()->safeEmail,
-        'email_responsavel' => $faker->safeEmail,
-        'nome' => $faker->name(),
-        'nome_responsavel' => $faker->name(),
-        'escola' => $faker->lexify('Escola ???? ??????'),
-	'rua' => $faker->streetName(),
-        'telefone' => $faker->phoneNumber(),
-        'telefone_responsavel' => $faker->phoneNumber(),
-        'turma_id' => function(){
-            return factory(App\Turma::class)->create()->id;
-        }
-    ];
-});
+    protected $model = Aluno::class;
+
+    public function definition()
+    {
+        // TODO: Implement definition() method.
+        return [
+            'fez_enem' => $this->faker->boolean(),
+            'tipo_escola' => $this->faker->boolean(),
+            'data_nascimento' => ($this->faker->dateTimeBetween('-100 years', '-13 years'))->format('d/m/Y'),
+            'numero' => $this->faker->buildingNumber(),
+            'ano_conclusao' => $this->faker->year($max = 'now'),
+            'bairro' => $this->faker->lexify('????? ???????'),
+            'cidade' => $this->faker->city(),
+            'complemento' => $this->faker->secondaryAddress(),
+            'email' => $this->faker->unique()->safeEmail,
+            'email_responsavel' => $this->faker->safeEmail,
+            'nome' => $this->faker->name(),
+            'nome_responsavel' => $this->faker->name(),
+            'escola' => $this->faker->lexify('Escola ???? ??????'),
+            'rua' => $this->faker->streetName(),
+            'telefone' => $this->faker->phoneNumber(),
+            'telefone_responsavel' => $this->faker->phoneNumber(),
+            'turma_id' => function(){
+                return factory(App\Turma::class)->create()->id;
+            }
+        ];
+    }
+}

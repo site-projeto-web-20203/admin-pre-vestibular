@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Professor;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Turma;
 
-class ProfessorSeeder extends Seeder
+class TurmaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +13,6 @@ class ProfessorSeeder extends Seeder
      */
     public function run()
     {
-    factory(App\Professor::class, 5)->create();
+	factory(Turma::class, 5)->create();
     }
 }

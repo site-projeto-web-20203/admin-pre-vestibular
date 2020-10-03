@@ -5,6 +5,7 @@
 namespace Database\Factories;
 
 use App\Models\Aluno;
+use App\Models\Turma;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -42,10 +43,7 @@ class AlunoFactory extends Factory{
             'rua' => $this->faker->streetName(),
             'telefone' => $this->faker->phoneNumber(),
             'telefone_responsavel' => $this->faker->phoneNumber(),
-            /*'turma_id' => function(){
-                return factory(App\Models\Turma::class)->create()->id;
-                //return turma::factory()->create()->id;
-            }*/
+            'turma_id' => $this->faker->randomElement(Turma::pluck('id')->toArray())
         ];
     }
 }

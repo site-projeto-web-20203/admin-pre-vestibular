@@ -1,7 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AdministradorController;
+use App\Http\Controllers\AlunoController;
+use App\Http\Controllers\ApostilaController;
+use App\Http\Controllers\MensagemController;
+use App\Http\Controllers\ProfessorController;
+use App\Http\Controllers\TurmaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,14 +22,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/listar/administradores', "AdministradorController@listar");
+Route::get('/listar/administradores', [AdministradorController::class, 'listar']);
 
-Route::get('/listar/alunos', "AlunoController@listar");
+Route::get('/listar/alunos', [AlunoController::class, 'listar']);
 
-Route::get('/listar/apostilas', "ApostilaController@listar");
+Route::get('/listar/apostilas', [ApostilaController::class, 'listar']);
 
-Route::get('/listar/mensagens', "MensagemController@listar");
+Route::get('/listar/mensagens', [MensagemController::class, 'listar']);
 
-Route::get('/listar/professores', "ProfessorController@listar");
+Route::get('/listar/professores', [ProfessorController::class, 'listar']);
 
-Route::get('/listar/turmas', "TurmaController@listar");
+Route::get('/listar/turmas', [TurmaController::class, 'listar']);

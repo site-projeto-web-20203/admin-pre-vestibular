@@ -20,19 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57e39bc3-e5da-4ad8-ace4-64e0d9a3eb88" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/site-admin-pre-vest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/site-admin-pre-vest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Administrador.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Administrador.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Aluno.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Aluno.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Apostila.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Apostila.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mensagem.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Mensagem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Professor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Professor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ProfessorTurma.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProfessorTurma.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Turma.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Turma.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Administrador.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Administrador.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Aluno.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Aluno.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Apostila.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Apostila.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Mensagem.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Mensagem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Professor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Professor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/ProfessorTurma.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProfessorTurma.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Turma.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Turma.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/factories/AdministradorFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/AdministradorFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/factories/AlunoFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/AlunoFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/factories/ApostilaFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ApostilaFactory.php" afterDir="false" />
@@ -40,14 +38,15 @@
       <change beforePath="$PROJECT_DIR$/database/factories/ProfessorFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ProfessorFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/factories/TurmaFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/TurmaFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/AdministradorSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/AdministradorSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/AlunoSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/AlunoSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/ApostilaSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ApostilaSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/MensagemSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/MensagemSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/ProfessorSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProfessorSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/ProfessorTurmaSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProfessorTurmaSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/TurmaSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/TurmaSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/AdministradorSeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/AlunoSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/AlunoSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/ApostilaSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ApostilaSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/MensagemSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/MensagemSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/ProfessorSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProfessorSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/ProfessorTurmaSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProfessorTurmaSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/TurmaSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/TurmaSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,6 +222,9 @@
       <workItem from="1601631449258" duration="332000" />
       <workItem from="1601631796639" duration="64000" />
       <workItem from="1601631944672" duration="2771000" />
+      <workItem from="1601663228204" duration="1999000" />
+      <workItem from="1601670715347" duration="599000" />
+      <workItem from="1601743531263" duration="6692000" />
     </task>
     <servers />
   </component>
@@ -242,6 +244,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601747003288">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1601747003288" />
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1600596116689">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

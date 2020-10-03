@@ -2,7 +2,9 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Model;
+namespace Database\Factories;
+
+use App\Models\Apostila;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -14,7 +16,7 @@ use Illuminate\Support\Str;
 
 class ApostilaFactory extends Factory{
 
-    protected $model = \App\Apostila::class;
+    protected $model = \App\Models\Apostila::class;
     public function definition()
     {
         // TODO: Implement definition() method.

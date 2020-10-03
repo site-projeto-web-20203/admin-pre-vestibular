@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Apostila;
@@ -13,6 +15,6 @@ class ApostilaSeeder extends Seeder
      */
     public function run()
     {
-    factory(App\Apostila::class, 5)->create();
+        Apostila::factory()->count(5)->create();
     }
 }

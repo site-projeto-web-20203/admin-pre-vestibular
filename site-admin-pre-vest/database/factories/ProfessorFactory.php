@@ -2,14 +2,16 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Model;
+namespace Database\Factories;
+
+use App\Models\Professor;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 
 class ProfessorFactory extends Factory{
 
-    protected $model = \App\Professor::class;
+    protected $model = \App\Models\Professor::class;
 
     public function definition()
     {

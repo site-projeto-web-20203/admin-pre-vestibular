@@ -15,6 +15,11 @@ class ApostilaSeeder extends Seeder
      */
     public function run()
     {
-        Apostila::factory()->count(5)->create();
+        for($i = 1; $i <= 5; $i++){
+            Apostila::factory()->profapo()->create();
+        }
+        for($i = 1; $i <= 5; $i++){
+            Apostila::factory()->admapo()->create();
+        }
     }
 }

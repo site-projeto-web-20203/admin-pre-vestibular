@@ -14,17 +14,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(AdministradorSeeder::class);
-        $this->call(AlunoSeeder::class);
         $this->call(MensagemSeeder::class);
-        #$this->call(TurmaSeeder::class);
-        $this->call(ApostilaSeeder::class);
-        #$this->call(ProfessorSeeder::class);
         $this->call(ProfessorTurmaSeeder::class);
+        $this->call(AlunoSeeder::class);
+        $this->call(ApostilaSeeder::class);
 
-        /*$this->call('AdministradorSeeder');
-        $this->call('AlunoSeeder');
-        $this->call('MensagemSeeder');
-        $this->call('ApostilaSeeder');
-        $this->call('ProfessorTurmaSeeder');*/
     }
 }

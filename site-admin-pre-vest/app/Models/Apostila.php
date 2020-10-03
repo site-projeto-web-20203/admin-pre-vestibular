@@ -16,6 +16,6 @@ class Apostila extends Model
     }
 
     public function administrador(){
-        return $this->hasOne('sApp\Models\Administrador');
+        return $this->hasOne('App\Models\Administrador');
     }
 }

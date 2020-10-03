@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Aluno;
 use App\Models\Professor;
 use App\Models\Turma;
 use Illuminate\Database\Seeder;
@@ -16,8 +17,9 @@ class ProfessorTurmaSeeder extends Seeder
      */
     public function run()
     {
+        //Turma::factory()->count(5)->has(Aluno::factory()->count(5))->create();
         Turma::factory()->count(5)->create();
-
+        //Aluno::factory()->count(25)->create();
         Professor::factory()->count(5)->create();
 
         $turmas = Turma::all();

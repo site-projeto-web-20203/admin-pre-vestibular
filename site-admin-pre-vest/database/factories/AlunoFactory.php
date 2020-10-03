@@ -2,7 +2,9 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Aluno;
+namespace Database\Factories;
+
+use App\Models\Aluno;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -40,9 +42,10 @@ class AlunoFactory extends Factory{
             'rua' => $this->faker->streetName(),
             'telefone' => $this->faker->phoneNumber(),
             'telefone_responsavel' => $this->faker->phoneNumber(),
-            'turma_id' => function(){
-                return factory(App\Turma::class)->create()->id;
-            }
+            /*'turma_id' => function(){
+                return factory(App\Models\Turma::class)->create()->id;
+                //return turma::factory()->create()->id;
+            }*/
         ];
     }
 }

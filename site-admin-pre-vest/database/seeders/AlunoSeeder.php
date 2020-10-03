@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Aluno;
@@ -13,6 +15,7 @@ class AlunoSeeder extends Seeder
      */
     public function run()
     {
-	factory(Aluno::class, 5)->create();
+	//factory(Aluno::class, 5)->create();
+        Aluno::factory()->count(5)->create();
     }
 }

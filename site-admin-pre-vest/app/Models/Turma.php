@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -10,7 +10,7 @@ class Turma extends Model
 
     use HasFactory;
 
-    public function aluno(){
+    public function alunos(){
         return $this->hasMany('App\Models\Aluno');
     }
 

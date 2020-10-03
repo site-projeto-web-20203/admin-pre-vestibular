@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Administrador;
@@ -13,6 +15,7 @@ class AdministradorSeeder extends Seeder
      */
     public function run()
     {
-	factory(Administrador::class, 5)->create();
+        //factory(Administrador::class, 5)->create();
+        Administrador::factory()->count(5)->create();
     }
 }

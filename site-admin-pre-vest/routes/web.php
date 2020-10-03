@@ -30,6 +30,6 @@ Route::get('/listar/apostilas', [ApostilaController::class, 'listar']);
 
 Route::get('/listar/mensagens', [MensagemController::class, 'listar']);
 
-Route::get('/listar/professores', [ProfessorController::class, 'listar]);
+Route::get('/listar/professores', [ProfessorController::class, 'listar']);
 
 Route::get('/listar/turmas', [TurmaController::class, 'listar']);

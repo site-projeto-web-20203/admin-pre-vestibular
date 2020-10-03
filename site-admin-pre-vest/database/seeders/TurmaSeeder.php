@@ -1,7 +1,10 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
-use App\Turma;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Turma;
 
 class TurmaSeeder extends Seeder
 {
@@ -12,6 +15,6 @@ class TurmaSeeder extends Seeder
      */
     public function run()
     {
-	factory(Turma::class, 5)->create();
+        Turma::factory()->count(5)->create();
     }
 }

@@ -1,7 +1,10 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
-use App\Professor;
+use Illuminate\Support\Facades\Hash;
+use App\Models\Professor;
 
 class ProfessorSeeder extends Seeder
 {
@@ -12,6 +15,6 @@ class ProfessorSeeder extends Seeder
      */
     public function run()
     {
-    factory(App\Professor::class, 5)->create();
+        Professor::factory()->count(5)->create();
     }
 }

@@ -2,8 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Administrador;
-use Faker\Generator as Faker;
+namespace Database\Factories;
+
+use App\Models\Administrador;
+use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 /*
@@ -16,12 +18,18 @@ use Illuminate\Support\Str;
 | model instances for testing / seeding your application's database.
 |
 */
+class AdministradorFactory extends Factory{
 
-$factory->define(Administrador::class, function (Faker $faker) {
-    return [
-            'data_nascimento' => ($faker->dateTimeBetween('-100 years', '-18 years'))->format('d/m/Y'),
-            'email' => $faker->unique()->safeEmail,
-	    'nome' => $faker->name(),
-            'telefone' => $faker->phoneNumber()
-    ];
-});
+    protected $model = Administrador::class;
+
+    public function definition()
+    {
+        // TODO: Implement definition() method.
+        return [
+            'data_nascimento' => ($this->faker->dateTimeBetween('-100 years', '-18 years'))->format('d/m/Y'),
+            'email' => $this->faker->unique()->safeEmail,
+            'nome' => $this->faker->name(),
+            'telefone' => $this->faker->phoneNumber()
+        ];
+    }
+}

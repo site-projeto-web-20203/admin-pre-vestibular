@@ -16,7 +16,7 @@ class CadastrarAlunoController extends Controller
             \App\Validator\AlunoValidator::validate($request->all());
             $dados = $request->all();
             \App\Models\Aluno::create($dados);
-            return "Administrador criado";
+            return "Aluno criado";
         } catch(\App\Validator\ValidationException $exception){
             return redirect('/cadastrar/aluno')
                 ->withErrors($exception->getValidator())

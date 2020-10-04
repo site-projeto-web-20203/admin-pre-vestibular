@@ -16,7 +16,7 @@ class NovaMensagemController extends Controller
 		try{
 			\App\Validator\MensagemValidator::validate($request->all());
 			$dados = $request->all();
-			\App\Http\Controllers\MensagemController::criar($dados);
+			Mensagem::create($dados);
 			return "Mensagem enviada";
 		}
 		catch(\App\Validator\ValidationException $exception){

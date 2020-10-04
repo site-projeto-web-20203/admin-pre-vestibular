@@ -17,7 +17,6 @@ class CadastrarAdministradorController extends Controller
         try{
             AdministradorValidator::validate($request->all());
             $dados = $request->all();
-            //$dados[]
             Administrador::create($dados);
             return "Administrador criado";
         } catch(ValidationException $exception){

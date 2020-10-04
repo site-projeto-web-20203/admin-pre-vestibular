@@ -15,24 +15,24 @@ class CreateAlunosTable extends Migration
     {
         Schema::create('alunos', function (Blueprint $table) {
             $table->id();
-			$table->boolean('fez_enem');
-			$table->boolean('tipo_escola');
+			$table->string('fez_enem');
+			$table->string('tipo_escola');
 			$table->date('data_nascimento');
 			$table->integer('numero');
 			$table->integer('tipo_usuario')->default(1);
 			$table->string('ano_conclusao');
 			$table->string('bairro');
 			$table->string('cidade');
-			$table->string('complemento');
+			$table->string('complemento')->nullable();
 			$table->string('email')->unique();
-			$table->string('email_responsavel');
+			$table->string('email_responsavel')->nullable();
 			$table->string('escola');
 			$table->string('nome');
-			$table->string('nome_responsavel');
+			$table->string('nome_responsavel')->nullable();
 			$table->string('rua');
 			$table->string('senha')->default("12345");
 			$table->string('telefone');
-			$table->string('telefone_responsavel');
+			$table->string('telefone_responsavel')->nullable();
             $table->integer('turma_id')->unsigned()->nullable();
             $table->foreign('turma_id')->references('id')->on('turmas');
             $table->timestamps();

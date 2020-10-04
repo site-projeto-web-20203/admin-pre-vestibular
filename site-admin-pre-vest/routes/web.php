@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CadastrarProfessorController;
 use App\Http\Controllers\AdministradorController;
 use App\Http\Controllers\AlunoController;
 use App\Http\Controllers\ApostilaController;
@@ -21,6 +22,8 @@ use App\Http\Controllers\TurmaController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/cadastrar/professor', [CadastrarProfessorController::class, 'prepararCadastro'])->name('cadastrar.professor');
 
 Route::get('/listar/administradores', [AdministradorController::class, 'listar']);
 

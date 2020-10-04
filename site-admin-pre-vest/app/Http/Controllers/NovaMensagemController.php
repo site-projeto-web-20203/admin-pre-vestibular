@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use App\Mensagem;
+use App\Models\Mensagem;
 
 class NovaMensagemController extends Controller
 {
@@ -16,7 +16,7 @@ class NovaMensagemController extends Controller
 		try{
 			\App\Validator\MensagemValidator::validate($request->all());
 			$dados = $request->all();
-			\App\MensagemController::criar($dados);
+			\App\Http\Controllers\MensagemController::criar($dados);
 			return "Mensagem enviada";
 		}
 		catch(\App\Validator\ValidationException $exception){

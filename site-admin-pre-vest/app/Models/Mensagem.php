@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 
 class Mensagem extends Authenticatable
@@ -14,7 +15,7 @@ class Mensagem extends Authenticatable
 	protected $fillable = ['remetente', 'email', 'conteudo'];
 	public static $rules = [
 	'remetente' => 'required|min:5', 
-	'email' => 'required',
+	'email' => 'required|email',
 	'conteudo' => 'required|min:15',
 	];
 	public static $messages = [

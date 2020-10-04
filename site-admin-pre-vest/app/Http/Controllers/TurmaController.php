@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Turma;
+use App\Models\Turma;
 use DB;
 
 class TurmaController extends Controller

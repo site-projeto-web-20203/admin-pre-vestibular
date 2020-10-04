@@ -39,7 +39,7 @@ class Aluno extends Authenticatable
     public static $messages = ['nome.*' => 'O campo nome é obrigatório e deve ter entre 3 e 100 caracteres',
                                 'data_nascimento.*' => 'O campo data de nascimento é obrigatório',
                                 'email.*'  => 'O campo email é obrigatório e não pode ser um email já cadastrado',
-                                'telefone.*' => 'O campo telefone é obrigatiorio e deve ser preenchido no formato DDXXXXXXXXX',
+                                'telefone.*' => 'O campo telefone é obrigatório e deve ser preenchido no formato DDXXXXXXXXX',
                                 'rua.*' => 'O campo rua é obrigatório e deve ter no máximo 100 caracteres',
                                 'bairro.*' => 'O campo bairro é obrigatório e deve ter no máximo 100 caracteres',
                                 'complemento.*' => 'O campo complemento deve ter no máximo 100 caracteres',

@@ -8,6 +8,11 @@ use DB;
 
 class MensagemController extends Controller
 {
+
+	public static function criar(){
+
+	}
+
     public function listar(){
         $mensagens = DB::select("SELECT * FROM mensagems");
         return view('listaMensagens', ['mensagens' => $mensagens]);

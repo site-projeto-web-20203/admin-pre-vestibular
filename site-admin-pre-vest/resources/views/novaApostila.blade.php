@@ -5,7 +5,7 @@
   </head>
   <body>
     <h1>Enviar Apostila</h1>
-    <form method="POST" action="{{url('/mensagem/enviar')}}">
+    <form method="POST" action="{{url('/apostila/nova')}}">
       @csrf
       <div class="form-group row">
         <label for="disciplina" class="col-md-4 col-form-label text-md-right">Disciplina</label>

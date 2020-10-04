@@ -9,9 +9,9 @@ use App\Http\Controllers\ProfessorController;
 use App\Http\Controllers\TurmaController;
 use App\Http\Controllers\CadastrarAdministradorController;
 use App\Http\Controllers\CadastrarAlunoController;
+use App\Http\Controllers\NovaApostilaController;
 use App\Http\Controllers\CadastrarProfessorController;
 use App\Http\Controllers\CadastrarTurmaController;
-use App\Http\Controllers\NovaApostilaController;
 use App\Http\Controllers\NovaMensagemController;
 
 /*
@@ -53,6 +53,10 @@ Route::get('/cadastrar/aluno', [CadastrarAlunoController::class, 'prepararCadast
 
 Route::post('/cadastrar/aluno', [CadastrarAlunoController::class, 'cadastrar'])->name('aluno.create');
 
+Route::get('/cadastrar/apostila', [NovaApostilaController::class, 'prepararEnvio'])->name('apostila.cadastrar');
+
+Route::post('/cadastrar/apostila', [NovaApostilaController::class, 'enviar'])->name('apostila.create');
+
 Route::get('/cadastrar/professor', [CadastrarProfessorController::class, 'prepararCadastro'])->name('professor.cadastrar');
 
 Route::post('/cadastrar/professor', [CadastrarProfessorController::class, 'cadastrar'])->name('professor.create');
@@ -60,10 +64,6 @@ Route::post('/cadastrar/professor', [CadastrarProfessorController::class, 'cadas
 Route::get('/cadastrar/turma', [CadastrarTurmaController::class, 'prepararCadastro'])->name('turma.cadastrar');
 
 Route::post('/cadastrar/turma', [CadastrarTurmaController::class, 'cadastrar'])->name('turma.create');
-
-Route::get('/apostila/nova', [NovaApostilaController::class, 'prepararEnvio'])->name('apostila.nova');
-
-Route::post('/apostila/nova', [NovaApostilaController::class, 'enviar'])->name('apostila.create');
 
 Route::get('/mensagem/nova', [NovaMensagemController::class, 'prepararEnvio'])->name('mensagem.nova');
 

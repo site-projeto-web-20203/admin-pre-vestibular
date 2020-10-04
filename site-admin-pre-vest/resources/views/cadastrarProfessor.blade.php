@@ -77,6 +77,34 @@
           @enderror
         </div>
         <br>
+          <label>Disponibilidade</label>
+          <div class="col-md-8">
+              <input type="hidden" name="dispoManha" id="dispoManhaHidden" value="null"/>
+              <input type="checkbox" name="dispoManha" id="dispoManha" value="yes" />Manhã
+              <input type="checkbox" name="dispoTarde" id="dispoTarde" value="yes" />Tarde
+              <input type="checkbox" name="dispoNoite" id="dispoNoite" value="yes" />Noite
+          </div>
+          <br>
+          <label>Áreas de atuação</label>
+          <div class="col-md-8">
+              <input type="checkbox" name="atuaBiologia" id="atuaBiologia" value="yes" />Biologia
+              <input type="checkbox" name="atuaEspanhol" id="atuaEspanhol" value="yes" />Espanhol
+              <input type="checkbox" name="atuaFilosofia" id="atuaFilosofia" value="yes" />Filosofia
+              <br>
+              <input type="checkbox" name="atuaFisica" id="atuaFisica" value="yes" />Fisica
+              <input type="checkbox" name="atuaGeografia" id="atuaGeografia" value="yes" />Geografia
+              <input type="checkbox" name="atuaHistoria" id="atuaHistoria" value="yes" />História
+              <br>
+              <input type="checkbox" name="atuaIngles" id="atuaIngles" value="yes" />Inglês
+              <input type="checkbox" name="atuaLiteratura" id="atuaLiteratura" value="yes" />Literatura
+              <input type="checkbox" name="atuaMatematica" id="atuaMatematica" value="yes" />Matematica
+              <br>
+              <input type="checkbox" name="atuaPortugues" id="atuaPortugues" value="yes" />Português
+              <input type="checkbox" name="atuaQuimica" id="atuaQuimica" value="yes" />Quimica
+              <input type="checkbox" name="atuaRedacao" id="atuaRedacao" value="yes" />Redação
+              <input type="checkbox" name="atuaSociologia" id="atuaSociologia" value="yes" />Sociologia
+          </div>
+        <br>
         <input type="submit" value="Cadastrar" />
       </div>
     </form>

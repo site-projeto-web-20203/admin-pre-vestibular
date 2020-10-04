@@ -94,7 +94,8 @@
 		<br>
                 <div class="links">
                     <a href="{{ url('listar/mensagens') }}">Listar Mensagens</a>
-                    <a href="{{ url('/apostila/nova') }}">Adicionar Apostila</a>
+                    <a href="{{ url('/cadastrar/apostila') }}">Adicionar Apostila</a>
+                    <a href="{{ url('/cadastrar/turma') }}">Adicionar Turma</a>
                     <a href="{{ url('/cadastrar/administrador') }}">Cadastrar Administrador</a>
                     <a href="{{ url('/mensagem/nova') }}">Enviar Mensagem</a>
                 </div>

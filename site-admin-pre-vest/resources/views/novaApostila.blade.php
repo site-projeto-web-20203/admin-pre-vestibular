@@ -4,8 +4,9 @@
     <title>Nome do Curso</title>
   </head>
   <body>
-    <h1>Enviar Apostila</h1>
-    <form method="POST" action="{{url('/apostila/nova')}}">
+    <h1>Cadastrar Apostila</h1>
+    <form method="POST" action="{{route('apostila.create')}}">
+
       @csrf
       <div class="form-group row">
         <label for="disciplina" class="col-md-4 col-form-label text-md-right">Disciplina</label>
@@ -18,18 +19,16 @@
           @enderror
         </div>
         <br>
-        <label for="nome_arq" class="col-md-4 col-form-label text-md-right">Nome do Arquivo</label>
+        <label for="arq" class="col-md-4 col-form-label text-md-right">Arquivo</label>
         <div class="col-md-8">
-          <input id="nome_arq" type="nome_arq" class="form-control @error('nome_arq') is-invalid @enderror" name="nome_arq" value="{{old('nome_arq')}}" required autofocus/>
-          @error('nome_arq')
+            <input type="file" id="arq" name="arq" class="form-control-file @error('arq') is-invalid @enderror">
+          @error('arq')
           <span class="invalid-feedback" role="alert">
             <strong>{{$message}}</strong>
           </span>
           @enderror
         </div>
          <br>
-         <input type="file" id="arquivo" name="nome">
-         <br><br>
         <input type="submit" value="Enviar" />
       </div>
     </form>

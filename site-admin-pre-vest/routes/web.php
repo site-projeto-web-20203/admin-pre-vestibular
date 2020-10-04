@@ -9,6 +9,8 @@ use App\Http\Controllers\MensagemController;
 use App\Http\Controllers\ProfessorController;
 use App\Http\Controllers\TurmaController;
 use App\Http\Controllers\CadastrarAdministradorController;
+use App\Http\Controllers\CadastrarAlunoController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,3 +43,7 @@ Route::get('/listar/turmas', [TurmaController::class, 'listar']);
 Route::get('/cadastrar/administrador', [CadastrarAdministradorController::class, 'prepararCadastro'])->name('administrador.cadastrar');
 
 Route::post('/cadastrar/administrador', [CadastrarAdministradorController::class, 'cadastrar'])->name('administrador.create');
+
+Route::get('/cadastrar/aluno', [CadastrarAlunoController::class, 'prepararCadastro'])->name('aluno.cadastrar');
+
+Route::post('/cadastrar/aluno', [CadastrarAlunoController::class, 'cadastrar'])->name('aluno.create');

@@ -92,7 +92,6 @@
                     <a href="{{ url('listar/turmas') }}">Listar Turmas</a>
                     <a href="{{ url('listar/apostilas') }}">Listar Apostilas</a>
                     <a href="{{ url('listar/mensagens') }}">Listar Mensagens</a>
-                    <a href="{{ url('cadastrar/administrador') }}">Cadastrar Administrador</a>
                 </div>
             </div>
         </div>

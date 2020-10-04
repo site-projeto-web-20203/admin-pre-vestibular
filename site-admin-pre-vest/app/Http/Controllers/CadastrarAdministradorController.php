@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Validator\AdministradorValidator;
+use App\Validator\ValidationException;
 use Illuminate\Http\Request;
 use App\Models\Administrador;
 
@@ -13,13 +15,13 @@ class CadastrarAdministradorController extends Controller
 
     public function cadastrar(Request $request){
         try{
-            \App\Validator\AdministradorValidator::validate($request->all());
+            AdministradorValidator::validate($request->all());
             $dados = $request->all();
             //$dados[]
-            \App\Models\Administrador::create($dados);
+            Administrador::create($dados);
             return "Administrador criado";
-        } catch(\App\Validator\ValidationException $exception){
-            return redirect('administrador.cadastrar')
+        } catch(ValidationException $exception){
+            return redirect('/cadastrar/administrador')
                 ->withErrors($exception->getValidator())
                 ->withInput();
         }

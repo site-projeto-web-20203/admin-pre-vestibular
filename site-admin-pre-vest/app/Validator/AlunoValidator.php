@@ -2,7 +2,7 @@
 
 namespace App\Validator;
 
-class AdministradorValidator{
+class AlunoValidator{
 
     public static function validate($data){
         $validator = \Validator::make($data, \App\Models\Aluno::$rules, \App\Models\Aluno::$messages);

@@ -39,3 +39,5 @@ Route::get('/listar/professores', [ProfessorController::class, 'listar']);
 Route::get('/listar/turmas', [TurmaController::class, 'listar']);
 
 Route::get('/cadastrar/administrador', [CadastrarAdministradorController::class, 'prepararCadastro'])->name('administrador.cadastrar');
+
+Route::post('/cadastrar/administrador', [CadastrarAdministradorController::class, 'cadastrar'])->name('administrador.create');

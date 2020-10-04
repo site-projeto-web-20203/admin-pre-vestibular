@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Aluno;
+use App\Models\Aluno;
 use DB;
 
 class AlunoController extends Controller

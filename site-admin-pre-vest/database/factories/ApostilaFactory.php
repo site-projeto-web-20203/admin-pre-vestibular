@@ -10,12 +10,6 @@ use App\Models\Apostila;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
-/*
-			$table->integer('professor_id')->unsigned()->nullable();
-			$table->foreign('professor_id')->references('id')->on('professors');
-			$table->integer('administrador_id')->unsigned()->nullable();
-			$table->foreign('administrador_id')->references('id')->on('administradors');*/
-
 class ApostilaFactory extends Factory{
 
     protected $model = \App\Models\Apostila::class;

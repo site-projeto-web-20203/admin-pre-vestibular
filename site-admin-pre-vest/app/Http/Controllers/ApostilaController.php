@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Apostila;
+use App\Models\Apostila;
 use DB;
 
 class ApostilaController extends Controller

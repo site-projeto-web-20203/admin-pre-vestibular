@@ -20,13 +20,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57e39bc3-e5da-4ad8-ace4-64e0d9a3eb88" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CadastrarAdministradorController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CadastrarAlunoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Validator/AdministradorValidator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Validator/AlunoValidator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Validator/ValidationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/cadastrarAdministrador.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdministradorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdministradorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AlunoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlunoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApostilaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApostilaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MensagemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MensagemController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfessorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfessorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TurmaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TurmaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Administrador.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Administrador.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Aluno.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Aluno.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Apostila.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Apostila.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/AlunoFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/AlunoFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/factories/ApostilaFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ApostilaFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/ApostilaSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ApostilaSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/ProfessorTurmaSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/ProfessorTurmaSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +221,7 @@
       <workItem from="1601631944672" duration="2771000" />
       <workItem from="1601663228204" duration="1999000" />
       <workItem from="1601670715347" duration="599000" />
-      <workItem from="1601743531263" duration="10445000" />
+      <workItem from="1601743531263" duration="30117000" />
     </task>
     <servers />
   </component>

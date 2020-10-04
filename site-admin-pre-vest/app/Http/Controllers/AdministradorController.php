@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Administrador;
+use App\Models\Administrador;
 use DB;
 
 class AdministradorController extends Controller

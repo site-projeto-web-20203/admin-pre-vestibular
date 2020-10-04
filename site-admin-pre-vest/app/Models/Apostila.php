@@ -23,6 +23,7 @@ class Apostila extends Authenticatable
     public static $messages = ['disciplina.*' => 'O campo disciplina é obrigatório',
                                 'arq.*' => 'É obrigatório selecionar o arquivo para enviar'];
 
+
     #hasOne pode ser usado como 0:1
     public function professor(){
         return $this->hasOne('App\Models\Professor');

@@ -6,6 +6,7 @@
   <body>
     <h1>Cadastrar Apostila</h1>
     <form method="POST" action="{{route('apostila.create')}}">
+
       @csrf
       <div class="form-group row">
         <label for="disciplina" class="col-md-4 col-form-label text-md-right">Disciplina</label>

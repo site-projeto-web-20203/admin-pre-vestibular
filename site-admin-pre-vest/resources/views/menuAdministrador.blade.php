@@ -83,7 +83,6 @@
                 <div class="title m-b-md">
                     Nome do Curso
                 </div>
-
                 <div class="links">
                     <a href="{{ url('/') }}">Inicio</a>
                     <a href="{{ url('listar/administradores') }}">Listar Administradores</a>
@@ -91,7 +90,13 @@
                     <a href="{{ url('listar/professores') }}">Listar Professores</a>
                     <a href="{{ url('listar/turmas') }}">Listar Turmas</a>
                     <a href="{{ url('listar/apostilas') }}">Listar Apostilas</a>
+                </div>
+		<br>
+                <div class="links">
                     <a href="{{ url('listar/mensagens') }}">Listar Mensagens</a>
+                    <a href="{{ url('/apostila/nova') }}">Adicionar Apostila</a>
+                    <a href="{{ url('/cadastrar/administrador') }}">Cadastrar Administrador</a>
+                    <a href="{{ url('/mensagem/nova') }}">Enviar Mensagem</a>
                 </div>
             </div>
         </div>

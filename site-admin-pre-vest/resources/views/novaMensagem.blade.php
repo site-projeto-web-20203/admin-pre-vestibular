@@ -5,7 +5,7 @@
   </head>
   <body>
     <h1>Enviar Mensagem</h1>
-    <form method="POST" action="{{url('/mensagem/enviar')}}">
+    <form method="POST" action="{{url('/mensagem/nova')}}">
       @csrf
       <div class="form-group row">
         <label for="remetente" class="col-md-4 col-form-label text-md-right">Seu Nome</label>

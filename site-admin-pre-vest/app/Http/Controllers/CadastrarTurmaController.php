@@ -16,7 +16,7 @@ class CadastrarTurmaController extends Controller
 		try{
 			\App\Validator\TurmaValidator::validate($request->all());
 			$dados = $request->all();
-			\App\Http\Controllers\TurmaController::criar($dados);
+			Turma::create($dados);
 			return "Turma cadastrada";
 		}
 		catch(\App\Validator\ValidationException $exception){

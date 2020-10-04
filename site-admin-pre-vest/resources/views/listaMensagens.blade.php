@@ -83,7 +83,7 @@
                     {{$mensagem->email}}
                     </td>
                     <td>
-                    {{$mensagem->data_envio}}
+                    {{$mensagem->created_at}}
                     </td>
                 </tr>
 	    </tbody>

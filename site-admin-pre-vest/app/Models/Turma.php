@@ -15,8 +15,8 @@ class Turma extends Authenticatable
 
 	protected $fillable = ['dataInicio', 'dataFim', 'horario', 'nome'];
 	public static $rules = [
-	'dataInicio' => 'required', 
-	'dataFim' => 'required',
+	'dataInicio' => 'required|date',
+	'dataFim' => 'required|date',
 	'horario' => 'required',
 	'nome' => 'required|min:4'
 	];

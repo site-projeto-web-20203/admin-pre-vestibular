@@ -16,7 +16,7 @@ class CadastrarProfessorController extends Controller
 		try{
 			\App\Validator\ProfessorValidator::validate($request->all());
 			$dados = $request->all();
-			\App\Http\Controllers\ProfessorController::criar($dados);
+			Professor::create($dados);
 			return "Professor cadastrado";
 		}
 		catch(\App\Validator\ValidationException $exception){

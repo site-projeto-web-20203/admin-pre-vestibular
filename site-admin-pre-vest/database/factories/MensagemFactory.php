@@ -28,7 +28,6 @@ class MensagemFactory extends Factory{
         // TODO: Implement definition() method.
         return [
             'aberta' => $this->faker->boolean(),
-            'data_envio' => ($this->faker->dateTimeBetween('-10 years', 'now'))->format('d/m/Y'),
             'email' => $this->faker->unique()->safeEmail,
             'remetente' => $this->faker->name(),
             'conteudo' => $this->faker->realText($maxNbChars = 400, $indexSize = 2)

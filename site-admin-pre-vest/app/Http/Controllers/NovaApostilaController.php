@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Hash;
 use App\Models\Apostila;
 
@@ -12,16 +13,19 @@ class NovaApostilaController extends Controller
         return view('novaApostila');
     }
 
-	public function enviar(Request $request){
-		try{
-			\App\Validator\ApostilaValidator::validate($request->all());
-			$dados = $request->all();
-			\App\Http\Controllers\ApostilaController::criar($dados);
-			return "Apostila enviada";
-		}
-		catch(\App\Validator\ValidationException $exception){
-			return redirect('/apostila/nova')->withErrors($exception->getValidator())->withInput();
+    public function enviar(Request $request){
+        try{
+            \App\Validator\ApostilaValidator::validate($request->all());
+            $dados = $request->all();
+            $dados['nome_arq'] = $dados['arq'];
+            Apostila::create($dados);
+            return "Apostila adicionada";
+        }
+        catch(\App\Validator\ValidationException $exception){
+            return redirect('/cadastrar/apostila')
+                ->withErrors($exception->getValidator())
+                ->withInput();
 
-		}
-	}
+        }
+    }
 }

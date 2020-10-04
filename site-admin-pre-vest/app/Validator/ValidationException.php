@@ -4,7 +4,8 @@ namespace App\Validator;
 
 use Throwable;
 
-class ValidationException extends \Exception{
+class ValidationException extends \Exception
+{
 
     protected $validator;
 
@@ -14,7 +15,8 @@ class ValidationException extends \Exception{
         $this->validator = $validator;
     }
 
-    public function getValidator(){
+    public function getValidator()
+    {
         return $this->validator;
     }
 }

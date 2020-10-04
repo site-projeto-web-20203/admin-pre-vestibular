@@ -11,6 +11,7 @@ use App\Http\Controllers\ProfessorController;
 use App\Http\Controllers\TurmaController;
 use App\Http\Controllers\CadastrarAdministradorController;
 use App\Http\Controllers\CadastrarAlunoController;
+use App\Http\Controllers\NovaApostilaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,3 +55,7 @@ Route::post('/cadastrar/administrador', [CadastrarAdministradorController::class
 Route::get('/cadastrar/aluno', [CadastrarAlunoController::class, 'prepararCadastro'])->name('aluno.cadastrar');
 
 Route::post('/cadastrar/aluno', [CadastrarAlunoController::class, 'cadastrar'])->name('aluno.create');
+
+Route::get('/cadastrar/apostila', [NovaApostilaController::class, 'prepararEnvio'])->name('apostila.cadastrar');
+
+Route::post('/cadastrar/apostila', [NovaApostilaController::class, 'enviar'])->name('apostila.create');

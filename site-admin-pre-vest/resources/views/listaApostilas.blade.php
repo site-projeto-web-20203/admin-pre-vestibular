@@ -83,7 +83,7 @@
                     {{$apostila->nome_arq}}
                     </td>
                     <td>
-                    {{$apostila->data_envio}}
+                    {{$apostila->created_at}}
                     </td>
                 </tr>
 	    </tbody>

@@ -15,7 +15,6 @@ class CreateApostilasTable extends Migration
     {
         Schema::create('apostilas', function (Blueprint $table) {
             $table->id();
-			$table->dateTime('data_envio');
 			$table->string('disciplina');
 			$table->string('nome_arq');
             $table->timestamps();

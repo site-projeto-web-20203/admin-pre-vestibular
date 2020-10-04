@@ -17,7 +17,6 @@ class ApostilaFactory extends Factory{
     {
         // TODO: Implement definition() method.
         return [
-            'data_envio' => ($this->faker->dateTimeBetween('-10 years', 'now'))->format('d/m/Y'),
             'disciplina' => $this->faker->lexify('Disciplina ?????'),
             'nome_arq' => $this->faker->lexify('??????.').$this->faker->fileExtension
         ];

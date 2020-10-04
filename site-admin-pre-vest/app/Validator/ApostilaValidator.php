@@ -2,7 +2,6 @@
 
 namespace App\Validator;
 
-use Carbon\Carbon;
 
 class ApostilaValidator{
 
@@ -13,4 +12,5 @@ class ApostilaValidator{
         }
         return $validator;
     }
+
 }

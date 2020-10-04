@@ -9,7 +9,7 @@ use DB;
 class ProfessorController extends Controller
 {
 
-    public function criar(){
+    public static function criar(){
 
     }
 

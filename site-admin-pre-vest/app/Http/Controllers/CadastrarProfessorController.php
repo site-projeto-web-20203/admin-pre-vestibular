@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use App\Professor;
+use App\Models\Professor;
 
 class CadastrarProfessorController extends Controller
 {
@@ -16,7 +16,7 @@ class CadastrarProfessorController extends Controller
 		try{
 			\App\Validator\ProfessorValidator::validate($request->all());
 			$dados = $request->all();
-			\App\ProfessorController::criar($dados);
+			\App\Http\Controllers\ProfessorController::criar($dados);
 			return "Professor cadastrado";
 		}
 		catch(\App\Validator\ValidationException $exception){

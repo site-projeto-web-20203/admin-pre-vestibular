@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Apostila;
+
 use Illuminate\Support\Facades\Hash;
-use App\Mensagem;
+use App\Models\Apostila;
 
 class NovaApostilaController extends Controller
 {
     public function prepararEnvio(){
-        return view('cadastrarApostila');
+        return view('novaApostila');
     }
 
     public function enviar(Request $request){

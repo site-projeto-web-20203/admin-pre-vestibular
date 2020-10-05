@@ -1,13 +1,10 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
-
 namespace Database\Factories;
 
 use App\Models\Professor;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-
 
 class ProfessorFactory extends Factory{
 
@@ -17,28 +14,14 @@ class ProfessorFactory extends Factory{
     {
         // TODO: Implement definition() method.
         return [
-            'data_nascimento' => ($this->faker->dateTimeBetween('-100 years', '-16 years'))->format('d/m/Y'),
+            'data_nascimento' => ($this->faker->dateTime())->format('d/m/Y'),
             'email' => $this->faker->unique()->safeEmail,
             'nome' => $this->faker->name(),
             'telefone' => $this->faker->phoneNumber(),
             'ehVoluntario' => $this->faker->randomElement(['Sim', 'Não']),
             'grauInstrucao' => $this->faker->randomElement(['Estudante de Graduação', 'Graduação', 'Pós Graduação', 'Mestrado', 'Doutorado']),
-            'dispoManha' => $this->faker->boolean(),
-            'dispoTarde' => $this->faker->boolean(),
-            'dispoNoite' => $this->faker->boolean(),
-            'atuaBiologia' => $this->faker->boolean(),
-            'atuaEspanhol' => $this->faker->boolean(),
-            'atuaFilosofia' => $this->faker->boolean(),
-            'atuaFisica' => $this->faker->boolean(),
-            'atuaGeografia' => $this->faker->boolean(),
-            'atuaHistoria' => $this->faker->boolean(),
-            'atuaIngles' => $this->faker->boolean(),
-            'atuaLiteratura' => $this->faker->boolean(),
-            'atuaMatematica' => $this->faker->boolean(),
-            'atuaPortugues' => $this->faker->boolean(),
-            'atuaQuimica' => $this->faker->boolean(),
-            'atuaRedacao' => $this->faker->boolean(),
-            'atuaSociologia' => $this->faker->boolean()
+            'disponibilidade' => implode(', ',$this->faker->randomElements(['Manhã', 'Tarde', 'Noite'], $count=rand(1,3))),
+			'areasAtuacao' => implode(', ',$this->faker->randomElements(['Biologia', 'Espanhol', 'Filosofia', 'Física', 'Geografia', 'História', 'Inglês', 'Literatura', 'Matemática', 'Português', 'Química', 'Redação', 'Sociologia'], $count=rand(1,5)))
         ];
     }
 }

@@ -67,7 +67,7 @@
     <body>
         @foreach($professores as $professor)
         <table class="table table-striped", align="center", style="border-spacing: 0.5em">
-            <thead>
+            <thead align="center">
                 <tr>
                     <th>Nome Completo</th>
                     <th>E-mail</th>
@@ -95,7 +95,7 @@
                     </td>
                 </tr>
 	    </tbody>
-            <thead>
+            <thead align="center">
                 <tr>
                     <th>Grau de Instrução</th>
 		    <th>Disponibilidade</th>
@@ -108,128 +108,11 @@
                     {{$professor->grauInstrucao}}
                     </td>
                     <td>
-		    <?php $cont = 0;?>
-		    @if($professor->dispoManha == true)
-		        {{'Manhã'}}
-			<?php $cont = $cont + 1; ?>
-		    @endif
-		    @if($professor->dispoTarde == true)
-			@if($cont > 0)
-		            {{', Tarde'}}
-                        @else
-                            {{'Tarde'}}
-			    <?php $cont = $cont + 1; ?>
-			@endif
-		    @endif
-		    @if($professor->dispoNoite == true)
-			@if($cont > 0)
-		            {{', Noite'}}
-                        @else
-                            {{'Noite'}}
-			@endif
-		    @endif
+                    {{$professor->disponibilidade}}
                     </td>
                     <td>
-		    <?php $cont = 0; ?>
-		    @if($professor->atuaBiologia == true)
-		        {{'Biologia'}}
-			<?php $cont = $cont + 1; ?>
-		    @endif
-		    @if($professor->atuaEspanhol == true)
-			@if($cont > 0)
-		            {{', Espanhol'}}
-                        @else
-                            {{'Espanhol'}}
-			    <?php $cont = $cont + 1; ?>
-			@endif
-		    @endif
-		    @if($professor->atuaFilosofia == true)
-			@if($cont > 0)
-		            {{', Filosofia'}}
-                        @else
-                            {{'Filosofia'}}
-			    <?php $cont = $cont + 1; ?>
-			@endif
-		    @endif
-		    @if($professor->atuaFisica == true)
-			@if($cont > 0)
-		            {{', Física'}}
-                        @else
-                            {{'Física'}}
-			    <?php $cont = $cont + 1; ?>
-			@endif
-		    @endif
-		    @if($professor->atuaGeografia == true)
-			@if($cont > 0)
-		            {{', Geografia'}}
-                        @else
-                            {{'Geografia'}}
-			    <?php $cont = $cont + 1; ?>
-			@endif
-		    @endif
-		    @if($professor->atuaHistoria == true)
-			@if($cont > 0)
-		            {{', História'}}
-                        @else
-                            {{'História'}}
-			    <?php $cont = $cont + 1; ?>
-			@endif
-		    @endif
-		    @if($professor->atuaIngles == true)
-			@if($cont > 0)
-		            {{', Inglês'}}
-                        @else
-                            {{'Inglês'}}
-			    <?php $cont = $cont + 1; ?>
-			@endif
-		    @endif
-		    @if($professor->atuaLiteratura == true)
-			@if($cont > 0)
-		            {{', Literatura'}}
-                        @else
-                            {{'Literatura'}}
-			    <?php $cont = $cont + 1; ?>
-			@endif
-		    @endif
-		    @if($professor->atuaMatematica == true)
-			@if($cont > 0)
-		            {{', Matemática'}}
-                        @else
-                            {{'Matemática'}}
-			    <?php $cont = $cont + 1; ?>
-			@endif
-		    @endif
-		    @if($professor->atuaPortugues == true)
-			@if($cont > 0)
-		            {{', Português'}}
-                        @else
-                            {{'Português'}}
-			    <?php $cont = $cont + 1; ?>
-			@endif
-		    @endif
-		    @if($professor->atuaQuimica == true)
-			@if($cont > 0)
-		            {{', Química'}}
-                        @else
-                            {{'Química'}}
-			    <?php $cont = $cont + 1; ?>
-			@endif
-		    @endif
-		    @if($professor->atuaRedacao == true)
-			@if($cont > 0)
-		            {{', Redação'}}
-                        @else
-                            {{'Redação'}}
-			    <?php $cont = $cont + 1; ?>
-			@endif
-		    @endif
-		    @if($professor->atuaSociologia == true)
-			@if($cont > 0)
-		            {{', Sociologia'}}
-                        @else
-                            {{'Sociologia'}}
-			@endif
-		    @endif
+		    <td>
+                    {{$professor->areasAtuacao}}
                     </td>
                 </tr>
 	    </tbody>

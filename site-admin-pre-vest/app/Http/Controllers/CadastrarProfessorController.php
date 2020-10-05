@@ -16,6 +16,8 @@ class CadastrarProfessorController extends Controller
 		try{
 			\App\Validator\ProfessorValidator::validate($request->all());
 			$dados = $request->all();
+			$dados['disponibilidade'] = implode(', ', $dados['disponibilidade']);
+			$dados['areasAtuacao'] = implode(', ', $dados['areasAtuacao']);
 			Professor::create($dados);
 			return "Professor cadastrado";
 		}

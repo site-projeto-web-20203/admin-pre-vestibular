@@ -51,8 +51,8 @@
         <label for="ehVoluntario">Você é Voluntário?</label>
         <div class="col-md-8">
           <select name="ehVoluntario" id="ehVoluntario">
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
           </select>
           @error('ehVoluntario')
           <span class="invalid-feedback" role="alert">
@@ -61,7 +61,7 @@
           @enderror
         </div>
         <br>
-	    <label for="grauInstrucao">Grau de Instrução</label>
+	<label for="grauInstrucao">Grau de Instrução</label>
         <div class="col-md-8">
           <select name="grauInstrucao" id="grauInstrucao">
             <option value="estudanteGraduacao">Estudante de Graduação</option>
@@ -77,33 +77,59 @@
           @enderror
         </div>
         <br>
+	<?php
+	if (isset($_POST['disponibilidade'])) {
+	  $disponibilidade = implode(', ', $_POST['disponibilidade']);
+	} else {
+	  $disponibilidade = "";
+	}
+	if (isset($_POST['areasAtuacao'])) {
+	  $areasAtuacao = implode(', ', $_POST['areasAtuacao']);
+	} else {
+	  $areasAtuacao = "";
+	} 
+	?>
+	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
           <label>Disponibilidade</label>
           <div class="col-md-8">
-              <input type="hidden" name="dispoManha" id="dispoManhaHidden" value="null"/>
-              <input type="checkbox" name="dispoManha" id="dispoManha" value="yes" />Manhã
-              <input type="checkbox" name="dispoTarde" id="dispoTarde" value="yes" />Tarde
-              <input type="checkbox" name="dispoNoite" id="dispoNoite" value="yes" />Noite
+              <input type="checkbox" name="disponibilidade[]" id="manha" value="Manhã" />Manhã
+              <input type="checkbox" name="disponibilidade[]" id="tarde" value="Tarde" />Tarde
+              <input type="checkbox" name="disponibilidade[]" id="noite" value="Noite" />Noite
           </div>
+          @error('disponibilidade')
+          <span class="invalid-feedback" role="alert">
+            <strong>{{$message}}</strong>
+          </span>
+          @enderror
           <br>
           <label>Áreas de atuação</label>
           <div class="col-md-8">
-              <input type="checkbox" name="atuaBiologia" id="atuaBiologia" value="yes" />Biologia
-              <input type="checkbox" name="atuaEspanhol" id="atuaEspanhol" value="yes" />Espanhol
-              <input type="checkbox" name="atuaFilosofia" id="atuaFilosofia" value="yes" />Filosofia
-              <br>
-              <input type="checkbox" name="atuaFisica" id="atuaFisica" value="yes" />Fisica
-              <input type="checkbox" name="atuaGeografia" id="atuaGeografia" value="yes" />Geografia
-              <input type="checkbox" name="atuaHistoria" id="atuaHistoria" value="yes" />História
-              <br>
-              <input type="checkbox" name="atuaIngles" id="atuaIngles" value="yes" />Inglês
-              <input type="checkbox" name="atuaLiteratura" id="atuaLiteratura" value="yes" />Literatura
-              <input type="checkbox" name="atuaMatematica" id="atuaMatematica" value="yes" />Matematica
-              <br>
-              <input type="checkbox" name="atuaPortugues" id="atuaPortugues" value="yes" />Português
-              <input type="checkbox" name="atuaQuimica" id="atuaQuimica" value="yes" />Quimica
-              <input type="checkbox" name="atuaRedacao" id="atuaRedacao" value="yes" />Redação
-              <input type="checkbox" name="atuaSociologia" id="atuaSociologia" value="yes" />Sociologia
+              <input type="checkbox" name="areasAtuacao[]" id="biologia" value="Biologia" />Biologia
+              <input type="checkbox" name="areasAtuacao[]" id="espanhol" value="Espanhol" />Espanhol
+	      <br>
+              <input type="checkbox" name="areasAtuacao[]" id="filosofia" value="Filosofia" />Filosofia
+              <input type="checkbox" name="areasAtuacao[]" id="fisica" value="Física" />Física
+	      <br>
+              <input type="checkbox" name="areasAtuacao[]" id="geografia" value="Geografia" />Geografia
+              <input type="checkbox" name="areasAtuacao[]" id="historia" value="História" />História
+	      <br>
+              <input type="checkbox" name="areasAtuacao[]" id="ingles" value="Inglês" />Inglês
+              <input type="checkbox" name="areasAtuacao[]" id="literatura" value="Literatura" />Literatura
+	      <br>
+              <input type="checkbox" name="areasAtuacao[]" id="matematica" value="Matemática" />Matemática
+              <input type="checkbox" name="areasAtuacao[]" id="portugues" value="Português" />Português
+	      <br>
+              <input type="checkbox" name="areasAtuacao[]" id="quimica" value="Química" />Química
+              <input type="checkbox" name="areasAtuacao[]" id="redacao" value="Redação" />Redação
+	      <br>
+              <input type="checkbox" name="areasAtuacao[]" id="sociologia" value="Sociologia" />Sociologia
           </div>
+          @error('areasAtuacao')
+          <span class="invalid-feedback" role="alert">
+            <strong>{{$message}}</strong>
+          </span>
+          @enderror
+	</form>
         <br>
         <input type="submit" value="Cadastrar" />
       </div>

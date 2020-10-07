@@ -89,13 +89,16 @@
                     <a href="{{ url('listar/alunos') }}">Listar Alunos</a>
                     <a href="{{ url('listar/professores') }}">Listar Professores</a>
                     <a href="{{ url('listar/turmas') }}">Listar Turmas</a>
-                    <a href="{{ url('listar/apostilas') }}">Listar Apostilas</a>
                 </div>
 		<br>
                 <div class="links">
+                    <a href="{{ url('listar/apostilas') }}">Listar Apostilas</a>
                     <a href="{{ url('listar/mensagens') }}">Listar Mensagens</a>
                     <a href="{{ url('/cadastrar/apostila') }}">Adicionar Apostila</a>
                     <a href="{{ url('/cadastrar/turma') }}">Adicionar Turma</a>
+                </div>
+		<br>
+                <div class="links">
                     <a href="{{ url('/cadastrar/administrador') }}">Cadastrar Administrador</a>
                     <a href="{{ url('/mensagem/nova') }}">Enviar Mensagem</a>
                 </div>

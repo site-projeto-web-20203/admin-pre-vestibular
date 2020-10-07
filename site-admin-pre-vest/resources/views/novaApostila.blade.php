@@ -2,34 +2,54 @@
 <html lang="{{ app()->getLocale() }}">
   <head>
     <title>Nome do Curso</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <h1>Cadastrar Apostila</h1>
-    <form method="POST" action="{{route('apostila.create')}}">
-
+    <h1 align="center">Nova Apostila</h1>
+    <form method="POST" action="{{url('/cadastrar/apostila')}}">
       @csrf
-      <div class="form-group row">
-        <label for="disciplina" class="col-md-4 col-form-label text-md-right">Disciplina</label>
-        <div class="col-md-8">
-          <input id="disciplina" type="text" class="form-control @error('disciplina') is-invalid @enderror" name="disciplina" value="{{old('disciplina')}}" required autofocus/>
-          @error('disciplina')
-          <span class="invalid-feedback" role="alert">
-            <strong>{{$message}}</strong>
-          </span>
-          @enderror
-        </div>
-        <br>
-        <label for="arq" class="col-md-4 col-form-label text-md-right">Arquivo</label>
-        <div class="col-md-8">
+      <div class="container pt-3">
+	<div class="row">
+          <div class="col">
+            <label for="disciplina" class="col-form-label text-md-right">Disciplina</label><br>
+            <select name="disciplina" id="disciplina">
+              <option value="Biologia">Biologia</option>
+              <option value="Espanhol">Espanhol</option>
+              <option value="Filosofia">Filosofia</option>
+              <option value="Física">Física</option>
+              <option value="Geografia">Geografia</option>
+              <option value="História">História</option>
+              <option value="Inglês">Inglês</option>
+              <option value="Literatura">Literatura</option>
+              <option value="Matemática">Matemática</option>
+              <option value="Português">Português</option>
+              <option value="Química">Química</option>
+              <option value="Redação">Redação</option>
+              <option value="Sociologia">Sociologia</option>
+            </select>
+            @error('disciplina')
+            <span class="invalid-feedback" role="alert">
+              <strong>{{$message}}</strong>
+            </span>
+            @enderror
+          </div>
+          <div class="col">
+            <label for="arq" class="col-form-label text-md-right">Arquivo</label>
             <input type="file" id="arq" name="arq" class="form-control-file @error('arq') is-invalid @enderror">
-          @error('arq')
-          <span class="invalid-feedback" role="alert">
-            <strong>{{$message}}</strong>
-          </span>
-          @enderror
-        </div>
-         <br>
-        <input type="submit" value="Enviar" />
+            @error('arq')
+            <span class="invalid-feedback" role="alert">
+              <strong>{{$message}}</strong>
+            </span>
+            @enderror
+          </div>
+         </div>
+        <br>
+        <input type="submit" value="Enviar"/>
       </div>
     </form>
   </body>

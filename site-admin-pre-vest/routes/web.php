@@ -68,3 +68,4 @@ Route::post('/cadastrar/turma', [CadastrarTurmaController::class, 'cadastrar'])-
 Route::get('/mensagem/nova', [NovaMensagemController::class, 'prepararEnvio'])->name('mensagem.nova');
 
 Route::post('/mensagem/nova', [NovaMensagemController::class, 'enviar'])->name('mensagem.create');
+

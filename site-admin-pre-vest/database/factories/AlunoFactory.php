@@ -27,8 +27,8 @@ class AlunoFactory extends Factory{
     {
         // TODO: Implement definition() method.
         return [
-            'fez_enem' => $this->faker->lexify('???'),
-            'tipo_escola' => $this->faker->lexify('Escola ??????'),
+            'fez_enem' => $this->faker->randomElement(['Sim', 'Não']),
+            'tipo_escola' => $this->faker->randomElement(['Pública', 'Particular']),
             'data_nascimento' => ($this->faker->dateTimeBetween('-100 years', '-13 years'))->format('d/m/Y'),
             'numero' => $this->faker->buildingNumber(),
             'ano_conclusao' => $this->faker->year($max = 'now'),

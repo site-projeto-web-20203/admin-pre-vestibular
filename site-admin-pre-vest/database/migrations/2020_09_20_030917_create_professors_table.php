@@ -23,22 +23,8 @@ class CreateProfessorsTable extends Migration
             $table->string('telefone');
             $table->string('ehVoluntario');
             $table->string('grauInstrucao');
-            $table->boolean('dispoManha')->nullable();
-            $table->boolean('dispoTarde')->nullable();
-            $table->boolean("dispoNoite")->nullable();
-            $table->boolean('atuaBiologia')->nullable();
-            $table->boolean('atuaEspanhol')->nullable();
-            $table->boolean('atuaFilosofia')->nullable();
-            $table->boolean('atuaFisica')->nullable();
-            $table->boolean('atuaGeografia')->nullable();
-            $table->boolean('atuaHistoria')->nullable();
-            $table->boolean('atuaIngles')->nullable();
-            $table->boolean('atuaLiteratura')->nullable();
-            $table->boolean('atuaMatematica')->nullable();
-            $table->boolean('atuaPortugues')->nullable();
-            $table->boolean('atuaQuimica')->nullable();
-            $table->boolean('atuaRedacao')->nullable();
-            $table->boolean('atuaSociologia')->nullable();
+            $table->string('disponibilidade');
+            $table->string('areasAtuacao');
             $table->timestamps();
         });
     }

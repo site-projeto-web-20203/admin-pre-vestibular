@@ -33,10 +33,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-/*Route::get('menu/administrador', function () {
-    return view('menuAdministrador');
-});*/
-
 Route::get('/listar/administradores', [AdministradorController::class, 'listar']);
 
 Route::get('/listar/alunos', [AlunoController::class, 'listar']);
@@ -87,8 +83,8 @@ Route::get('menu/administrador', function () {
 })->name('admin.home');
 #Route::view('/professor', 'listaTurmas');
 Route::get('menu/professor', function(){
-    return view('auth.register');
+    return view('menuProfessor');
 })->name('professor.home');
 Route::get('menu/aluno', function(){
-    return view('auth.register');
+    return view('menuAluno');
 })->name('aluno.home');

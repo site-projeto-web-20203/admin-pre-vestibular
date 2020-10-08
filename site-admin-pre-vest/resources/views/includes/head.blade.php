@@ -20,11 +20,13 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: "Quicksand", serif;
+        font-family: sans-serif;
+        text-transform: uppercase;
         font-size: 16px;
     }
 
     .nav div.navbar a {
+        font-family: "Quicksand", sans-serif;
         display:inline-block;
         color: black;
         text-align: center;

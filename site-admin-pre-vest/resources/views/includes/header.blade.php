@@ -8,7 +8,14 @@
         <a href="{{ url('/cadastrar/aluno') }}">Inscrição do Aluno</a>
         <a href="{{ url('cadastrar/professor') }}">Inscrição do Professor</a>
         <a href="{{ url('listar/apostilas') }}">Apostilas</a>
-        <a href="{{ url('menu/administrador') }}">Entrar</a>
+        @if (Route::has('login'))
+            <!-- lembrar de verificar e alterar p logout -->
+            @auth
+                <a href="{{ url('/') }}">Home</a>
+            @else
+                <a href="{{ url('/login') }}">Entrar</a>
+            @endauth
+        @endif
         <a href="{{ url('logout') }}">Logout</a>
     </div>
 </div>

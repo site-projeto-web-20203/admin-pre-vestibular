@@ -18,15 +18,8 @@ class CadastrarAdministradorController extends Controller
 
     protected $redirectTo = RouteServiceProvider::HOME;
 
-    public function __construct()
-    {
-        $this->middleware('guest');
-        $this->middleware('guest:admin');
-        $this->middleware('guest:professor');
-    }
-
     public function prepararCadastro(){
-        return view("cadastrarAdministrador", ['url' => 'admin']);
+        return view("cadastrarAdministrador");
     }
 
     protected function cadastrar(Request $request){

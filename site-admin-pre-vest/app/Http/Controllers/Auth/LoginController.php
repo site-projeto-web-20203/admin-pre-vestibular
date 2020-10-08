@@ -53,10 +53,10 @@ class LoginController extends Controller
         if(Auth::guard('admin')->attempt($credentials)){
             return redirect()->route('admin.home');
         }
-        if(Auth::guard('professor')->attempt($credentials)){
+        elseif(Auth::guard('professor')->attempt($credentials)){
             return redirect()->route('professor.home');
         }
-        if(Auth::guard('aluno')->attempt($credentials)){
+        elseif(Auth::guard('aluno')->attempt($credentials)){
             return redirect()->route('aluno.home');
         }
         else{
@@ -76,7 +76,7 @@ class LoginController extends Controller
 
         $request->session()->regenerateToken();
 
-        return view('auth.login');
+        return redirect('');
     }
 
 }

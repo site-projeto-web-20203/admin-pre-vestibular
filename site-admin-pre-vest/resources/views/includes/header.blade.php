@@ -16,5 +16,6 @@
                 <a href="{{ url('/login') }}">Entrar</a>
             @endauth
         @endif
+        <a href="{{ url('logout') }}">Logout</a>
     </div>
 </div>

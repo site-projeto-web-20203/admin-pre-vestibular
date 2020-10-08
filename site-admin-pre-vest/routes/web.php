@@ -82,7 +82,6 @@ Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'login
 Route::get('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout']);
 
 Route::view('/home', 'home')->middleware('auth');
-#Route::view('/admin', 'menuAdministrador');
 Route::get('menu/administrador', function () {
     return view('menuAdministrador');
 })->name('admin.home');

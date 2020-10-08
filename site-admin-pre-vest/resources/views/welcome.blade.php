@@ -28,6 +28,9 @@
             <footer class="row">
                 @include('includes.footer')
             </footer>
+            @if($errors->any())
+                <h4>{{$errors->first()}}</h4>
+            @endif
         </div>
     </body>
 </html>

@@ -12,11 +12,7 @@
   <body>
     <div class="card-header"> {{ isset($url) ? ucwords($url) : ""}} {{ __('Cadastrar') }}</div>
     <h1 align="center">Cadastrar Administrador</h1>
-    @isset($url)
-        <form method="POST" action="{{ url("/cadastrar/administrador") }}" aria-label={{ __('Cadastrar') }}">
-    @else
-        <form method="POST" action="{{ url("/cadastrar/administrador") }}" aria-label={{ __('Cadastrar') }}">
-    @endisset
+    <form method="POST" action="{{ url("/cadastrar/administrador") }}" aria-label={{ __('Cadastrar') }}">
       @csrf
       <div class="container pt-3">
 	<div class="row">

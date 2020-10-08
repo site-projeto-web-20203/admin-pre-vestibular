@@ -9,5 +9,6 @@
         <a href="{{ url('cadastrar/professor') }}">Inscrição do Professor</a>
         <a href="{{ url('listar/apostilas') }}">Apostilas</a>
         <a href="{{ url('menu/administrador') }}">Entrar</a>
+        <a href="{{ url('logout') }}">Logout</a>
     </div>
 </div>

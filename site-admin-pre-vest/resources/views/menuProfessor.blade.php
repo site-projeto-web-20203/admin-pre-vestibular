@@ -12,7 +12,7 @@
             <br>
             <h1>Nome do Curso</h1>
             <br>
-            <div class="container pt-3">
+            <div class="container pt-3" align="left">
                 <div class="row">
                     <div class="col">
                         <a href="{{ url('/') }}">Meu Perfil</a><br>

@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
 
 class CreateAdministradorsTable extends Migration
@@ -19,8 +20,10 @@ class CreateAdministradorsTable extends Migration
 			$table->integer('tipo_usuario')->default(3);
 			$table->string('email')->unique();
 			$table->string('nome');
-			$table->string('senha')->default("12345");
+			$table->string('password')->default(Hash::make('12345'));
 			$table->string('telefone');
+			$table->boolean('eh_admin')->default(1);
+			$table->rememberToken()->nullable();
             $table->timestamps();
         });
     }

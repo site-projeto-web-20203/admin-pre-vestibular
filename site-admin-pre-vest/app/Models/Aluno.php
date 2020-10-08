@@ -14,6 +14,9 @@ class Aluno extends Authenticatable
     use HasFactory;
     use Notifiable;
 
+    protected $guard = 'aluno';
+
+
     protected $fillable = ['nome', 'data_nascimento', 'email', 'telefone', 'rua', 'bairro', 'complemento', 'cidade',
                             'numero', 'escola', 'ano_conclusao', 'tipo_escola','fez_enem','nome_responsavel',
                             'telefone_responsavel', 'email_responsavel'];

@@ -12,6 +12,8 @@ class Professor extends Authenticatable
     use HasFactory;
 	use Notifiable;
 
+	protected $guard = 'professor';
+
 	protected $fillable = ['nome', 'email', 'telefone', 'data_nascimento', 'ehVoluntario', 'grauInstrucao', 'disponibilidade', 'areasAtuacao'];
 	public static $rules = [
 	    'nome' => 'required|min:5',
@@ -42,6 +44,8 @@ class Professor extends Authenticatable
         'disponibilidade.*' => 'O campo disponibilidade é obrigatório',
         'areasAtuacao.*' => 'O campo áreas de atuação é obrigatório'
     ];
+
+	protected $hidden = ['senha', 'remember_token'];
 
     public function turmas(){
         return $this->belongsToMany('App\Models\Turma');

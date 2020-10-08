@@ -19,12 +19,14 @@ class CreateProfessorsTable extends Migration
             $table->integer('tipo_usuario')->default(2);
             $table->string('email')->unique();
             $table->string('nome');
-            $table->string('senha')->default("12345");
+            $table->string('password')->default(Hash::make('12345'));
             $table->string('telefone');
             $table->string('ehVoluntario');
             $table->string('grauInstrucao');
             $table->string('disponibilidade');
             $table->string('areasAtuacao');
+            $table->boolean('eh_professor')->default(1);
+            $table->rememberToken()->nullable();
             $table->timestamps();
         });
     }

@@ -1,5 +1,6 @@
 <?php
 
+
 return [
 
     /*
@@ -46,6 +47,20 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'administradors',
+        ],
+
+        'professor' => [
+            'driver' => 'session',
+            'provider' => 'professors',
+        ],
+
+        'aluno' => [
+            'driver' => 'session',
+            'provider' => 'alunos',
+        ],
     ],
 
     /*
@@ -68,7 +83,22 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Models\User::class,
+        ],
+
+        'administradors' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Administrador::class,
+        ],
+
+        'professors' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Professor::class,
+        ],
+
+        'alunos' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Aluno::class,
         ],
 
         // 'users' => [

@@ -54,8 +54,8 @@
                             @enderror
                         </div>
                     </div>
-                    <input type="submit" value="Cadastrar" />
                 </div>
+                <input type="submit" class="btn btn-primary" value="Cadastrar" />
             </form>
             <br>
             <footer class="row">

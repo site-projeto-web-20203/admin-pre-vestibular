@@ -17,4 +17,9 @@ class ProfessorController extends Controller
         $professores = DB::select("SELECT * FROM professors");
         return view('listaProfessores', ['professores' => $professores]);
     }
+
+    public function listarAdmin(){
+        $professores = DB::select("SELECT * FROM professors");
+        return view('listaProfessoresEditarRemover', ['professores' => $professores]);
+    }
 }

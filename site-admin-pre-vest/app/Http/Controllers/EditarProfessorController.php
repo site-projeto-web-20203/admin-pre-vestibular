@@ -9,7 +9,7 @@ use App\Models\Professor;
 
 class EditarProfessorController extends Controller
 {
-    public function prepararAtualizacao(int $id){
+    public function prepararAtualizacao($id){
         $professor = Professor::find($id);
         return view('editarProfessor', ['professor' => $professor]);
     }

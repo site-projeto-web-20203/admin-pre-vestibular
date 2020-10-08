@@ -15,6 +15,7 @@ use App\Http\Controllers\CadastrarProfessorController;
 use App\Http\Controllers\CadastrarTurmaController;
 use App\Http\Controllers\NovaMensagemController;
 use App\Http\Controllers\EditarProfessorController;
+use App\Http\Controllers\RemoverProfessorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +46,8 @@ Route::get('/listar/professores', [ProfessorController::class, 'listar']);
 
 Route::get('/listar/turmas', [TurmaController::class, 'listar']);
 
+Route::get('/admin/listar/professores', [ProfessorController::class, 'listarAdmin']);
+
 Route::get('/cadastrar/administrador', [CadastrarAdministradorController::class, 'prepararCadastro'])->name('administrador.cadastrar');
 
 Route::post('/cadastrar/administrador', [CadastrarAdministradorController::class, 'cadastrar'])->name('administrador.create');
@@ -72,6 +75,10 @@ Route::post('/mensagem/nova', [NovaMensagemController::class, 'enviar'])->name('
 Route::get('/editar/professor/{id}', [EditarProfessorController::class, 'prepararAtualizacao'])->name('professor.editar');
 
 Route::post('/editar/professor/{id}', [EditarProfessorController::class, 'atualizar'])->name('professor.update');
+
+Route::get('/remover/professor/{id}', [RemoverProfessorController::class, 'prepararRemocao'])->name('professor.remover');
+
+Route::post('/remover/professor/{id}', [RemoverProfessorController::class, 'remover'])->name('professor.delete');
 
 #Route::get('/login', [\App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'login']);

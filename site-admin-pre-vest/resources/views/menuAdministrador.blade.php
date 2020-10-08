@@ -12,12 +12,12 @@
             <br>
             <h1>Nome do Curso</h1>
             <br>
-            <div class="container pt-3">
+            <div class="container pt-3" align="left">
                 <div class="row">
                     <div class="col">
                         <a href="{{ url('listar/administradores') }}">Listar Administradores</a><br>
                         <a href="{{ url('listar/alunos') }}">Listar Alunos</a><br>
-                        <a href="{{ url('listar/professores') }}">Listar Professores</a><br>
+                        <a href="{{ url('admin/listar/professores') }}">Listar Professores</a><br>
                         <a href="{{ url('listar/turmas') }}">Listar Turmas</a><br>
                     </div>
                     <div class="col">

@@ -46,8 +46,8 @@
                         </div>
                     </div>
                     <br>
-                    <input type="submit" value="Enviar"/>
                 </div>
+                <input type="submit" class="btn btn-primary" value="Enviar" />
             </form>
             <br>
             <footer class="row">

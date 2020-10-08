@@ -14,6 +14,7 @@ use App\Http\Controllers\NovaApostilaController;
 use App\Http\Controllers\CadastrarProfessorController;
 use App\Http\Controllers\CadastrarTurmaController;
 use App\Http\Controllers\NovaMensagemController;
+use App\Http\Controllers\EditarProfessorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,9 +73,9 @@ Route::get('/mensagem/nova', [NovaMensagemController::class, 'prepararEnvio'])->
 
 Route::post('/mensagem/nova', [NovaMensagemController::class, 'enviar'])->name('mensagem.create');
 
-#Route::get('menu/administrador', [\App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
-#Route::get('/listar/turmas', [\App\Http\Controllers\HomeController::class, 'professorHome'])->name('professor.home')->middleware('is_admin');
+Route::get('/editar/professor/{id}', [EditarProfessorController::class, 'prepararAtualizacao'])->name('professor.editar');
 
+Route::post('/editar/professor/{id}', [EditarProfessorController::class, 'atualizar'])->name('professor.update');
 
 #Route::get('/login', [\App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'login']);

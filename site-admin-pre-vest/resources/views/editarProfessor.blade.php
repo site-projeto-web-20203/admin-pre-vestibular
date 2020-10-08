@@ -10,14 +10,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <h1 align="center">Cadastrar Professor</h1>
-    <form method="POST" action="{{url('/cadastrar/professor')}}">
+    <h1 align="center">Editar Professor</h1>
+    <form method="POST" action="{{url('/editar/professor/'.$professor->id)}}">
       @csrf
       <div class="container pt-3">
 	<div class="row">
           <div class="col">
             <label for="nome" class="col-form-label text-md-right">Nome Completo</label>
-            <input id="nome" type="text" class="form-control @error('nome') is-invalid @enderror" name="nome" value="{{old('nome')}}" required autofocus/>
+            <input id="nome" type="text" value="{{$professor->nome}}" class="form-control @error('nome') is-invalid @enderror" name="nome" required autofocus/>
             @error('nome')
             <span class="invalid-feedback" role="alert">
               <strong>{{$message}}</strong>
@@ -26,7 +26,8 @@
           </div>
           <div class="col">
             <label for="email" class="col-form-label text-md-right">E-mail</label>
-            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{old('email')}}" required autofocus/>
+            <input id="email" type="hidden" name="email" value="{{$professor->email}}"/>
+            <input id="email" type="text" name="aaa" value="{{$professor->email}}" class="form-control @error('email') is-invalid @enderror" readonly/>
             @error('email')
             <span class="invalid-feedback" role="alert">
               <strong>{{$message}}</strong>
@@ -38,7 +39,7 @@
 	<div class="row">
           <div class="col">
             <label for="telefone" class="col-form-label text-md-right">Telefone</label>
-            <input id="telefone" type="text" class="form-control @error('telefone') is-invalid @enderror" name="telefone" value="{{old('telefone')}}" required autofocus/>
+            <input id="telefone" type="text" value="{{$professor->telefone}}" class="form-control @error('telefone') is-invalid @enderror" name="telefone" required autofocus/>
             @error('telefone')
             <span class="invalid-feedback" role="alert">
               <strong>{{$message}}</strong>
@@ -47,7 +48,7 @@
           </div>
           <div class="col">
             <label for="data_nascimento" class="col-form-label text-md-right">Data de Nascimento</label>
-            <input id="data_nascimento" type="date" class="form-control @error('data_nascimento') is-invalid @enderror" name="data_nascimento" value="{{old('data_nascimento')}}" required autofocus/>
+            <input id="data_nascimento" type="date" value="{{$professor->data_nascimento}}" class="form-control @error('data_nascimento') is-invalid @enderror" name="data_nascimento" required autofocus/>
             @error('data_nascimento')
             <span class="invalid-feedback" role="alert">
               <strong>{{$message}}</strong>
@@ -59,7 +60,7 @@
 	<div class="row">
           <div class="col">
             <label for="ehVoluntario">Você é Voluntário?</label><br>
-            <select name="ehVoluntario" id="ehVoluntario">
+            <select name="ehVoluntario" id="ehVoluntario" claass="form-control @error('ehVoluntario') is-invalid @enderror">
               <option value="Sim">Sim</option>
               <option value="Não">Não</option>
             </select>

@@ -3,8 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="26a94090-6685-4bee-b043-1c4433f464c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cadastrarAdministrador.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cadastrarAdministrador.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cadastrarAluno.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cadastrarAluno.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cadastrarProfessor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cadastrarProfessor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cadastrarTurma.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cadastrarTurma.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/editarProfessor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editarProfessor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaAdministradores.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaAdministradores.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaApostilas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaApostilas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaProfessores.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaProfessores.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaProfessoresEditarRemover.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaProfessoresEditarRemover.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaTurmas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaTurmas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menuAdministrador.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menuAdministrador.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menuAluno.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menuAluno.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menuProfessor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menuProfessor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/novaApostila.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/novaApostila.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/novaMensagem.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/novaMensagem.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/removerProfessor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/removerProfessor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +172,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602180674271</updated>
-      <workItem from="1602180675570" duration="10714000" />
+      <workItem from="1602180675570" duration="18819000" />
     </task>
     <servers />
   </component>

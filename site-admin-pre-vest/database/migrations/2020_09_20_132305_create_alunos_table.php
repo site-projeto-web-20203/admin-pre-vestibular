@@ -30,7 +30,9 @@ class CreateAlunosTable extends Migration
 			$table->string('nome');
 			$table->string('nome_responsavel')->nullable();
 			$table->string('rua');
-			$table->string('senha')->default("12345");
+			$table->string('password')->default(Hash::make('12345'));
+            $table->boolean('eh_aluno')->default(1);
+            $table->rememberToken()->nullable();
 			$table->string('telefone');
 			$table->string('telefone_responsavel')->nullable();
             $table->integer('turma_id')->unsigned()->nullable();

@@ -5,6 +5,11 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use App\Models\Administrador;
+use App\Models\Professor;
+use App\Models\Aluno;
+
+
 
 class UserSeeder extends Seeder
 {
@@ -24,7 +29,7 @@ class UserSeeder extends Seeder
 
 		$aluno = User::factory()->create();
 
-		$administrador->roles()->attach($administradorRole);
+		$admin->roles()->attach($administradorRole);
 		$professor->roles()->attach($professorRole);
 		$aluno->roles()->attach($alunoRole);
     }

@@ -10,8 +10,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
   <body>
+    <div class="card-header"> {{ isset($url) ? ucwords($url) : ""}} {{ __('Cadastrar') }}</div>
     <h1 align="center">Cadastrar Administrador</h1>
-    <form method="POST" action="{{url('/cadastrar/administrador')}}">
+    @isset($url)
+        <form method="POST" action="{{ url("/cadastrar/administrador") }}" aria-label={{ __('Cadastrar') }}">
+    @else
+        <form method="POST" action="{{ url("/cadastrar/administrador") }}" aria-label={{ __('Cadastrar') }}">
+    @endisset
       @csrf
       <div class="container pt-3">
 	<div class="row">
@@ -56,7 +61,7 @@
           </div>
         </div>
         <br>
-        <input type="submit" value="Cadastrar" />
+          <input type="submit" value="Cadastrar" />
       </div>
     </form>
   </body>

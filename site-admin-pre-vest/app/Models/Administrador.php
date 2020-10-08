@@ -7,11 +7,15 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Hash;
+
 
 class Administrador extends Authenticatable
 {
     use HasFactory;
     use Notifiable;
+
+    protected $guard = 'admin';
 
     protected $fillable = ['nome', 'data_nascimento', 'email', 'telefone'];
 
@@ -24,4 +28,6 @@ class Administrador extends Authenticatable
                                 'data_nascimento.*' => 'O campo Data de nascimento é obrigatório e deve ser preenchido no formato XX/XX/XXXX',
                                 'email.*' => 'O campo email é obrigatório e não pode ser um email já cadastrado',
                                 'telefone.*' => 'O campo telefone é obrigatiorio e deve ser preenchido no formato DDXXXXXXXXX'];
+
+    protected $hidden = ['password', 'remember_token'];
 }

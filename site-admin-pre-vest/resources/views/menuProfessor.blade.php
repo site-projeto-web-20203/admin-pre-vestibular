@@ -15,7 +15,7 @@
             <div class="container pt-3">
                 <div class="row">
                     <div class="col">
-                        <a href="{{ url('listar/administradores') }}">Listar Administradores</a><br>
+                        <a href="{{ url('/') }}">Meu Perfil</a><br>
                         <a href="{{ url('listar/alunos') }}">Listar Alunos</a><br>
                         <a href="{{ url('listar/professores') }}">Listar Professores</a><br>
                         <a href="{{ url('listar/turmas') }}">Listar Turmas</a><br>
@@ -24,11 +24,6 @@
                         <a href="{{ url('listar/apostilas') }}">Listar Apostilas</a><br>
                         <a href="{{ url('listar/mensagens') }}">Listar Mensagens</a><br>
                         <a href="{{ url('/cadastrar/apostila') }}">Adicionar Apostila</a><br>
-                        <a href="{{ url('/cadastrar/turma') }}">Adicionar Turma</a><br>
-                    </div>
-                    <div class="col">
-                        <a href="{{ url('/cadastrar/administrador') }}">Cadastrar Administrador</a><br>
-                        <a href="{{ url('/mensagem/nova') }}">Enviar Mensagem</a><br>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdministradorController;
 use App\Http\Controllers\AlunoController;
@@ -29,9 +30,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('menu/administrador', function () {
+Auth::routes();
+
+/*Route::get('menu/administrador', function () {
     return view('menuAdministrador');
-});
+});*/
 
 Route::get('/listar/administradores', [AdministradorController::class, 'listar']);
 
@@ -69,3 +72,23 @@ Route::get('/mensagem/nova', [NovaMensagemController::class, 'prepararEnvio'])->
 
 Route::post('/mensagem/nova', [NovaMensagemController::class, 'enviar'])->name('mensagem.create');
 
+#Route::get('menu/administrador', [\App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+#Route::get('/listar/turmas', [\App\Http\Controllers\HomeController::class, 'professorHome'])->name('professor.home')->middleware('is_admin');
+
+
+#Route::get('/login', [\App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'login']);
+Route::get('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout']);
+
+Route::view('/home', 'home')->middleware('auth');
+#Route::view('/admin', 'menuAdministrador');
+Route::get('menu/administrador', function () {
+    return view('menuAdministrador');
+})->name('admin.home');
+#Route::view('/professor', 'listaTurmas');
+Route::get('menu/professor', function(){
+    return view('auth.register');
+})->name('professor.home');
+Route::get('menu/aluno', function(){
+    return view('auth.register');
+})->name('aluno.home');

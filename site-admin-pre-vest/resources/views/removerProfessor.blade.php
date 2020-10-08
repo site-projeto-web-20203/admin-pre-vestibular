@@ -59,8 +59,8 @@
                         </div>
                     </div>
                     <br>
+                    <input type="submit" class="btn btn-primary" value="Remover"/>
                 </div>
-                <input type="submit" class="btn btn-primary" value="Remover" />
             </form>
             <br>
             <footer class="row">

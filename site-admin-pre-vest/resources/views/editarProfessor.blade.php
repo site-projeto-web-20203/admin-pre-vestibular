@@ -145,8 +145,8 @@
                         </div>
                     </form>
                     <br>
+                    <input type="submit" class="btn btn-primary" value="Editar" align="center" />
                 </div>
-                <input type="submit" class="btn btn-primary" value="Editar" />
             </form>
             <br>
             <footer class="row">

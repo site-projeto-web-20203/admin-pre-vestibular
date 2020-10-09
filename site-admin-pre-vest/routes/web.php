@@ -100,19 +100,32 @@ Route::post('/remover/administrador/{id}', [RemoverAdministradorController::clas
 
 #Route::get('/login', [\App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'login']);
+
 Route::get('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout']);
 
-Route::view('/home', 'home')->middleware('auth');
-
 Route::get('menu/administrador', function () {
-    return view('menuAdministrador');
+    if(Auth::guard('admin')->check()) {
+        return view('menuAdministrador');
+    }
+    else{
+        return view('permissaoNegada');
+    }
 })->name('admin.home');
-#Route::view('/professor', 'listaTurmas');
 
 Route::get('menu/professor', function(){
-    return view('menuProfessor')->with('id', Auth::guard('professor')->user()->id);
+    if(Auth::guard('professor')->check()) {
+        return view('menuProfessor')->with('id', Auth::guard('professor')->user()->id);
+    }
+    else{
+        return view('permissaoNegada');
+    }
 })->name('professor.home');
 
 Route::get('menu/aluno', function(){
-    return view('menuAluno');
+    if(Auth::guard('aluno')->check()) {
+        return view('menuAluno')->with('id', Auth::guard('aluno')->user()->id);;
+    }
+    else{
+        return view('permissaoNegada');
+    }
 })->name('aluno.home');

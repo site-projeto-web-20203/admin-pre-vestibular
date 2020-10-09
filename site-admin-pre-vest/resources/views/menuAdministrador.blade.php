@@ -9,7 +9,6 @@
             <header class="row">
                 @include('includes.header')
             </header>
-            <br>
             <div class="card" align="center">
                 <h3 align="center">Menu - Administrador</h3>
                 <div class="container pt-3">

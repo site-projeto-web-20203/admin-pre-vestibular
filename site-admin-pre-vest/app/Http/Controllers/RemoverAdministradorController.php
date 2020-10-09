@@ -4,17 +4,28 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Administrador;
+use Illuminate\Support\Facades\Auth;
 
 class RemoverAdministradorController extends Controller
 {
     public function prepararRemocao($id){
-        $administrador = Administrador::find($id);
-        return view('removerAdministrador', ['administrador' => $administrador]);
+        if(Auth::guard('admin')->check()) {
+            $administrador = Administrador::find($id);
+            return view('removerAdministrador', ['administrador' => $administrador]);
+        }
+        else{
+            return view('permissaoNegada');
+        }
     }
 
     public function remover($id){
-        $administrador = Administrador::find($id);
-        $administrador->delete();
-        return "Administrador removido";
+        if(Auth::guard('admin')->check()) {
+            $administrador = Administrador::find($id);
+            $administrador->delete();
+            return "Administrador removido";
+        }
+        else{
+            return view('permissaoNegada');
+        }
     }
 }

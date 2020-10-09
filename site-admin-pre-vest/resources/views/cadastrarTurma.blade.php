@@ -8,7 +8,6 @@
             <header class="row">
                 @include('includes.header')
             </header>
-            <br>
             <form method="POST" action="{{url('/cadastrar/turma')}}">
                 @csrf
                 <div class="card" align="center">

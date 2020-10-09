@@ -8,7 +8,6 @@
             <header class="row">
                 @include('includes.header')
             </header>
-            <br>
             <h1 align="center">Mensagens Recebidas</h1>
             <br>
             <div class="container pt-3">

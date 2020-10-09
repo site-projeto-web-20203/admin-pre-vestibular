@@ -23,6 +23,55 @@
         font-family: sans-serif;
         text-transform: uppercase;
         font-size: 16px;
+        background-image: url("https://img.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?size=626&ext=jpg");
+    }
+
+    .card {
+        padding: 35px;
+        border: none;
+        background: rgba(94, 94, 94, 0.6);
+        font-family: sans-serif;
+        font-size: 16px;
+    }
+
+    .btn {
+        background-color: #000058;
+        border: 2px solid transparent;
+        color: white;
+        text-align: center;
+        width: 150px;
+        height: 30px
+        font-size: 18px;
+    }
+
+    .btn:hover {
+        background-color: #000021;
+        border: 2px solid transparent;
+        color: white;
+        text-align: center;
+        width: 150px;
+        height: 30px
+        font-size: 18px;
+    }
+
+    .btn2 {
+        background-color: #000058;
+        border: 2px solid transparent;
+        color: white;
+        text-align: center;
+        width: 250px;
+        height: 30px
+        font-size: 18px;
+    }
+
+    .btn2:hover {
+        background-color: #000021;
+        border: 2px solid transparent;
+        color: white;
+        text-align: center;
+        width: 250px;
+        height: 30px
+        font-size: 18px;
     }
 
     .nav div.navbar a {

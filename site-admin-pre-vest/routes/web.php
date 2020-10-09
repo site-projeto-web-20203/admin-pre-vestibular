@@ -84,6 +84,8 @@ Route::get('/editar/administrador/{id}', [EditAdministradorController::class, 'p
 
 Route::post('/editar/administrador/{id}', [EditAdministradorController::class, 'atualizar'])->name('administrador.update');
 
+Route::get('/visualizar/professor/{id}', [ProfessorController::class, 'visualizar'])->name('professor.visualizar');
+
 Route::get('/remover/professor/{id}', [RemoverProfessorController::class, 'prepararRemocao'])->name('professor.remover');
 
 Route::post('/remover/professor/{id}', [RemoverProfessorController::class, 'remover'])->name('professor.delete');
@@ -97,13 +99,16 @@ Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'login
 Route::get('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout']);
 
 Route::view('/home', 'home')->middleware('auth');
+
 Route::get('menu/administrador', function () {
     return view('menuAdministrador');
 })->name('admin.home');
 #Route::view('/professor', 'listaTurmas');
+
 Route::get('menu/professor', function(){
-    return view('menuProfessor');
+    return view('menuProfessor')->with('id', Auth::guard('professor')->user()->id);
 })->name('professor.home');
+
 Route::get('menu/aluno', function(){
     return view('menuAluno');
 })->name('aluno.home');

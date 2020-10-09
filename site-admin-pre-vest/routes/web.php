@@ -90,6 +90,8 @@ Route::get('/visualizar/aluno/{id}', [AlunoController::class, 'visualizar'])->na
 
 Route::get('/visualizar/professor/{id}', [ProfessorController::class, 'visualizar'])->name('professor.visualizar');
 
+Route::get('/visualizar/administrador/{id}', [AdministradorController::class, 'visualizar'])->name('administrador.visualizar');
+
 Route::get('/remover/professor/{id}', [RemoverProfessorController::class, 'prepararRemocao'])->name('professor.remover');
 
 Route::post('/remover/professor/{id}', [RemoverProfessorController::class, 'remover'])->name('professor.delete');
@@ -105,7 +107,7 @@ Route::get('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logou
 
 Route::get('menu/administrador', function () {
     if(Auth::guard('admin')->check()) {
-        return view('menuAdministrador');
+        return view('menuAdministrador')->with('id', Auth::guard('admin')->user()->id);
     }
     else{
         return view('permissaoNegada');

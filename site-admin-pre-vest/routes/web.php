@@ -86,9 +86,11 @@ Route::get('/editar/administrador/{id}', [EditAdministradorController::class, 'p
 
 Route::post('/editar/administrador/{id}', [EditAdministradorController::class, 'atualizar'])->name('administrador.update');
 
-Route::get('/visualizar/aluno/{id}', [AlunoController::class, 'visualizar'])->name('aluno.visualizar');
+Route::get('/admin/visualizar/aluno/{id}', [AlunoController::class, 'visualizar'])->name('aluno.visualizar')->middleware('auth:admin');
 
-Route::get('/visualizar/professor/{id}', [ProfessorController::class, 'visualizar'])->name('professor.visualizar');
+Route::get('/admin/visualizar/professor/{id}', [ProfessorController::class, 'visualizar'])->name('professor.visualizar')->middleware('auth:admin');
+
+#Route::get('/visualizar/administrador/{id}', [AdministradorController::class, 'visualizar'])->name('administrador.visualizar');
 
 Route::get('/remover/professor/{id}', [RemoverProfessorController::class, 'prepararRemocao'])->name('professor.remover');
 
@@ -105,7 +107,7 @@ Route::get('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logou
 
 Route::get('menu/administrador', function () {
     if(Auth::guard('admin')->check()) {
-        return view('menuAdministrador');
+        return view('menuAdministrador')->with('id', Auth::guard('admin')->user()->id);
     }
     else{
         return view('permissaoNegada');
@@ -129,3 +131,30 @@ Route::get('menu/aluno', function(){
         return view('permissaoNegada');
     }
 })->name('aluno.home');
+
+Route::get('/visualizar/aluno/{aluno}',  function(){
+    if(Auth::guard('aluno')->check()){
+        return view('visualizarAluno')->with('aluno', Auth::guard('aluno')->user());
+    }
+    else{
+        return view('permissaoNegada');
+    }
+});
+
+Route::get('/visualizar/professor/{professor}',  function(){
+    if(Auth::guard('professor')->check()){
+        return view('visualizarProfessor')->with('professor', Auth::guard('professor')->user());
+    }
+    else{
+        return view('permissaoNegada');
+    }
+});
+
+Route::get('/visualizar/administrador/{administrador}',  function(){
+    if(Auth::guard('admin')->check()){
+        return view('visualizarAdministrador')->with('administrador', Auth::guard('admin')->user());
+    }
+    else{
+        return view('permissaoNegada');
+    }
+});

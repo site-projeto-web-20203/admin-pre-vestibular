@@ -92,7 +92,7 @@
                                         <a href="{{url('/')}}" class="btn btn-primary">Remover</a>
                                     </div>
                                     <div class="col">
-                                        <a href="{{url('/visualizar/aluno/'.$aluno->id)}}" class="btn btn-primary">Visualizar</a>
+                                        <a href="{{url('/admin/visualizar/aluno/'.$aluno->id)}}" class="btn btn-primary">Visualizar</a>
                                     </div>
                                 </div>
                                 <br><br>

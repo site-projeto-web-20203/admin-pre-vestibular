@@ -28,4 +28,9 @@ class AdministradorController extends Controller
             return view('permissaoNegada');
         }
     }
+
+    public function visualizar($id){
+        $administrador = Administrador::find($id);
+        return view('visualizarAdministrador', ['administrador' => $administrador]);
+    }
 }

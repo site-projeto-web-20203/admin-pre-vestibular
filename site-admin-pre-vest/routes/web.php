@@ -50,6 +50,8 @@ Route::get('/listar/turmas', [TurmaController::class, 'listar']);
 
 Route::get('/admin/listar/professores', [ProfessorController::class, 'listarAdmin']);
 
+Route::get('/admin/listar/alunos', [AlunoController::class, 'listarAdmin']);
+
 Route::get('/admin/listar/administradores', [AdministradorController::class, 'listarAdmins']);
 
 Route::get('/cadastrar/administrador', [CadastrarAdministradorController::class, 'prepararCadastro'])->name('administrador.cadastrar');
@@ -83,6 +85,8 @@ Route::post('/editar/professor/{id}', [EditarProfessorController::class, 'atuali
 Route::get('/editar/administrador/{id}', [EditAdministradorController::class, 'prepararAtualizacao'])->name('administrador.editar');
 
 Route::post('/editar/administrador/{id}', [EditAdministradorController::class, 'atualizar'])->name('administrador.update');
+
+Route::get('/visualizar/aluno/{id}', [AlunoController::class, 'visualizar'])->name('aluno.visualizar');
 
 Route::get('/visualizar/professor/{id}', [ProfessorController::class, 'visualizar'])->name('professor.visualizar');
 

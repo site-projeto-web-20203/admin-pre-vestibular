@@ -84,6 +84,17 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                <div class="row">
+                                    <div class="col">
+                                        <a href="{{url('/')}}" class="btn btn-primary">Editar</a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="{{url('/')}}" class="btn btn-primary">Remover</a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="{{url('/visualizar/aluno/'.$aluno->id)}}" class="btn btn-primary">Visualizar</a>
+                                    </div>
+                                </div>
                                 <br><br>
                             @endforeach
                         </div>

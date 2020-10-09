@@ -20,7 +20,6 @@
                                         <th>Nome Completo</th>
                                         <th>E-mail</th>
                                         <th>Telefone</th>
-                                        <th>Data de Nascimento</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -29,7 +28,6 @@
                                             <td>{{$administrador->nome}}</td>
                                             <td>{{$administrador->email}}</td>
                                             <td>{{$administrador->telefone}}</td>
-                                            <td>{{$administrador->data_nascimento}}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>

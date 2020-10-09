@@ -61,6 +61,10 @@
                     </div>
                 </div>
             </form>
+            <br>
+            <footer class="row">
+                @include('includes.footer')
+            </footer>
         </div>
     </body>
 </html>

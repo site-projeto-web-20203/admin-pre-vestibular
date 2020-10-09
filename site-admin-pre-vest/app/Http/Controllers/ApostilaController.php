@@ -8,11 +8,7 @@ use DB;
 
 class ApostilaController extends Controller
 {
-
-	public static function criar(){
-
-	}
-
+    //td mundo pode ver as apostilas
     public function listar(){
         $apostilas = DB::select("SELECT * FROM apostilas");
         return view('listaApostilas', ['apostilas' => $apostilas]);

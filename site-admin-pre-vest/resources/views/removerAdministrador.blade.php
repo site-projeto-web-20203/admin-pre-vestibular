@@ -9,7 +9,6 @@
             <header class="row">
                 @include('includes.header')
             </header>
-            <br>
             <form method="POST" action="{{url('/remover/administrador/'.$administrador->id)}}">
                 @csrf
                 <div class="card" align="center">

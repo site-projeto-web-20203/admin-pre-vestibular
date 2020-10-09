@@ -205,22 +205,5 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="617" y="354" width="742" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602198222877">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="617" y="354" width="742" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1602198222877" />
-    <state x="631" y="179" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602199912335">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="416" y="126" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.684@0.27.1366.684" timestamp="1602187562944" />
-    <state x="631" y="179" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1602199912335" />
-    <state x="652" y="272" width="785" height="561" key="NewPhpClassDialog" timestamp="1602200325028">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="652" y="272" width="785" height="561" key="NewPhpClassDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1602200325028" />
-    <state x="657" y="253" key="run.anything.popup" timestamp="1602200045987">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="657" y="253" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1602200045987" />
   </component>
 </project>

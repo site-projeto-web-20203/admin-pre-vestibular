@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Professor;
 
+//td mundo pode cadastrar professores
 class CadastrarProfessorController extends Controller
 {
     public function prepararCadastro(){

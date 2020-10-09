@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Mensagem;
 
+//td mundo pode enviar msg
 class NovaMensagemController extends Controller
 {
     public function prepararEnvio(){

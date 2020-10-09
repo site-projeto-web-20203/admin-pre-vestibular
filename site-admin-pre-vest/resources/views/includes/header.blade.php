@@ -1,9 +1,6 @@
-<div class="nav">
-    <div class="logo">
-        <a href="/">NOME DO CURSO</a>
-    </div>
-    <br>
-    <div class="navbar">
+<div class="navbar navbar-wrapper">
+    <div class="container-fluid">
+        <a href="/">Logo</a>
         <a class="active" href="{{ url('/') }}">Inicio</a>
         <a href="{{ url('/cadastrar/aluno') }}">Inscrição do Aluno</a>
         <a href="{{ url('cadastrar/professor') }}">Inscrição do Professor</a>

@@ -12,4 +12,9 @@ class AdministradorController extends Controller
         $administradores = DB::select("SELECT * FROM administradors");
         return view('listaAdministradores', ['administradores' => $administradores]);
     }
+
+    public function listarAdmins(){
+        $administradores = DB::select("SELECT * FROM administradors");
+        return view('listaAdministradoresEditarRemover', ['administradores' => $administradores]);
+    }
 }

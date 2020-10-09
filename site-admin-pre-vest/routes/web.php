@@ -16,6 +16,8 @@ use App\Http\Controllers\CadastrarTurmaController;
 use App\Http\Controllers\NovaMensagemController;
 use App\Http\Controllers\EditarProfessorController;
 use App\Http\Controllers\RemoverProfessorController;
+use App\Http\Controllers\EditAdministradorController;
+use App\Http\Controllers\RemoverAdministradorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +50,8 @@ Route::get('/listar/turmas', [TurmaController::class, 'listar']);
 
 Route::get('/admin/listar/professores', [ProfessorController::class, 'listarAdmin']);
 
+Route::get('/admin/listar/administradores', [AdministradorController::class, 'listarAdmins']);
+
 Route::get('/cadastrar/administrador', [CadastrarAdministradorController::class, 'prepararCadastro'])->name('administrador.cadastrar');
 
 Route::post('/cadastrar/administrador', [CadastrarAdministradorController::class, 'cadastrar'])->name('administrador.create');
@@ -76,11 +80,19 @@ Route::get('/editar/professor/{id}', [EditarProfessorController::class, 'prepara
 
 Route::post('/editar/professor/{id}', [EditarProfessorController::class, 'atualizar'])->name('professor.update');
 
+Route::get('/editar/administrador/{id}', [EditAdministradorController::class, 'prepararAtualizacao'])->name('administrador.editar');
+
+Route::post('/editar/administrador/{id}', [EditAdministradorController::class, 'atualizar'])->name('administrador.update');
+
 Route::get('/visualizar/professor/{id}', [ProfessorController::class, 'visualizar'])->name('professor.visualizar');
 
 Route::get('/remover/professor/{id}', [RemoverProfessorController::class, 'prepararRemocao'])->name('professor.remover');
 
 Route::post('/remover/professor/{id}', [RemoverProfessorController::class, 'remover'])->name('professor.delete');
+
+Route::get('/remover/administrador/{id}', [RemoverAdministradorController::class, 'prepararRemocao'])->name('administrador.remover');
+
+Route::post('/remover/administrador/{id}', [RemoverAdministradorController::class, 'remover'])->name('administrador.delete');
 
 #Route::get('/login', [\App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'login']);

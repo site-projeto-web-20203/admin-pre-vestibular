@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Aluno;
 
+//td mundo pode cadastrar alunos
 class CadastrarAlunoController extends Controller
 {
     public function prepararCadastro(){

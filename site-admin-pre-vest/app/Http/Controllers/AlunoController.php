@@ -12,4 +12,14 @@ class AlunoController extends Controller
         $alunos = DB::select("SELECT * FROM alunos");
         return view('listaAlunos', ['alunos' => $alunos]);
     }
+
+    public function listarAdmin(){
+        $alunos = DB::select("SELECT * FROM alunos");
+        return view('listaAlunosEditarRemover', ['alunos' => $alunos]);
+    }
+
+    public function visualizar($id){
+        $aluno = Aluno::find($id);
+        return view('visualizarAluno', ['aluno' => $aluno]);
+    }
 }

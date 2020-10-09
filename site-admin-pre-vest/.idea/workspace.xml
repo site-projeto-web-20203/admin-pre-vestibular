@@ -21,6 +21,17 @@
   <component name="ChangeListManager">
     <list default="true" id="26a94090-6685-4bee-b043-1c4433f464c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AlunoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlunoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/editarAdministrador.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editarAdministrador.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaAdministradores.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaAdministradores.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaAdministradoresEditarRemover.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaAdministradoresEditarRemover.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaAlunos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaAlunos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menuAdministrador.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menuAdministrador.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menuProfessor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menuProfessor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/removerAdministrador.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/removerAdministrador.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/removerProfessor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/removerProfessor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,9 +202,9 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="416" y="126" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602187562944">
+    <state x="416" y="126" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602208418877">
       <screen x="0" y="27" width="1366" height="684" />
     </state>
-    <state x="416" y="126" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.684@0.27.1366.684" timestamp="1602187562944" />
+    <state x="416" y="126" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.684@0.27.1366.684" timestamp="1602208418877" />
   </component>
 </project>

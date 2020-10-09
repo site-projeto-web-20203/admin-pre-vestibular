@@ -18,6 +18,7 @@
                             <a href="{{ url('/visualizar/professor/'.$id) }}" class="btn2 btn">Meu Perfil</a><br><br>
                             <a href="{{ url('listar/alunos') }}" class="btn2 btn">Listar Alunos</a><br><br>
                             <a href="{{ url('listar/professores') }}" class="btn2 btn">Listar Professores</a><br><br>
+                            <a href="{{ url('listar/administradores') }}" class="btn2 btn">Listar Administradores</a><br><br>
                         </div>
                         <div class="col">
                             <a href="{{ url('listar/turmas') }}" class="btn2 btn">Listar Turmas</a><br><br>

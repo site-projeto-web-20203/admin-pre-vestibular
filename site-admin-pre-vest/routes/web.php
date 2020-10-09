@@ -86,9 +86,9 @@ Route::get('/editar/administrador/{id}', [EditAdministradorController::class, 'p
 
 Route::post('/editar/administrador/{id}', [EditAdministradorController::class, 'atualizar'])->name('administrador.update');
 
-#Route::get('/visualizar/aluno/{id}', [AlunoController::class, 'visualizar'])->name('aluno.visualizar');
+Route::get('/admin/visualizar/aluno/{id}', [AlunoController::class, 'visualizar'])->name('aluno.visualizar')->middleware('auth:admin');
 
-#Route::get('/visualizar/professor/{id}', [ProfessorController::class, 'visualizar'])->name('professor.visualizar');
+Route::get('/admin/visualizar/professor/{id}', [ProfessorController::class, 'visualizar'])->name('professor.visualizar')->middleware('auth:admin');
 
 #Route::get('/visualizar/administrador/{id}', [AdministradorController::class, 'visualizar'])->name('administrador.visualizar');
 

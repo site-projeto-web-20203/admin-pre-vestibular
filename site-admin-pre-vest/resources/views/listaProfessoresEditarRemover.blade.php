@@ -56,6 +56,9 @@
                                     <div class="col">
                                         <a href="{{url('/remover/professor/'.$professor->id)}}" class="btn btn-primary">Remover</a>
                                     </div>
+                                    <div class="col">
+                                        <a href="{{url('/visualizar/professor/'.$professor->id)}}" class="btn btn-primary">Visualizar</a>
+                                    </div>
                                 </div>
                                 <br><br>
                             @endforeach

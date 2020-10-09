@@ -11,4 +11,12 @@ class AdministradorValidator{
         }
         return $validator;
     }
+
+    public static function validateEditar($data){
+        $validator = \Validator::make($data, \App\Models\Administrador::$rulesEditar, \App\Models\Administrador::$messages);
+        if(!$validator->errors()->isEmpty()){
+            throw new ValidationException($validator, "Erro na validação do Administrador");
+        }
+        return $validator;
+    }
 }

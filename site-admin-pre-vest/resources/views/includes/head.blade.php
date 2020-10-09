@@ -23,7 +23,7 @@
         font-family: sans-serif;
         text-transform: uppercase;
         font-size: 16px;
-        background-image: url("https://img.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg?size=626&ext=jpg");
+        background-image: url("https://d26lpennugtm8s.cloudfront.net/stores/969/237/products/seamless-1-21-2bd061015a135fc1fe15718483955575-640-0.jpg");
     }
 
     .card {
@@ -38,6 +38,7 @@
         background-color: #000058;
         border: 2px solid transparent;
         color: white;
+        text-transform: none;
         text-align: center;
         width: 150px;
         height: auto;
@@ -48,6 +49,7 @@
         background-color: #000021;
         border: 2px solid transparent;
         color: white;
+        text-transform: none;
         text-align: center;
         width: 150px;
         height: auto;
@@ -58,6 +60,7 @@
         background-color: #000058;
         border: 2px solid transparent;
         color: white;
+        text-transform: none;
         text-align: center;
         width: 250px;
         height: auto;
@@ -68,6 +71,7 @@
         background-color: #000021;
         border: 2px solid transparent;
         color: white;
+        text-transform: none;
         text-align: center;
         width: 250px;
         height: auto;

@@ -11,6 +11,8 @@
             <div class="card" align="center">
                 <div class="container pt-3">
                     <a>Você não tem permissão para acessar essa página!</a>
+                    <br><br>
+                    <a href="{{ url('/') }}" class="btn btn">Voltar</a><br><br>
                 </div>
             </div>
             <br>

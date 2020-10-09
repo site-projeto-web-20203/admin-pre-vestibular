@@ -9,6 +9,7 @@ use App\Models\Professor;
 
 class EditarProfessorController extends Controller
 {
+    //falta fazer, tem que permitir so o professor com esse id nas 2 funcoes
     public function prepararAtualizacao($id){
         $professor = Professor::find($id);
         return view('editarProfessor', ['professor' => $professor]);

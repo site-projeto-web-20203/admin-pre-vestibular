@@ -20,26 +20,4 @@ class HomeController extends Controller
             return $next($request);
     });
     }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function index()
-    {
-        return view('welcome');
-    }
-
-    public function adminHome(){
-        return view('adminHome');
-    }
-
-    public function professorHome(){
-        return view('professorHome');
-    }
-
-    public function alunoHome(){
-        return view('alunoHome');
-    }
 }

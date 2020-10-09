@@ -40,7 +40,7 @@
         color: white;
         text-align: center;
         width: 150px;
-        height: 30px
+        height: auto;
         font-size: 18px;
     }
 
@@ -50,7 +50,7 @@
         color: white;
         text-align: center;
         width: 150px;
-        height: 30px
+        height: auto;
         font-size: 18px;
     }
 
@@ -60,7 +60,7 @@
         color: white;
         text-align: center;
         width: 250px;
-        height: 30px
+        height: auto;
         font-size: 18px;
     }
 
@@ -70,37 +70,33 @@
         color: white;
         text-align: center;
         width: 250px;
-        height: 30px
+        height: auto;
         font-size: 18px;
     }
 
-    .nav div.navbar a {
+    .navbar {
+        margin: auto;
+        height: auto;
+        padding: 12px;
+        font-size: 20px;
+    }
+
+    .navbar a {
         font-family: "Quicksand", sans-serif;
         display:inline-block;
         color: black;
         text-align: center;
         text-transform: uppercase;
-        padding: 12px;
+        padding: 20px;
         font-size: 18px;
+        margin: 0;
         line-height: 80px;
         width: auto;
         height: auto;
     }
 
-    .nav div.logo a {
-        display:inline-block;
-        margin: 0 auto;
-        text-align: center;
-        width: 100%;
-        color: black;
-        text-transform: uppercase;
-        font-size: 23px;
-        padding: 12px;
-        height: auto;
-    }
-
-    .nav div.logo a:hover {
-        color: #e60000;
+    .navbar a:hover {
+        color: #000079;
     }
 
     .nav div.main_list ul {

@@ -31,7 +31,7 @@
                                             <td>{{$aluno->nome}}</td>
                                             <td>{{$aluno->email}}</td>
                                             <td>{{$aluno->telefone}}</td>
-                                            <td>{{$aluno->data_nascimento}}</td>
+                                            <td>{{Carbon\Carbon::parse($aluno->data_nascimento)->format('d/m/Y')}}</td>
                                         </tr>
                                     </tbody>
                                     <thead>
@@ -46,11 +46,7 @@
                                         <tr>
                                             <td>{{$aluno->fez_enem}}</td>
                                             <td>{{$aluno->escola}}</td>
-                                            <td>
-                                                @if($aluno->tipo_escola == true){{'Pública'}}
-                                                @else{{'Particular'}}
-                                                @endif
-                                            </td>
+                                            <td>{{$aluno->tipo_escola}}</td>                                            </td>
                                             <td>{{$aluno->ano_conclusao}}</td>
                                         </tr>
                                     </tbody>

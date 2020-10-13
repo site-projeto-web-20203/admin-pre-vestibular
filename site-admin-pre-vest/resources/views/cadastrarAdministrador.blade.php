@@ -36,6 +36,7 @@
                                 @enderror
                             </div>
                         </div>
+                        <br>
                         <div class="row">
                             <div class="col">
                                 <label for="telefone" class="col-form-label text-md-right required">Telefone</label>

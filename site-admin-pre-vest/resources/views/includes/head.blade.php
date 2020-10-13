@@ -143,10 +143,35 @@
         color: #000058;
     }
 
-    /* Add a hover effect if you want */
     .fa:hover {
         background: #000058;
         color: white;
+    }
+
+    table{
+        text-transform: none;
+    }
+
+    table > thead {
+        text-transform: uppercase;
+    }
+
+    tr, th {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid black;
+    }
+
+    .table-bordered > thead > tr > th{
+        border:1px solid black;
+    }
+
+    .table-bordered > tbody > tr > td{
+        border:1px solid black;
+    }
+
+    .table-bordered > tfoot > tr > td{
+        border:1px solid black;
     }
 
     .nav div.main_list ul {

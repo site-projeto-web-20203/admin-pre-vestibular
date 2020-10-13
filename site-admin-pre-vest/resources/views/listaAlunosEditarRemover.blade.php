@@ -31,27 +31,7 @@
                                             <td>{{$aluno->nome}}</td>
                                             <td>{{$aluno->email}}</td>
                                             <td>{{$aluno->telefone}}</td>
-                                            <td>{{$aluno->data_nascimento}}</td>
-                                        </tr>
-                                    </tbody>
-                                    <thead>
-                                        <tr>
-                                            <th>Já Fez ENEM?</th>
-                                            <th>Nome da Escola</th>
-                                            <th>Tipo de Escola</th>
-                                            <th>Ano de Conclusão do EM</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>{{$aluno->fez_enem}}</td>
-                                            <td>{{$aluno->escola}}</td>
-                                            <td>
-                                                @if($aluno->tipo_escola == true){{'Pública'}}
-                                                @else{{'Particular'}}
-                                                @endif
-                                            </td>
-                                            <td>{{$aluno->ano_conclusao}}</td>
+                                            <td>{{Carbon\Carbon::parse($aluno->data_nascimento)->format('d/m/Y')}}</td>
                                         </tr>
                                     </tbody>
                                     <thead>
@@ -68,22 +48,6 @@
                                             <td>{{$aluno->email_responsavel}}</td>
                                             <td>{{$aluno->telefone_responsavel}}</td>
                                             <td>{{$aluno->cidade}}</td>
-                                        </tr>
-                                    </tbody>
-                                    <thead>
-                                        <tr>
-                                            <th>Bairro</th>
-                                            <th>Rua</th>
-                                            <th>Número</th>
-                                            <th>Complemento</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>{{$aluno->bairro}}</td>
-                                            <td>{{$aluno->rua}}</td>
-                                            <td>{{$aluno->numero}}</td>
-                                            <td>{{$aluno->complemento}}</td>
                                         </tr>
                                     </tbody>
                                 </table>

@@ -18,4 +18,9 @@ class MensagemController extends Controller
             return view('permissaoNegada');
         }
     }
+
+    public function visualizar($id){
+        $mensagem = Mensagem::find($id);
+        return view('visualizarMensagem', ['mensagem' => $mensagem]);
+    }
 }

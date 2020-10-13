@@ -16,30 +16,26 @@
                 <div class="container pt-3">
                     <div class="row">
                         <div class="col">
-                            @foreach($mensagens as $mensagem)
-                                <table class="table table-bordered", align="center", style="border-spacing: 0.5em">
-                                    <thead>
-                                        <tr>
-                                            <th>Remetente</th>
-                                            <th>E-mail</th>
-                                            <th>Enviada Em</th>
-                                        </tr>
-                                    </thead>
+                            <table class="table table-borderless", align="center", style="border-spacing: 0.5em">
+                                <thead>
+                                    <tr>
+                                        <th>Remetente</th>
+                                        <th>E-mail</th>
+                                        <th>Recebida Em</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                @foreach($mensagens as $mensagem)
                                     <tbody>
                                         <tr>
                                             <td>{{$mensagem->remetente}}</td>
                                             <td>{{$mensagem->email}}</td>
-                                            <td>{{$mensagem->created_at}}</td>
+                                            <td>{{Carbon\Carbon::parse($mensagem->created_at)->format('d/m/Y - H:i')}}</td>
+                                            <td><a href="{{url('/admin/visualizar/mensagem/'.$mensagem->id)}}" class="btn btn-primary">Visualizar</a></td>
                                         </tr>
                                     </tbody>
-                                </table>
-                                <table class="table table-bordered", align="center", style="border-spacing: 0.5em">
-                                    <tbody>
-                                        <td>{{$mensagem->conteudo}}</td>
-                                    </tbody>
-                                </table>
-                                <br>
-                            @endforeach
+                                @endforeach
+                            </table>
                         </div>
                     </div>
                 </div>

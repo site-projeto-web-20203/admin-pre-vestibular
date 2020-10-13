@@ -15,9 +15,8 @@ class ApostilaFactory extends Factory{
     protected $model = \App\Models\Apostila::class;
     public function definition()
     {
-        // TODO: Implement definition() method.
         return [
-            'disciplina' => $this->faker->lexify('Disciplina ?????'),
+            'disciplina' => $this->faker->randomElement(['Biologia', 'Espanhol', 'Filosofia', 'Física', 'Geografia', 'História', 'Inglês', 'Literatura', 'Matemática', 'Português', 'Química', 'Redação', 'Sociologia']),
             'nome_arq' => $this->faker->lexify('??????.').$this->faker->fileExtension
         ];
     }

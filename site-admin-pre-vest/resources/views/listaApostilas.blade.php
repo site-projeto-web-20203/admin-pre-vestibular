@@ -19,17 +19,18 @@
                             <table class="table table-borderless", align="center", style="border-spacing: 0.5em">
                                 <thead>
                                     <tr>
+                                        <th>Enviada Em</th>
                                         <th>Disciplina</th>
                                         <th>Apostila</th>
-                                        <th>Enviada Em</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach($apostilas as $apostila)
                                         <tr>
+                                            <td>{{Carbon\Carbon::parse($apostila->created_at)->format('d/m/Y - H:i')}}</td>
                                             <td>{{$apostila->disciplina}}</td>
                                             <td>{{$apostila->nome_arq}}</td>
-                                            <td>{{$apostila->created_at}}</td>
                                             <td><a href="/" class="btn btn-primary">Download</a></td>
                                         </tr>
                                     @endforeach

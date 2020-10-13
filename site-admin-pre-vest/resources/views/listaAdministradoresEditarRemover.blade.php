@@ -31,7 +31,7 @@
                                         <td>{{$administrador->nome}}</td>
                                         <td>{{$administrador->email}}</td>
                                         <td>{{$administrador->telefone}}</td>
-                                        <td>{{$administrador->data_nascimento}}</td>
+                                        <td>{{Carbon\Carbon::parse($administrador->data_nascimento)->format('d/m/Y')}}</td>
                                     </tr>
                                 </tbody>
                             </table>

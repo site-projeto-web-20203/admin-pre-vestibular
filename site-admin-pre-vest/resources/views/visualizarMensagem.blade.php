@@ -12,29 +12,28 @@
         <br>
         <div class="container" align="center">
             <div class="card" align="center">
-                <h3 align="center">Lista de Turmas</h3>
+                <h3 align="center">Ver Mensagem</h3>
                 <div class="container pt-3">
                     <div class="row">
                         <div class="col">
-                            <table class="table table-borderless", align="center">
+                            <table class="table table-bordered", align="center", style="border-spacing: 0.5em">
                                 <thead>
-                                    <tr>
-                                        <th>Nome</th>
-                                        <th>Data de Início</th>
-                                        <th>Data de Término</th>
-                                        <th>Horário</th>
-                                    </tr>
+                                <tr>
+                                    <th>Remetente</th>
+                                    <th>E-mail</th>
+                                    <th>Recebida Em</th>
+                                </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($turmas as $turma)
-                                        <tr>
-                                            <td>{{$turma->nome}}</td>
-                                            <td>{{Carbon\Carbon::parse($turma->dataInicio)->format('d/m/Y')}}</td>
-                                            <td>{{Carbon\Carbon::parse($turma->dataFim)->format('d/m/Y')}}</td>
-                                            <td>{{$turma->horario}}</td>
-                                        </tr>
-                                    @endforeach
+                                <tr>
+                                    <td>{{$mensagem->remetente}}</td>
+                                    <td>{{$mensagem->email}}</td>
+                                    <td>{{Carbon\Carbon::parse($mensagem->created_at)->format('d/m/Y - H:i')}}</td>
+                                </tr>
                                 </tbody>
+                                <tfoot>
+                                <td colspan="3">{{$mensagem->conteudo}}</td>
+                                </tfoot>
                             </table>
                         </div>
                     </div>

@@ -30,7 +30,7 @@
                                         <td>{{$aluno->nome}}</td>
                                         <td>{{$aluno->email}}</td>
                                         <td>{{$aluno->telefone}}</td>
-                                        <td>{{$aluno->data_nascimento}}</td>
+                                        <td>{{Carbon\Carbon::parse($aluno->data_nascimento)->format('d/m/Y')}}</td>
                                     </tr>
                                 </tbody>
                                 <thead>

@@ -21,6 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="26a94090-6685-4bee-b043-1c4433f464c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_20_030902_create_administradors_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_20_030902_create_administradors_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_20_030917_create_professors_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_20_030917_create_professors_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_20_132305_create_alunos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_20_132305_create_alunos_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ProfessorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ProfessorTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/MensagemValidatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/MensagemValidatorTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Unit/ProfessorValidatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ProfessorValidatorTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,7 +206,7 @@
       <workItem from="1602443549498" duration="604000" />
       <workItem from="1602531746446" duration="15593000" />
       <workItem from="1602557109938" duration="9409000" />
-      <workItem from="1602610744468" duration="9327000" />
+      <workItem from="1602610744468" duration="15506000" />
     </task>
     <servers />
   </component>

@@ -16,7 +16,6 @@ class CreateProfessorsTable extends Migration
         Schema::create('professors', function (Blueprint $table) {
             $table->id();
             $table->date('data_nascimento');
-            $table->integer('tipo_usuario')->default(2);
             $table->string('email')->unique();
             $table->string('nome');
             $table->string('password')->default(Hash::make('12345'));
@@ -25,7 +24,6 @@ class CreateProfessorsTable extends Migration
             $table->string('grauInstrucao');
             $table->string('disponibilidade');
             $table->string('areasAtuacao');
-            $table->boolean('eh_professor')->default(1);
             $table->rememberToken()->nullable();
             $table->timestamps();
         });

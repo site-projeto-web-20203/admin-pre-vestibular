@@ -26,4 +26,10 @@ class MensagemValidatorTest extends TestCase
         $mensagem = Mensagem::factory()->make(['conteudo'=>'']);
         MensagemValidator::validate($mensagem->toArray());
     }
+
+    public function testMensagemCorreta(){
+        $mensagem = Mensagem::factory()->make();
+        MensagemValidator::validate($mensagem->toArray());
+        $this->assertTrue(true);
+    }
 }

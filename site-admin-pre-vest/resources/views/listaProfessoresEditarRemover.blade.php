@@ -4,10 +4,13 @@
         @include('includes.head')
     </head>
     <body>
-        <div class="container" align="center">
+        <div class="container-fluid p-0" align="center">
             <header class="row">
                 @include('includes.header')
             </header>
+        </div>
+        <br>
+        <div class="container" align="center">
             <div class="card" align="center">
                 <h3 align="center">Lista de Professores</h3>
                 <div class="container pt-3">
@@ -31,22 +34,6 @@
                                             <td>{{$professor->data_nascimento}}</td>
                                         </tr>
                                     </tbody>
-                                    <thead>
-                                        <tr>
-                                            <th>Voluntário?</th>
-                                            <th>Grau de Instrução</th>
-                                            <th>Disponibilidade</th>
-                                            <th>Áreas de Atuação</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>{{$professor->ehVoluntario}}</td>
-                                            <td>{{$professor->grauInstrucao}}</td>
-                                            <td>{{$professor->disponibilidade}}</td>
-                                            <td>{{$professor->areasAtuacao}}</td>
-                                        </tr>
-                                    </tbody>
                                 </table>
                                 <div class="row">
                                     <div class="col">
@@ -65,7 +52,9 @@
                     </div>
                 </div>
             </div>
-            <br>
+        </div>
+        <br>
+        <div class="container-fluid p-0" align="center">
             <footer class="row">
                 @include('includes.footer')
             </footer>

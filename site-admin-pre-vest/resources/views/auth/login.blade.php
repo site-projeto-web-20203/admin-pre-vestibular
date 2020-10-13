@@ -4,11 +4,13 @@
         @include('includes.head')
     </head>
     <body>
-        <div class="container" align="center">
+        <div class="container-fluid p-0" align="center">
             <header class="row">
                 @include('includes.header')
             </header>
-            <br>
+        </div>
+        <br>
+        <div class="container" align="center">
             <form method="POST" action="{{ route('login') }}">
                 @csrf
                 <div class="card" align="center">
@@ -35,6 +37,7 @@
                             @enderror
                         </div>
                     </div>
+                    <br>
                     <div class="row">
                         <div class="col">
                             <div class="form-check">
@@ -61,7 +64,9 @@
                     </div>
                 </div>
             </form>
-            <br>
+        </div>
+        <br>
+        <div class="container-fluid p-0" align="center">
             <footer class="row">
                 @include('includes.footer')
             </footer>

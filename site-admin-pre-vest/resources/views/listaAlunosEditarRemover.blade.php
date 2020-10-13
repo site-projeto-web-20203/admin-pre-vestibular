@@ -4,12 +4,15 @@
         @include('includes.head')
     </head>
     <body>
-        <div class="container" align="center">
+        <div class="container-fluid p-0" align="center">
             <header class="row">
                 @include('includes.header')
             </header>
+        </div>
+        <br>
+        <div class="container" align="center">
             <div class="card" align="center">
-                <h3 align="center">Lista de Alunos</h3>
+                <h3>Lista de Alunos</h3>
                 <div class="container pt-3">
                     <div class="row">
                         <div class="col">
@@ -101,7 +104,9 @@
                     </div>
                 </div>
             </div>
-            <br>
+        </div>
+        <br>
+        <div class="container-fluid p-0" align="center">
             <footer class="row">
                 @include('includes.footer')
             </footer>

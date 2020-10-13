@@ -4,10 +4,13 @@
         @include('includes.head')
     </head>
     <body>
-        <div class="container" align="center">
+        <div class="container-fluid p-0" align="center">
             <header class="row">
                 @include('includes.header')
             </header>
+        </div>
+        <br>
+        <div class="container" align="center">
             <form method="POST" action="{{url('/mensagem/nova')}}">
                 @csrf
                 <div class="card" align="center">
@@ -45,7 +48,9 @@
                     <input type="submit" class="btn btn-primary" value="Enviar" />
                 </div>
             </form>
-            <br>
+        </div>
+        <br>
+        <div class="container-fluid p-0" align="center">
             <footer class="row">
                 @include('includes.footer')
             </footer>

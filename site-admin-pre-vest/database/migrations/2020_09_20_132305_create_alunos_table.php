@@ -19,7 +19,6 @@ class CreateAlunosTable extends Migration
 			$table->string('tipo_escola');
 			$table->date('data_nascimento');
 			$table->integer('numero');
-			$table->integer('tipo_usuario')->default(1);
 			$table->string('ano_conclusao');
 			$table->string('bairro');
 			$table->string('cidade');
@@ -31,7 +30,6 @@ class CreateAlunosTable extends Migration
 			$table->string('nome_responsavel')->nullable();
 			$table->string('rua');
 			$table->string('password')->default(Hash::make('12345'));
-            $table->boolean('eh_aluno')->default(1);
             $table->rememberToken()->nullable();
 			$table->string('telefone');
 			$table->string('telefone_responsavel')->nullable();

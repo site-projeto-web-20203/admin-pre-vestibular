@@ -18,10 +18,19 @@ class ProfessorTest extends TestCase
 	}
 
 //Feature: Cadastro de Professor
-    public function testCadastroProfessorIncompleto()
-    {
+    public function testCadastroProfessorIncompleto(){
 		$dados = $this->inicializarArrayProfessor();
-		$dados['nome']="";
-        $response = $this->post('/cadastrar/professor', $dados)->assertStatus(302);
+		$dados['nome']='';
+        $response = $this->post('/cadastrar/professor', $dados);
+        $response->assertStatus(302);
+        $response->assertSessionHasErrors('nome');
     }
+
+    /*
+    public function testCadastroProfessorCorreto(){
+        $dados = $this->inicializarArrayProfessor();
+        $response = $this->post('/cadastrar/professor', $dados);
+        $response->assertStatus(302);
+        $response->assertRedirect(view('inscricaoConcluida'));
+	}*/
 }

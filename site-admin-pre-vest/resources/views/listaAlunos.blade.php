@@ -4,10 +4,13 @@
         @include('includes.head')
     </head>
     <body>
-        <div class="container" align="center">
+        <div class="container-fluid p-0" align="center">
             <header class="row">
                 @include('includes.header')
             </header>
+        </div>
+        <br>
+        <div class="container" align="center">
             <div class="card" align="center">
                 <h3 align="center">Lista de Alunos</h3>
                 <div class="container pt-3">
@@ -67,22 +70,6 @@
                                             <td>{{$aluno->cidade}}</td>
                                         </tr>
                                     </tbody>
-                                    <thead>
-                                        <tr>
-                                            <th>Bairro</th>
-                                            <th>Rua</th>
-                                            <th>Número</th>
-                                            <th>Complemento</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>{{$aluno->bairro}}</td>
-                                            <td>{{$aluno->rua}}</td>
-                                            <td>{{$aluno->numero}}</td>
-                                            <td>{{$aluno->complemento}}</td>
-                                        </tr>
-                                    </tbody>
                                 </table>
                                 <br><br>
                             @endforeach
@@ -90,7 +77,9 @@
                     </div>
                 </div>
             </div>
-            <br>
+        </div>
+        <br>
+        <div class="container-fluid p-0" align="center">
             <footer class="row">
                 @include('includes.footer')
             </footer>

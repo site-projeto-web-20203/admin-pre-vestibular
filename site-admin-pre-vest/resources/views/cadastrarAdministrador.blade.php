@@ -4,10 +4,13 @@
         @include('includes.head')
     </head>
     <body>
-        <div class="container" align="center">
+        <div class="container-fluid p-0" align="center">
             <header class="row">
                 @include('includes.header')
             </header>
+        </div>
+        <br>
+        <div class="container" align="center">
             <form method="POST" action="{{ url("/cadastrar/administrador") }}">
             @csrf
                 <div class="card" align="center">
@@ -15,7 +18,7 @@
                     <div class="container pt-3" align="left">
                         <div class="row">
                             <div class="col">
-                                <label for="nome" class="col-form-label text-md-right">Nome Completo</label>
+                                <label for="nome" class="col-form-label text-md-right required">Nome Completo</label>
                                 <input id="nome" type="text" class="form-control @error('nome') is-invalid @enderror" name="nome" value="{{old('nome')}}" required autofocus/>
                                 @error('nome')
                                 <span class="invalid-feedback" role="alert">
@@ -24,7 +27,7 @@
                                 @enderror
                             </div>
                             <div class="col">
-                                <label for="email" class="col-form-label text-md-right">E-mail</label>
+                                <label for="email" class="col-form-label text-md-right required">E-mail</label>
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{old('email')}}" required autofocus/>
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -35,7 +38,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label for="telefone" class="col-form-label text-md-right">Telefone</label>
+                                <label for="telefone" class="col-form-label text-md-right required">Telefone</label>
                                 <input id="telefone" type="text" class="form-control @error('telefone') is-invalid @enderror" name="telefone" value="{{old('telefone')}}" required autofocus/>
                                 @error('telefone')
                                 <span class="invalid-feedback" role="alert">
@@ -44,7 +47,7 @@
                                 @enderror
                             </div>
                             <div class="col">
-                                <label for="data_nascimento" class="col-form-label text-md-right">Data de Nascimento</label>
+                                <label for="data_nascimento" class="col-form-label text-md-right required">Data de Nascimento</label>
                                 <input id="data_nascimento" type="date" class="form-control @error('data_nascimento') is-invalid @enderror" name="data_nascimento" value="{{old('data_nascimento')}}" required autofocus/>
                                 @error('data_nascimento')
                                 <span class="invalid-feedback" role="alert">
@@ -58,7 +61,9 @@
                     <input type="submit" class="btn btn-primary" value="Cadastrar" />
                 </div>
             </form>
-            <br>
+        </div>
+        <br>
+        <div class="container-fluid p-0" align="center">
             <footer class="row">
                 @include('includes.footer')
             </footer>

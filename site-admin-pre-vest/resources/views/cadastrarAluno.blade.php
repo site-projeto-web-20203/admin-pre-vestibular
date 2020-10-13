@@ -4,10 +4,13 @@
         @include('includes.head')
     </head>
     <body>
-        <div class="container" align="center">
+        <div class="container-fluid p-0" align="center">
             <header class="row">
                 @include('includes.header')
             </header>
+        </div>
+        <br>
+        <div class="container" align="center">
             <form method="POST" action="{{url('/cadastrar/aluno')}}">
                 @csrf
                 <div class="card" align="center">
@@ -15,7 +18,7 @@
                     <div class="container pt-3" align="left">
                         <div class="row">
                             <div class="col">
-                                <label for="nome" class="col-form-label text-md-right">Nome Completo</label>
+                                <label for="nome" class="col-form-label text-md-right required">Nome Completo</label>
                                 <input id="nome" type="text" class="form-control @error('nome') is-invalid @enderror" name="nome" value="{{old('nome')}}" required autofocus/>
                                 @error('nome')
                                 <span class="invalid-feedback" role="alert">
@@ -24,7 +27,7 @@
                                 @enderror
                             </div>
                             <div class="col">
-                                <label for="email" class="col-form-label text-md-right">E-mail</label>
+                                <label for="email" class="col-form-label text-md-right required">E-mail</label>
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{old('email')}}" required autofocus/>
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -35,7 +38,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label for="telefone" class="col-form-label text-md-right">Telefone</label>
+                                <label for="telefone" class="col-form-label text-md-right required">Telefone</label>
                                 <input id="telefone" type="text" class="form-control @error('telefone') is-invalid @enderror" name="telefone" value="{{old('telefone')}}" required autofocus/>
                                 @error('telefone')
                                 <span class="invalid-feedback" role="alert">
@@ -44,7 +47,7 @@
                                 @enderror
                             </div>
                             <div class="col">
-                                <label for="data_nascimento" class="col-form-label text-md-right">Data de Nascimento</label>
+                                <label for="data_nascimento" class="col-form-label text-md-right required">Data de Nascimento</label>
                                 <input id="data_nascimento" type="date" class="form-control @error('data_nascimento') is-invalid @enderror" name="data_nascimento" value="{{old('data_nascimento')}}" required autofocus/>
                                 @error('data_nascimento')
                                 <span class="invalid-feedback" role="alert">
@@ -55,7 +58,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label for="rua" class="col-form-label text-md-right">Rua</label>
+                                <label for="rua" class="col-form-label text-md-right required">Rua</label>
                                 <input id="rua" type="text" class="form-control @error('rua') is-invalid @enderror" name="rua" value="{{old('rua')}}" required autofocus/>
                                 @error('rua')
                                 <span class="invalid-feedback" role="alert">
@@ -64,7 +67,7 @@
                                 @enderror
                             </div>
                             <div class="col">
-                                <label for="bairro" class="col-form-label text-md-right">Bairro</label>
+                                <label for="bairro" class="col-form-label text-md-right required">Bairro</label>
                                 <input id="bairro" type="text" class="form-control @error('bairro') is-invalid @enderror" name="bairro" value="{{old('bairro')}}" required autofocs/>
                                 @error('bairro')
                                 <span class="invalid-feedback" role="alert">
@@ -84,7 +87,7 @@
                                 @enderror
                             </div>
                             <div class="col">
-                                <label for="cidade" class="col-form-label text-md-right">Cidade</label>
+                                <label for="cidade" class="col-form-label text-md-right required">Cidade</label>
                                 <input id="cidade" type="text" class="form-control @error('cidade') is-invalid @enderror" name="cidade" value="{{old('cidade')}}" required autofocs/>
                                 @error('cidade')
                                 <span class="invalid-feedback" role="alert">
@@ -95,7 +98,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label for="numero" class="col-form-label text-md-right">Numero</label>
+                                <label for="numero" class="col-form-label text-md-right required">Numero</label>
                                 <input id="numero" type="text" class="form-control @error('numero') is-invalid @enderror" name="numero" value="{{old('numero')}}" required autofocs/>
                                 @error('numero')
                                 <span class="invalid-feedback" role="alert">
@@ -104,7 +107,7 @@
                                 @enderror
                             </div>
                             <div class="col">
-                                <label for="escola" class="col-form-label text-md-right">Escola</label>
+                                <label for="escola" class="col-form-label text-md-right required">Escola</label>
                                 <input id="escola" type="text" class="form-control @error('escola') is-invalid @enderror" name="escola" value="{{old('escola')}}" required autofocs/>
                                 @error('escola')
                                 <span class="invalid-feedback" role="alert">
@@ -115,7 +118,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label for="ano_conclusao" class="col-form-label text-md-right">Ano de Conclusão</label>
+                                <label for="ano_conclusao" class="col-form-label text-md-right required">Ano de Conclusão</label>
                                 <input id="ano_conclusao" type="text" class="form-control @error('ano_conclusao') is-invalid @enderror" name="ano_conclusao" value="{{old('ano_conclusao')}}" required autofocs/>
                                 @error('ano_conclusao')
                                 <span class="invalid-feedback" role="alert">
@@ -155,7 +158,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label for="fez_enem">Fez Enem?</label><br>
+                                <label for="fez_enem" class="required">Fez Enem?</label><br>
                                 <select name="fez_enem" id="fez_enem">
                                     <option value="Sim">Sim</option>
                                     <option value="Não">não</option>
@@ -167,7 +170,7 @@
                                 @enderror
                             </div>
                             <div class="col">
-                                <label for="tipo_escola">Tipo de Escola</label><br>
+                                <label for="tipo_escola" class="required">Tipo de Escola</label><br>
                                 <select name="tipo_escola" id="tipo_escola">
                                     <option value="Pública">Pública</option>
                                     <option value="Privada">Privada</option>
@@ -184,7 +187,9 @@
                     <input type="submit" class="btn btn-primary" value="Cadastrar" />
                 </div>
             </form>
-            <br>
+        </div>
+        <br>
+        <div class="container-fluid p-0" align="center">
             <footer class="row">
                 @include('includes.footer')
             </footer>

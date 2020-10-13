@@ -21,15 +21,53 @@
   <component name="ChangeListManager">
     <list default="true" id="26a94090-6685-4bee-b043-1c4433f464c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cadastrarAdministrador.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cadastrarAdministrador.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cadastrarAluno.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cadastrarAluno.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cadastrarProfessor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cadastrarProfessor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cadastrarTurma.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cadastrarTurma.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/editarAdministrador.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editarAdministrador.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/editarProfessor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editarProfessor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaAdministradores.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaAdministradores.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaAdministradoresEditarRemover.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaAdministradoresEditarRemover.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaAlunos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaAlunos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaAlunosEditarRemover.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaAlunosEditarRemover.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaApostilas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaApostilas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaMensagens.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaMensagens.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaProfessores.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaProfessores.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaProfessoresEditarRemover.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaProfessoresEditarRemover.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaTurmas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaTurmas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menuAdministrador.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menuAdministrador.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menuAluno.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menuAluno.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menuProfessor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menuProfessor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/novaApostila.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/novaApostila.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/novaMensagem.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/novaMensagem.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/permissaoNegada.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/permissaoNegada.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/removerAdministrador.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/removerAdministrador.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/removerProfessor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/removerProfessor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/visualizarAdministrador.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/visualizarAdministrador.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/visualizarAluno.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/visualizarAluno.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/visualizarProfessor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/visualizarProfessor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -165,7 +203,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.routes">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
     <configuration name="routes" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner directory="$PROJECT_DIR$/routes" />
       <method v="2" />
@@ -186,6 +228,8 @@
       <updated>1602180674271</updated>
       <workItem from="1602180675570" duration="9483000" />
       <workItem from="1602226533996" duration="1936000" />
+      <workItem from="1602443549498" duration="604000" />
+      <workItem from="1602531746446" duration="14994000" />
     </task>
     <servers />
   </component>
@@ -204,6 +248,15 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/includes/head.blade.php</url>
+          <line>137</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

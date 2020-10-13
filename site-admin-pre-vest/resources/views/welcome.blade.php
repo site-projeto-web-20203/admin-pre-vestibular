@@ -73,6 +73,8 @@
             </div>
         </div>
         <br>
+        @include('includes.faleConosco')
+        <br>
         <div class="container-fluid p-0" align="center">
             <footer class="row">
                 @include('includes.footer')

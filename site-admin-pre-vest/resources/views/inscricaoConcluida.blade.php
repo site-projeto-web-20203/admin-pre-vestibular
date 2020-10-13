@@ -13,7 +13,7 @@
         <div class="container" align="center">
             <div class="card" align="center">
                 <div class="container pt-3">
-                    <h3>Você não tem permissão para acessar essa página!</h3>
+                    <h3>Sua inscrição foi realizada com sucesso!</h3>
                     <br>
                     <a href="{{ url('/') }}" class="btn btn">Voltar ao Início</a>
                 </div>

@@ -16,7 +16,7 @@
                 <div class="container pt-3">
                     <div class="row">
                         <div class="col">
-                            <table class="table table-bordered", align="center", style="border-spacing: 0.5em">
+                            <table class="table table-borderless", align="center", style="border-spacing: 0.5em">
                                 <thead>
                                     <tr>
                                         <th>Nome Completo</th>

@@ -69,14 +69,14 @@ class ProfessorValidatorTest extends TestCase
 	$professor = Professor::factory()->make(['areasAtuacao'=>'']);
         ProfessorValidator::validate($professor->toArray());
     }
-/*
+
+    /*
     public function testProfessorCorreto()
     {
 	$professor = Professor::factory()->make();
 	$dados = $professor->toArray();
 	$dados['senha']='senha';
-	$dados['tipo_usuario']=2;
-        ProfessorValidator::validate($dados);
+    ProfessorValidator::validate($dados);
 	$this->assertTrue(true);
     }*/
 }

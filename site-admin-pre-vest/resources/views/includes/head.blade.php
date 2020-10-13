@@ -45,7 +45,16 @@
         border-radius: 20px;
         padding: 35px;
         border: none;
-        background: rgba(94, 94, 94, 0.45);
+        background: rgba(219, 219, 219, 0.9);
+        font-family: sans-serif;
+        font-size: 16px;
+    }
+
+    .card2 {
+        padding: 35px;
+        border: none;
+        background: rgba(0, 0, 0, 0.9);
+        color: white;
         font-family: sans-serif;
         font-size: 16px;
     }
@@ -98,6 +107,30 @@
         text-transform: none;
         text-align: center;
         width: 250px;
+        height: auto;
+        font-size: 18px;
+    }
+
+    .btn3 {
+        border-radius: 10px;
+        background-color: white;
+        border: 2px solid transparent;
+        color: black;
+        text-transform: none;
+        text-align: center;
+        width: 150px;
+        height: auto;
+        font-size: 18px;
+    }
+
+    .btn3:hover {
+        border-radius: 10px;
+        background-color: #181818;
+        border: 2px solid transparent;
+        color: white;
+        text-transform: none;
+        text-align: center;
+        width: 150px;
         height: auto;
         font-size: 18px;
     }

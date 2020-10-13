@@ -20,8 +20,7 @@ class CadastrarProfessorController extends Controller
 			$dados['disponibilidade'] = implode(', ', $dados['disponibilidade']);
 			$dados['areasAtuacao'] = implode(', ', $dados['areasAtuacao']);
 			Professor::create($dados);
-			#return "Professor cadastrado";
-            return view("welcome");
+            return view("inscricaoConcluida");
 		}
 		catch(\App\Validator\ValidationException $exception){
 			return redirect('/cadastrar/professor')->withErrors($exception->getValidator())->withInput();

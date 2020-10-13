@@ -36,6 +36,7 @@
                                 @enderror
                             </div>
                         </div>
+                        <br>
                         <div class="row">
                             <div class="col">
                                 <label for="telefone" class="col-form-label text-md-right required">Telefone</label>
@@ -56,6 +57,7 @@
                                 @enderror
                             </div>
                         </div>
+                        <br>
                         <div class="row">
                             <div class="col">
                                 <label for="rua" class="col-form-label text-md-right required">Rua</label>
@@ -76,16 +78,8 @@
                                 @enderror
                             </div>
                         </div>
+                        <br>
                         <div class="row">
-                            <div class="col">
-                                <label for="complemento" class="col-form-label text-md-right">Complemento</label>
-                                <input id="complemento" type="text" class="form-control @error('complemento') is-invalid @enderror"/>
-                                @error('complemento')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{$message}}</strong>
-                                </span>
-                                @enderror
-                            </div>
                             <div class="col">
                                 <label for="cidade" class="col-form-label text-md-right required">Cidade</label>
                                 <input id="cidade" type="text" class="form-control @error('cidade') is-invalid @enderror" name="cidade" value="{{old('cidade')}}" required autofocs/>
@@ -95,8 +89,6 @@
                                 </span>
                                 @enderror
                             </div>
-                        </div>
-                        <div class="row">
                             <div class="col">
                                 <label for="numero" class="col-form-label text-md-right required">Numero</label>
                                 <input id="numero" type="text" class="form-control @error('numero') is-invalid @enderror" name="numero" value="{{old('numero')}}" required autofocs/>
@@ -107,7 +99,19 @@
                                 @enderror
                             </div>
                             <div class="col">
-                                <label for="escola" class="col-form-label text-md-right required">Escola</label>
+                                <label for="complemento" class="col-form-label text-md-right">Complemento</label>
+                                <input id="complemento" type="text" class="form-control @error('complemento') is-invalid @enderror"/>
+                                @error('complemento')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{$message}}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <label for="escola" class="col-form-label text-md-right required">Escola (Ensino Médio)</label>
                                 <input id="escola" type="text" class="form-control @error('escola') is-invalid @enderror" name="escola" value="{{old('escola')}}" required autofocs/>
                                 @error('escola')
                                 <span class="invalid-feedback" role="alert">
@@ -115,10 +119,8 @@
                                 </span>
                                 @enderror
                             </div>
-                        </div>
-                        <div class="row">
                             <div class="col">
-                                <label for="ano_conclusao" class="col-form-label text-md-right required">Ano de Conclusão</label>
+                                <label for="ano_conclusao" class="col-form-label text-md-right required">Ano de Conclusão (Ensino Médio)</label>
                                 <input id="ano_conclusao" type="text" class="form-control @error('ano_conclusao') is-invalid @enderror" name="ano_conclusao" value="{{old('ano_conclusao')}}" required autofocs/>
                                 @error('ano_conclusao')
                                 <span class="invalid-feedback" role="alert">
@@ -126,39 +128,23 @@
                                 </span>
                                 @enderror
                             </div>
-                            <div class="col">
-                                <label for="nome_responsavel" class="col-form-label text-md-right">Nome do Responsável</label>
-                                <input id="nome_responsavel" type="text" class="form-control @error('nome_responsavel') is-invalid @enderror"/>
-                                @error('nome_responsavel')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{$message}}</strong>
-                                </span>
-                                @enderror
-                            </div>
                         </div>
+                        <br>
                         <div class="row">
                             <div class="col">
-                                <label for="telefone_responsavel" class="col-form-label text-md-right">Telefone do Responsável</label>
-                                <input id="telefone_responsavel" type="text" class="form-control @error('telefone_responsavel') is-invalid @enderror"/>
-                                @error('telefone_responsavel')
+                                <label for="tipo_escola" class="required">Tipo de Escola</label><br>
+                                <select name="tipo_escola" id="tipo_escola">
+                                    <option value="Pública">Pública</option>
+                                    <option value="Privada">Privada</option>
+                                </select>
+                                @error('tipo_escola')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>
                                 </span>
                                 @enderror
                             </div>
                             <div class="col">
-                                <label for="email_responsavel" class="col-form-label text-md-right">E-mail do Responsável</label>
-                                <input id="email_responsavel" type="email" class="form-control @error('email_responsavel') is-invalid @enderror"/>
-                                @error('email_responsavel')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{$message}}</strong>
-                                </span>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <label for="fez_enem" class="required">Fez Enem?</label><br>
+                                <label for="fez_enem" class="required">Já Fez Enem?</label><br>
                                 <select name="fez_enem" id="fez_enem">
                                     <option value="Sim">Sim</option>
                                     <option value="Não">não</option>
@@ -169,13 +155,34 @@
                                 </span>
                                 @enderror
                             </div>
+                        </div>
+                        <br>
+                        <div class="row">
                             <div class="col">
-                                <label for="tipo_escola" class="required">Tipo de Escola</label><br>
-                                <select name="tipo_escola" id="tipo_escola">
-                                    <option value="Pública">Pública</option>
-                                    <option value="Privada">Privada</option>
-                                </select>
-                                @error('tipo_escola')
+                                <label for="nome_responsavel" class="col-form-label text-md-right">Nome do Responsável</label>
+                                <input id="nome_responsavel" type="text" class="form-control @error('nome_responsavel') is-invalid @enderror"/>
+                                @error('nome_responsavel')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{$message}}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            <div class="col">
+                                <label for="telefone_responsavel" class="col-form-label text-md-right">Telefone do Responsável</label>
+                                <input id="telefone_responsavel" type="text" class="form-control @error('telefone_responsavel') is-invalid @enderror"/>
+                                @error('telefone_responsavel')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{$message}}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col col-md-6">
+                                <label for="email_responsavel" class="col-form-label text-md-right">E-mail do Responsável</label>
+                                <input id="email_responsavel" type="email" class="form-control @error('email_responsavel') is-invalid @enderror"/>
+                                @error('email_responsavel')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>
                                 </span>

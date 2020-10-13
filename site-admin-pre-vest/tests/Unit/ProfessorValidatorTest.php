@@ -9,64 +9,51 @@ use App\Validator\ProfessorValidator;
 
 class ProfessorValidatorTest extends TestCase
 {
-    /**
-     * A basic unit test example.
-     *
-     * @return void
-     */
-    public function testProfessorSemNome()
-    {
-	$this->expectException(ValidationException::class);
-	$professor = Professor::factory()->make(['nome'=>'']);
+    public function testProfessorSemNome(){
+        $this->expectException(ValidationException::class);
+        $professor = Professor::factory()->make(['nome'=>'']);
         ProfessorValidator::validate($professor->toArray());
     }
 
-    public function testProfessorSemEmail()
-    {
-	$this->expectException(ValidationException::class);
-	$professor = Professor::factory()->make(['email'=>'']);
+    public function testProfessorSemEmail(){
+        $this->expectException(ValidationException::class);
+        $professor = Professor::factory()->make(['email'=>'']);
         ProfessorValidator::validate($professor->toArray());
     }
 
-    public function testProfessorSemTelefone()
-    {
-	$this->expectException(ValidationException::class);
-	$professor = Professor::factory()->make(['telefone'=>'']);
+    public function testProfessorSemTelefone(){
+	    $this->expectException(ValidationException::class);
+	    $professor = Professor::factory()->make(['telefone'=>'']);
         ProfessorValidator::validate($professor->toArray());
     }
 
-    public function testProfessorSemDataNasc()
-    {
-	$this->expectException(ValidationException::class);
-	$professor = Professor::factory()->make(['data_nascimento'=>'']);
+    public function testProfessorSemDataNasc(){
+        $this->expectException(ValidationException::class);
+        $professor = Professor::factory()->make(['data_nascimento'=>'']);
         ProfessorValidator::validate($professor->toArray());
     }
 
-    public function testProfessorSemGrauInstr()
-    {
-	$this->expectException(ValidationException::class);
-	$professor = Professor::factory()->make(['grauInstrucao'=>'']);
+    public function testProfessorSemGrauInstr(){
+        $this->expectException(ValidationException::class);
+        $professor = Professor::factory()->make(['grauInstrucao'=>'']);
         ProfessorValidator::validate($professor->toArray());
     }
 
-    public function testProfessorSemEhVoluntario()
-    {
-	$this->expectException(ValidationException::class);
-	$professor = Professor::factory()->make(['ehVoluntario'=>'']);
+    public function testProfessorSemEhVoluntario(){
+        $this->expectException(ValidationException::class);
+        $professor = Professor::factory()->make(['ehVoluntario'=>'']);
         ProfessorValidator::validate($professor->toArray());
     }
 
-    public function testProfessorSemDisponibilidade()
-    {
-	$this->expectException(ValidationException::class);
-	$professor = Professor::factory()->make(['disponibilidade'=>'']);
+    public function testProfessorSemDisponibilidade(){
+        $this->expectException(ValidationException::class);
+        $professor = Professor::factory()->make(['disponibilidade'=>'']);
         ProfessorValidator::validate($professor->toArray());
     }
 
-    public function testProfessorSemAreasAtuacao()
-    {
-	$this->expectException(ValidationException::class);
-	$professor = Professor::factory()->make(['areasAtuacao'=>'']);
+    public function testProfessorSemAreasAtuacao(){
+        $this->expectException(ValidationException::class);
+        $professor = Professor::factory()->make(['areasAtuacao'=>'']);
         ProfessorValidator::validate($professor->toArray());
     }
 

@@ -21,12 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="26a94090-6685-4bee-b043-1c4433f464c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CadastrarAlunoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CadastrarAlunoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CadastrarProfessorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CadastrarProfessorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/listaProfessores.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaProfessores.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/permissaoNegada.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/permissaoNegada.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Unit/ProfessorValidatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ProfessorValidatorTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +201,7 @@
       <workItem from="1602443549498" duration="604000" />
       <workItem from="1602531746446" duration="15593000" />
       <workItem from="1602557109938" duration="9409000" />
-      <workItem from="1602610744468" duration="6641000" />
+      <workItem from="1602610744468" duration="9327000" />
     </task>
     <servers />
   </component>
@@ -225,6 +219,12 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="416" y="117" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602619668657">
+      <screen x="0" y="27" width="1366" height="684" />
+    </state>
+    <state x="416" y="117" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1366.684@0.27.1366.684" timestamp="1602619668657" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

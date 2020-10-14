@@ -17,11 +17,10 @@ class CadastrarProfessorController extends Controller
 		try{
 			\App\Validator\ProfessorValidator::validate($request->all());
 			$dados = $request->all();
-			$dados['disponibilidade'] = implode(', ', $dados['disponibilidade']);
-			$dados['areasAtuacao'] = implode(', ', $dados['areasAtuacao']);
+			$dados['disponibilidade'] = implode(', ', (array)$dados['disponibilidade']);
+			$dados['areasAtuacao'] = implode(', ', (array)$dados['areasAtuacao']);
 			Professor::create($dados);
-			#return "Professor cadastrado";
-            return view("auth.login");
+            return view("inscricaoConcluida");
 		}
 		catch(\App\Validator\ValidationException $exception){
 			return redirect('/cadastrar/professor')->withErrors($exception->getValidator())->withInput();

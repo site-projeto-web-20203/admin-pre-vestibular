@@ -1,5 +1,5 @@
 <div class="navbar navbar-wrapper">
-    <div class="container-fluid">
+    <div class="container">
         <a href="/">Logo</a>
         <a class="active" href="{{ url('/') }}">Inicio</a>
         <a href="{{ url('/cadastrar/aluno') }}">Inscrição do Aluno</a>

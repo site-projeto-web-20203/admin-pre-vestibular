@@ -1,14 +1,16 @@
 <!doctype html>
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         @include('includes.head')
     </head>
     <body>
-        <div class="container" align="center">
+        <div class="container-fluid p-0" align="center">
             <header class="row">
                 @include('includes.header')
             </header>
+        </div>
+        <br>
+        <div class="container" align="center">
             <div class="card" align="center">
                 <h3 align="center">Menu - Administrador</h3>
                 <div class="container pt-3">
@@ -26,14 +28,16 @@
                             <a href="{{ url('/cadastrar/turma') }}" class="btn2 btn">Adicionar Turma</a><br><br>
                         </div>
                         <div class="col">
-                            <a href="{{ url('/cadastrar/administrador') }}" class="btn2 btn">Cadastrar Admin</a><br><br>
+                            <a href="{{ url('/cadastrar/administrador') }}" class="btn2 btn">Cadastrar Administrador</a><br><br>
                             <a href="{{ url('/mensagem/nova') }}" class="btn2 btn">Enviar Mensagem</a><br><br>
                             <a href="{{ url('/visualizar/administrador/'.$id) }}" class="btn2 btn">Meu Perfil</a><br><br>
                         </div>
                     </div>
                 </div>
             </div>
-            <br>
+        </div>
+        <br>
+        <div class="container-fluid p-0" align="center">
             <footer class="row">
                 @include('includes.footer')
             </footer>

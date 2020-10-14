@@ -4,16 +4,25 @@
         @include('includes.head')
     </head>
     <body>
-        <div class="container" align="center">
+        <div class="container-fluid p-0" align="center">
             <header class="row">
                 @include('includes.header')
             </header>
+        </div>
+        <br>
+        <div class="container" align="center">
             <div class="card" align="center">
                 <div class="container pt-3">
-                    <a>Você não tem permissão para acessar essa página!</a>
+                    <h3>Você não tem permissão para acessar essa página!</h3>
+                    <br>
+                    <a href="{{ url('/') }}" class="btn btn">Voltar ao Início</a>
                 </div>
             </div>
-            <br>
+        </div>
+        <br>
+        @include('includes.faleConosco')
+        <br>
+        <div class="container-fluid p-0" align="center">
             <footer class="row">
                 @include('includes.footer')
             </footer>

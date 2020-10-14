@@ -88,6 +88,8 @@ Route::post('/editar/administrador/{id}', [EditAdministradorController::class, '
 
 Route::get('/admin/visualizar/aluno/{id}', [AlunoController::class, 'visualizar'])->name('aluno.visualizar')->middleware('auth:admin');
 
+Route::get('/admin/visualizar/mensagem/{id}', [MensagemController::class, 'visualizar'])->name('mensagem.visualizar')->middleware('auth:admin');
+
 Route::get('/admin/visualizar/professor/{id}', [ProfessorController::class, 'visualizar'])->name('professor.visualizar')->middleware('auth:admin');
 
 #Route::get('/visualizar/administrador/{id}', [AdministradorController::class, 'visualizar'])->name('administrador.visualizar');

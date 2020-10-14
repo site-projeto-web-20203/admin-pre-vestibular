@@ -29,7 +29,6 @@ class ProfessorController extends Controller
         }
     }
 
-    //falta fzr
     public function visualizar($id){
         $professor = Professor::find($id);
         return view('visualizarProfessor', ['professor' => $professor]);

@@ -4,10 +4,13 @@
         @include('includes.head')
     </head>
     <body>
-        <div class="container" align="center">
+        <div class="container-fluid p-0" align="center">
             <header class="row">
                 @include('includes.header')
             </header>
+        </div>
+        <br>
+        <div class="container" align="center">
             <div class="card" align="center">
                 <h3 align="center">Lista de Turmas</h3>
                 <div class="container pt-3">
@@ -26,8 +29,8 @@
                                     @foreach($turmas as $turma)
                                         <tr>
                                             <td>{{$turma->nome}}</td>
-                                            <td>{{$turma->dataInicio}}</td>
-                                            <td>{{$turma->dataFim}}</td>
+                                            <td>{{Carbon\Carbon::parse($turma->dataInicio)->format('d/m/Y')}}</td>
+                                            <td>{{Carbon\Carbon::parse($turma->dataFim)->format('d/m/Y')}}</td>
                                             <td>{{$turma->horario}}</td>
                                         </tr>
                                     @endforeach
@@ -37,7 +40,9 @@
                     </div>
                 </div>
             </div>
-            <br>
+        </div>
+        <br>
+        <div class="container-fluid p-0" align="center">
             <footer class="row">
                 @include('includes.footer')
             </footer>

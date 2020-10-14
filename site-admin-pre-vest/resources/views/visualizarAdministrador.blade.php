@@ -40,6 +40,9 @@
                         <div class="col">
                             <a href="{{url('/editar/administrador/'.$administrador->id)}}" class="btn btn-primary">Editar Dados</a>
                         </div>
+                        <div class="col">
+                            <a href="{{url('/remover/administrador/'.$administrador->id)}}" class="btn btn-primary">Remover</a>
+                        </div>
                     </div>
                 </div>
             </div>

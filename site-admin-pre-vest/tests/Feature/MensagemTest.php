@@ -10,6 +10,8 @@ use App\Models\Mensagem;
 use App\Models\Professor;
 use App\Models\Administrador;
 
+//ENVIAR E VISUALIZACAO EM LISTA: OK
+//FALTA REMOVER E VISUALIZACAO DE UMA MSG (NAO TEM EDITAR)
 class MensagemTest extends TestCase
 {
     use RefreshDatabase;

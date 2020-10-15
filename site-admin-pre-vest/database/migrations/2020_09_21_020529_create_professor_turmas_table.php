@@ -17,9 +17,9 @@ class CreateProfessorTurmasTable extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('turma_id')->unsigned()->nullable();
-            $table->foreign('turma_id')->references('id')->on('turmas');
-            $table->integer('professor_id')->unsigned();
-            $table->foreign('professor_id')->references('id')->on('professors');
+            $table->foreign('turma_id')->references('id')->on('turmas')->onDelete('set null');
+            $table->integer('professor_id')->unsigned()->nullable();
+            $table->foreign('professor_id')->references('id')->on('professors')->onDelete('set null');
         });
     }
 

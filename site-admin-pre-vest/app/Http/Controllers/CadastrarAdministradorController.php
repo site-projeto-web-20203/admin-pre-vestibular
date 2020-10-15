@@ -35,7 +35,7 @@ class CadastrarAdministradorController extends Controller
                 $dados = $request->all();
                 Administrador::create($dados);
                 #return "Administrador criado";
-                return view("welcome");
+                return view("inscricaoConcluida");
             } catch (ValidationException $exception) {
                 return redirect('/cadastrar/administrador')
                     ->withErrors($exception->getValidator())

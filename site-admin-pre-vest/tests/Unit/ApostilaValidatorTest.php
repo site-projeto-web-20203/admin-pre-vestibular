@@ -20,6 +20,14 @@ class ApostilaValidatorTest extends TestCase
     public function testApostilaSemDisciplina(){
         $this->expectException(ValidationException::class);
         $apostila = Apostila::factory()->profapo()->make(['disciplina' => '']);
+        $apostila['arq'] = 'dna.pdf';
         ApostilaValidator::validate($apostila->toArray());
+    }
+
+    public function testApostilaCorreta(){
+        $apostila = Apostila::factory()->admapo()->make();
+        $apostila['arq'] = 'dna.pdf';
+       ApostilaValidator::validate($apostila->toArray());
+        $this->assertTrue(true);
     }
 }

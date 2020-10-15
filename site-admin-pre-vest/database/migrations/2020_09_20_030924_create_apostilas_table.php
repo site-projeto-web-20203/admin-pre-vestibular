@@ -19,9 +19,9 @@ class CreateApostilasTable extends Migration
 			$table->string('nome_arq');
             $table->timestamps();
 			$table->integer('professor_id')->unsigned()->nullable();
-			$table->foreign('professor_id')->references('id')->on('professors')->onDelete('cascade');
+			$table->foreign('professor_id')->references('id')->on('professors')->onDelete('set null');
 			$table->integer('administrador_id')->unsigned()->nullable();
-			$table->foreign('administrador_id')->references('id')->on('administradors')->onDelete('cascade');
+			$table->foreign('administrador_id')->references('id')->on('administradors')->onDelete('set null');
         });
     }
 

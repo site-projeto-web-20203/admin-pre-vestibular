@@ -14,7 +14,7 @@
             <form method="POST" action="{{url('/remover/administrador/'.$administrador->id)}}">
                 @csrf
                 <div class="card" align="center">
-                    <h3 align="center">Remover Professor</h3>
+                    <h3 align="center">Remover Administrador</h3>
                     <div class="container pt-3" align="left">
                         <div class="row">
                             <div class="col">

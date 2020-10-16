@@ -35,14 +35,6 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="row">
-                                <div class="col">
-                                    <a href="{{url('/editar/administrador/'.$administrador->id)}}" class="btn btn-primary">Editar</a>
-                                </div>
-                                <div class="col">
-                                    <a href="{{url('/remover/administrador/'.$administrador->id)}}" class="btn btn-primary">Remover</a>
-                                </div>
-                            </div>
                             <br><br>
                             @endforeach
                         </div>

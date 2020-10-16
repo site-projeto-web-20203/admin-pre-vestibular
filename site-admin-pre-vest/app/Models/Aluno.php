@@ -38,6 +38,22 @@ class Aluno extends Authenticatable
                             'telefone_responsavel' => 'nullable',
                             'email_responsavel' => 'nullable|email'];
 
+    public static $rulesEditar = ['nome' => 'required|min:3|max:100',
+        'data_nascimento' => 'required|date',
+        'telefone' => 'required',
+        'rua' => 'required|max:100',
+        'bairro' => 'required|max:100',
+        'complemento' => 'nullable|max:100',
+        'cidade' => 'required|max:100',
+        'numero' => 'required|digits_between:1,5',
+        'escola' => 'required|max:100',
+        'ano_conclusao' => 'required|digits:4',
+        'tipo_escola' => 'required',
+        'fez_enem' => 'required',
+        'nome_responsavel' => 'nullable|min:3|max:100',
+        'telefone_responsavel' => 'nullable',
+        'email_responsavel' => 'nullable|email'];
+
 
     public static $messages = ['nome.*' => 'O campo nome é obrigatório e deve ter entre 3 e 100 caracteres',
                                 'data_nascimento.*' => 'O campo data de nascimento é obrigatório',

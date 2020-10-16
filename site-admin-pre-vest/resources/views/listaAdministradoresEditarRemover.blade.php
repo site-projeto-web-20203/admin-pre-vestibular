@@ -16,8 +16,7 @@
                 <div class="container pt-3">
                     <div class="row">
                         <div class="col">
-                            @foreach($administradores as $administrador)
-                            <table class="table table-bordered", align="center", style="border-spacing: 0.5em">
+                            <table class="table table-borderless", align="center", style="border-spacing: 0.5em">
                                 <thead>
                                     <tr>
                                         <th>Nome Completo</th>
@@ -27,16 +26,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($administradores as $administrador)
                                     <tr>
                                         <td>{{$administrador->nome}}</td>
                                         <td>{{$administrador->email}}</td>
                                         <td>{{$administrador->telefone}}</td>
                                         <td>{{Carbon\Carbon::parse($administrador->data_nascimento)->format('d/m/Y')}}</td>
                                     </tr>
+                                @endforeach
                                 </tbody>
                             </table>
-                            <br><br>
-                            @endforeach
                         </div>
                     </div>
                 </div>

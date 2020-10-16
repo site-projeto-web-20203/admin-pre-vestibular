@@ -17,7 +17,8 @@ class CreateTurmasTable extends Migration
             $table->id();
             $table->date('dataInicio');
             $table->date('dataFim');
-            $table->string('horario');
+            $table->string('horarioInicio');
+            $table->string('horarioFim');
             $table->string('nome');
             $table->timestamps();
         });

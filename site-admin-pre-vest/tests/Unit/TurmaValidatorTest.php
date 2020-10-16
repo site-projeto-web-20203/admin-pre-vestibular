@@ -30,9 +30,17 @@ class TurmaValidatorTest extends TestCase
         TurmaValidator::validate($turma->toArray());
     }
 
-    public function testTurmaSemHorario(){
+    public function testTurmaSemHorarioInicio(){
         $this->expectException(ValidationException::class);
-        $turma = Turma::factory()->make(['horario' => '']);
+        $turma = Turma::factory()->make(['horarioInicio' => '']);
+        $turma['dataInicio'] = date(Carbon::createFromFormat('d/m/Y', $turma['dataInicio'])->format('Y-m-d'));
+        $turma['dataFim'] = date(Carbon::createFromFormat('d/m/Y', $turma['dataFim'])->format('Y-m-d'));
+        TurmaValidator::validate($turma->toArray());
+    }
+
+    public function testTurmaSemHorarioFim(){
+        $this->expectException(ValidationException::class);
+        $turma = Turma::factory()->make(['horarioFim' => '']);
         $turma['dataInicio'] = date(Carbon::createFromFormat('d/m/Y', $turma['dataInicio'])->format('Y-m-d'));
         $turma['dataFim'] = date(Carbon::createFromFormat('d/m/Y', $turma['dataFim'])->format('Y-m-d'));
         TurmaValidator::validate($turma->toArray());

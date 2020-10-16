@@ -28,7 +28,8 @@ class TurmaFactory extends Factory{
         return [
             'dataInicio' => ($this->faker->dateTimeBetween('-10 years', 'now'))->format('d/m/Y'),
             'dataFim' => ($this->faker->dateTimeBetween('-10 years', 'now'))->format('d/m/Y'),
-            'horario' => $this->faker->time($format = 'H:i:s', $max = '20:00:00'),
+            'horarioInicio' => $this->faker->time($format = 'H:i', $max = '20:00:00'),
+            'horarioFim' => $this->faker->time($format = 'H:i', $max = '22:00:00'),
             'nome' => $this->faker->lexify('Turma ?????')
         ];
     }

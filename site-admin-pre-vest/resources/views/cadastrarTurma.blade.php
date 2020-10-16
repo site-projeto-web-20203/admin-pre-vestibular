@@ -26,6 +26,8 @@
                                 </span>
                                 @enderror
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="col">
                                 <label for="dataInicio" class="col-form-label text-md-right">Data de Início da Turma</label>
                                 <input id="dataInicio" type="date" class="form-control @error('dataInicio') is-invalid @enderror" name="dataInicio" value="{{old('dataInicio')}}" required autofocus/>
@@ -35,21 +37,31 @@
                                 </span>
                                 @enderror
                             </div>
-                        </div>
-                        <div class="row">
                             <div class="col">
                                 <label for="dataFim" class="col-form-label text-md-right">Data de Encerramento da Turma</label>
-                                <input id="dataFim" type="date" class="form-control @error('dataFim') is-invalid @enderror" name="dataFim" value="{{old('dataFim')}}" required autofocs/>
+                                <input id="dataFim" type="date" class="form-control @error('dataFim') is-invalid @enderror" name="dataFim" value="{{old('dataFim')}}" required autofocus/>
                                 @error('dataFim')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>
                                 </span>
                                 @enderror
                             </div>
+                        </div>
+                        <div class="row">
+
                             <div class="col">
-                                <label for="horario" class="col-form-label text-md-right">Horário de Aula</label>
-                                <input id="horario" type="text" class="form-control @error('horario') is-invalid @enderror" name="horario" value="{{old('dataFim')}}" required autofocs/>
-                                @error('horario')
+                                <label for="horarioInicio" class="col-form-label text-md-right">Horário de Aula (Início)</label>
+                                <input id="horarioInicio" type="time" class="form-control @error('horarioInicio') is-invalid @enderror" name="horarioInicio" value="{{old('horarioInicio')}}" required autofocus/>
+                                @error('horarioInicio')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{$message}}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            <div class="col">
+                                <label for="horarioFim" class="col-form-label text-md-right">Horário de Aula (Final)</label>
+                                <input id="horarioFim" type="time" class="form-control @error('horarioFim') is-invalid @enderror" name="horarioFim" value="{{old('horarioFim')}}" required autofocus/>
+                                @error('horarioFim')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>
                                 </span>

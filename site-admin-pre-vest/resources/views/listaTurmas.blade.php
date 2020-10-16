@@ -31,7 +31,7 @@
                                             <td>{{$turma->nome}}</td>
                                             <td>{{Carbon\Carbon::parse($turma->dataInicio)->format('d/m/Y')}}</td>
                                             <td>{{Carbon\Carbon::parse($turma->dataFim)->format('d/m/Y')}}</td>
-                                            <td>{{$turma->horario}}</td>
+                                            <td>{{$turma->horarioInicio}} - {{$turma->horarioFim}}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>

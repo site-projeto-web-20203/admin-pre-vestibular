@@ -53,10 +53,10 @@
                                 </table>
                                 <div class="row">
                                     <div class="col">
-                                        <a href="{{url('/')}}" class="btn btn-primary">Editar</a>
+                                        <a href="{{url('/editar/aluno/'.$aluno->id)}}" class="btn btn-primary">Editar</a>
                                     </div>
                                     <div class="col">
-                                        <a href="{{url('/')}}" class="btn btn-primary">Remover</a>
+                                        <a href="{{url('/remover/aluno/'.$aluno->id)}}" class="btn btn-primary">Remover</a>
                                     </div>
                                     <div class="col">
                                         <a href="{{url('/admin/visualizar/aluno/'.$aluno->id)}}" class="btn btn-primary">Visualizar</a>

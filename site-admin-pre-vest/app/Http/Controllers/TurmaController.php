@@ -18,4 +18,14 @@ class TurmaController extends Controller
             return view('permissaoNegada');
         }
     }
+
+    public function listarAdmin(){
+        if(Auth::guard('admin')->check()) {
+            $turmas = DB::select("SELECT * FROM turmas");
+            return view('listaTurmasEditarRemover', ['turmas' => $turmas]);
+        }
+        else{
+            return view('permissaoNegada');
+        }
+    }
 }

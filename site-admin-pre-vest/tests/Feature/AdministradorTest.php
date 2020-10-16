@@ -93,8 +93,8 @@ class AdministradorTest extends TestCase
         $response->assertSee('Lista de Administradores', $escaped = true);
     }
 
-    /* ACESSAR O PERFIL CORRETO CAUSA ERRO 500 AS VEZES
-
+     #ACESSAR O PERFIL CORRETO CAUSA ERRO 500 AS VEZES
+    /*
     public function testUsuarioNaoLogadoAcessaPerfilAdministrador(){
         $response = $this->get('/visualizar/administrador/1');
         $response->assertStatus(200);
@@ -123,5 +123,6 @@ class AdministradorTest extends TestCase
         $response = $this->actingAs($administrador, 'admin')->get('/visualizar/administrador/$id');
         $response->assertStatus(200);
         $response->assertSee('Perfil de Administrador', $escaped = true);
-    }*/
+    }
+    */
 }

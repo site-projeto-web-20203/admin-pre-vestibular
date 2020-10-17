@@ -28,7 +28,7 @@
                             </div>
                             <div class="col">
                                 <label for="email" class="col-form-label text-md-right required">E-mail</label>
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{old('email')}}" required autofocus/>
+                                <input id="email" type="email"  placeholder="email@exemplo.com" class="form-control @error('email') is-invalid @enderror" name="email" value="{{old('email')}}" required autofocus/>
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>
@@ -40,7 +40,8 @@
                         <div class="row">
                             <div class="col">
                                 <label for="telefone" class="col-form-label text-md-right required">Telefone</label>
-                                <input id="telefone" type="text" class="form-control @error('telefone') is-invalid @enderror" name="telefone" value="{{old('telefone')}}" required autofocus/>
+                                <input id="telefone" type="tel" placeholder="(12) 34567-8901" pattern="[({1}][0-9]{2}[){1}] [0-9]{4,5}-[0-9]{4}" class="form-control @error('telefone') is-invalid @enderror" name="telefone" value="{{old('telefone')}}" required autofocus/>
+                                <small>Formato: (12) 34567-8901</small>
                                 @error('telefone')
                                 <span class="invalid-feedback" role="alert">
                                   <strong>{{$message}}</strong>

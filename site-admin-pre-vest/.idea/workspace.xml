@@ -21,7 +21,20 @@
   <component name="ChangeListManager">
     <list default="true" id="26a94090-6685-4bee-b043-1c4433f464c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/TurmaValidatorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/TurmaValidatorTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApostilaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApostilaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NovaApostilaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NovaApostilaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Administrador.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Administrador.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Aluno.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Aluno.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Professor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Professor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cadastrarAdministrador.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cadastrarAdministrador.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cadastrarAluno.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cadastrarAluno.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cadastrarProfessor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cadastrarProfessor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cadastrarTurma.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cadastrarTurma.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/editarAdministrador.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editarAdministrador.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/editarProfessor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editarProfessor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaApostilas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaApostilas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/novaApostila.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/novaApostila.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +218,8 @@
       <workItem from="1602557109938" duration="9409000" />
       <workItem from="1602610744468" duration="21243000" />
       <workItem from="1602648680259" duration="5423000" />
-      <workItem from="1602872565768" duration="3097000" />
+      <workItem from="1602872565768" duration="15048000" />
+      <workItem from="1602963433224" duration="7329000" />
     </task>
     <servers />
   </component>

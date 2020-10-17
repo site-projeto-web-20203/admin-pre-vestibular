@@ -11,7 +11,7 @@
         </div>
         <br>
         <div class="container" align="center">
-            <form method="POST" action="{{url('/cadastrar/apostila')}}">
+            <form method="POST" enctype="multipart/form-data" action="{{url('/cadastrar/apostila')}}">
                 @csrf
                 <div class="card" align="center">
                     <h3 align="center">Nova Apostila</h3>

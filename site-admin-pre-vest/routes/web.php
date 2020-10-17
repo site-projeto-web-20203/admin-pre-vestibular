@@ -102,7 +102,8 @@ Route::get('/remover/administrador/{id}', [RemoverAdministradorController::class
 
 Route::post('/remover/administrador/{id}', [RemoverAdministradorController::class, 'remover'])->name('administrador.delete');
 
-#Route::get('/login', [\App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
+Route::get('/download/apostila/{id}', [ApostilaController::class, 'download'])->name('apostila.download');
+
 Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'login']);
 
 Route::get('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout']);

@@ -31,7 +31,7 @@
                                             <td>{{Carbon\Carbon::parse($apostila->created_at)->format('d/m/Y - H:i')}}</td>
                                             <td>{{$apostila->disciplina}}</td>
                                             <td>{{$apostila->nome_arq}}</td>
-                                            <td><a href="/" class="btn btn-primary">Download</a></td>
+                                            <td><a href="{{url('/download/apostila/'.$apostila->id)}}" class="btn btn-primary">Download</a></td>
                                         </tr>
                                     @endforeach
                                 </tbody>

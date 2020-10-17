@@ -18,7 +18,7 @@ class Professor extends Authenticatable
 	public static $rules = [
 	    'nome' => 'required|min:5',
         'email' => 'required|email|unique:App\Models\Professor,email',
-        'telefone' => 'required',
+        'telefone' => 'required|min:14|max:15',
         'data_nascimento' => 'required|date',
         'ehVoluntario' => 'required',
         'grauInstrucao' => 'required',
@@ -27,7 +27,7 @@ class Professor extends Authenticatable
     ];
     public static $rulesEditar = [
         'nome' => 'required|min:5',
-        'telefone' => 'required',
+        'telefone' => 'required|min:14|max:15',
         'data_nascimento' => 'required|date',
         'ehVoluntario' => 'required',
         'grauInstrucao' => 'required',
@@ -37,7 +37,7 @@ class Professor extends Authenticatable
 	public static $messages = [
 	    'nome.*' => 'O campo nome é obrigatório e deve ter no mínimo 5 caracteres',
         'email.*' => 'O campo email é obrigatório e não pode ser um email já cadastrado',
-        'telefone.*' => 'O campo telefone é obrigatório',
+        'telefone.*' => 'O campo telefone é obrigatiorio e deve estar no formato (xx) xxxx-xxxx',
         'data_nascimento.*' => 'O campo data de nascimento é obrigatório',
         'voluntario.*' => 'É obrigatório informar se você é voluntário',
         'grauInstrucao.*' => 'O campo grau de instrução é obrigatório',

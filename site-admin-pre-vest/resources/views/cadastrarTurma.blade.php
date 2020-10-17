@@ -51,7 +51,7 @@
 
                             <div class="col">
                                 <label for="horarioInicio" class="col-form-label text-md-right">Horário de Aula (Início)</label>
-                                <input id="horarioInicio" type="time" class="form-control @error('horarioInicio') is-invalid @enderror" name="horarioInicio" value="{{old('horarioInicio')}}" required autofocus/>
+                                <input id="horarioInicio" type="time" min="06:00" max="23:00" class="form-control @error('horarioInicio') is-invalid @enderror" name="horarioInicio" value="{{old('horarioInicio')}}" required autofocus/>
                                 @error('horarioInicio')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>
@@ -60,7 +60,7 @@
                             </div>
                             <div class="col">
                                 <label for="horarioFim" class="col-form-label text-md-right">Horário de Aula (Final)</label>
-                                <input id="horarioFim" type="time" class="form-control @error('horarioFim') is-invalid @enderror" name="horarioFim" value="{{old('horarioFim')}}" required autofocus/>
+                                <input id="horarioFim" type="time" min="06:00" max="23:00" class="form-control @error('horarioFim') is-invalid @enderror" name="horarioFim" value="{{old('horarioFim')}}" required autofocus/>
                                 @error('horarioFim')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>

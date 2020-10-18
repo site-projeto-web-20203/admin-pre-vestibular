@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EditarAlunoController;
+use App\Http\Controllers\RemoverAlunoController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdministradorController;
@@ -50,6 +52,8 @@ Route::get('/listar/turmas', [TurmaController::class, 'listar']);
 
 Route::get('/admin/listar/professores', [ProfessorController::class, 'listarAdmin']);
 
+Route::get('/admin/listar/turmas', [TurmaController::class, 'listarAdmin']);
+
 Route::get('/admin/listar/alunos', [AlunoController::class, 'listarAdmin']);
 
 Route::get('/admin/listar/administradores', [AdministradorController::class, 'listarAdmins']);
@@ -82,6 +86,10 @@ Route::get('/editar/professor/{id}', [EditarProfessorController::class, 'prepara
 
 Route::post('/editar/professor/{id}', [EditarProfessorController::class, 'atualizar'])->name('professor.update');
 
+Route::get('/editar/aluno/{id}', [EditarAlunoController::class, 'prepararAtualizacao'])->name('aluno.editar');
+
+Route::post('/editar/aluno/{id}', [EditarAlunoController::class, 'atualizar'])->name('aluno.update');
+
 Route::get('/editar/administrador/{id}', [EditAdministradorController::class, 'prepararAtualizacao'])->name('administrador.editar');
 
 Route::post('/editar/administrador/{id}', [EditAdministradorController::class, 'atualizar'])->name('administrador.update');
@@ -97,6 +105,10 @@ Route::get('/admin/visualizar/professor/{id}', [ProfessorController::class, 'vis
 Route::get('/remover/professor/{id}', [RemoverProfessorController::class, 'prepararRemocao'])->name('professor.remover');
 
 Route::post('/remover/professor/{id}', [RemoverProfessorController::class, 'remover'])->name('professor.delete');
+
+Route::get('/remover/aluno/{id}', [RemoverAlunoController::class, 'prepararRemocao'])->name('aluno.remover');
+
+Route::post('/remover/aluno/{id}', [RemoverAlunoController::class, 'remover'])->name('aluno.delete');
 
 Route::get('/remover/administrador/{id}', [RemoverAdministradorController::class, 'prepararRemocao'])->name('administrador.remover');
 

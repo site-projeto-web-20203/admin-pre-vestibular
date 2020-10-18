@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\EditarAlunoController;
-use App\Http\Controllers\RemoverAlunoController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdministradorController;
@@ -20,6 +18,9 @@ use App\Http\Controllers\EditarProfessorController;
 use App\Http\Controllers\RemoverProfessorController;
 use App\Http\Controllers\EditAdministradorController;
 use App\Http\Controllers\RemoverAdministradorController;
+use App\Http\Controllers\RemoverApostilaController;
+use App\Http\Controllers\EditarAlunoController;
+use App\Http\Controllers\RemoverAlunoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +58,8 @@ Route::get('/admin/listar/turmas', [TurmaController::class, 'listarAdmin']);
 Route::get('/admin/listar/alunos', [AlunoController::class, 'listarAdmin']);
 
 Route::get('/admin/listar/administradores', [AdministradorController::class, 'listarAdmins']);
+
+Route::get('/admin/listar/apostilas', [ApostilaController::class, 'listarAdmin']);
 
 Route::get('/cadastrar/administrador', [CadastrarAdministradorController::class, 'prepararCadastro'])->name('administrador.cadastrar');
 
@@ -113,6 +116,10 @@ Route::post('/remover/aluno/{id}', [RemoverAlunoController::class, 'remover'])->
 Route::get('/remover/administrador/{id}', [RemoverAdministradorController::class, 'prepararRemocao'])->name('administrador.remover');
 
 Route::post('/remover/administrador/{id}', [RemoverAdministradorController::class, 'remover'])->name('administrador.delete');
+
+Route::get('/remover/apostila/{id}', [RemoverApostilaController::class, 'prepararRemocao'])->name('apostila.remover');
+
+Route::post('/remover/apostila/{id}', [RemoverApostilaController::class, 'remover'])->name('apostila.delete');
 
 Route::get('/download/apostila/{id}', [ApostilaController::class, 'download'])->name('apostila.download');
 

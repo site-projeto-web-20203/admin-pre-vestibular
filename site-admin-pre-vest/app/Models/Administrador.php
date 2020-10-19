@@ -33,7 +33,7 @@ class Administrador extends Authenticatable
                                 'data_nascimento.*' => 'O campo data de nascimento é obrigatório e deve ser preenchido no formato dd/mm/aaaa',
                                 'email.*' => 'O campo email é obrigatório e não pode ser um email já cadastrado',
                                 'telefone.*' => 'O campo telefone é obrigatiorio e deve estar no formato (xx) xxxx-xxxx',
-                                'password.*' => 'O campo senha é obrigatório e deve ter no minimo 5 caracteres'];
+                                'password.*' => 'Por favor digite sua senha atual ou uma nova senha com no minimo 5 digitos'];
 
     protected $hidden = ['password', 'remember_token'];
 }

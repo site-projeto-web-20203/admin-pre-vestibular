@@ -22,6 +22,7 @@ class EditarProfessorController extends Controller
             ProfessorValidator::validateEditar($dados);
             $dados['disponibilidade'] = implode(', ', $dados['disponibilidade']);
             $dados['areasAtuacao'] = implode(', ', $dados['areasAtuacao']);
+            $dados['password'] = Hash::make($dados['password']);
 			$professor->update($dados);
 			return "Professor atualizado";
 		}

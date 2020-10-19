@@ -20,6 +20,7 @@ class EditarAlunoController extends Controller
         try{
             $dados = $request->all();
             AlunoValidator::validateEditar($dados);
+            $dados['password'] = Hash::make($dados['password']);
             $aluno->update($dados);
             return "Aluno atualizado";
         }

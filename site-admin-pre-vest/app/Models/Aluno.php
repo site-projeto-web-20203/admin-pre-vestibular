@@ -24,7 +24,7 @@ class Aluno extends Authenticatable
     public static $rules = ['nome' => 'required|min:3|max:100',
                             'data_nascimento' => 'required|date',
                             'email' => 'required|email|unique:App\Models\Aluno,email',
-                            'telefone' => 'required',
+                            'telefone' => 'required|min:14|max:15',
                             'rua' => 'required|max:100',
                             'bairro' => 'required|max:100',
                             'complemento' => 'nullable|max:100',
@@ -35,7 +35,7 @@ class Aluno extends Authenticatable
                             'tipo_escola' => 'required',
                             'fez_enem' => 'required',
                             'nome_responsavel' => 'nullable|min:3|max:100',
-                            'telefone_responsavel' => 'nullable',
+                            'telefone_responsavel' => 'nullable|min:14|max:15',
                             'email_responsavel' => 'nullable|email'];
 
     public static $rulesEditar = ['nome' => 'required|min:3|max:100',
@@ -58,7 +58,7 @@ class Aluno extends Authenticatable
     public static $messages = ['nome.*' => 'O campo nome é obrigatório e deve ter entre 3 e 100 caracteres',
                                 'data_nascimento.*' => 'O campo data de nascimento é obrigatório',
                                 'email.*'  => 'O campo email é obrigatório e não pode ser um email já cadastrado',
-                                'telefone.*' => 'O campo telefone é obrigatório',
+                                'telefone.*' => 'O campo telefone é obrigatiorio e deve estar no formato (xx) xxxx-xxxx',
                                 'rua.*' => 'O campo rua é obrigatório e deve ter no máximo 100 caracteres',
                                 'bairro.*' => 'O campo bairro é obrigatório e deve ter no máximo 100 caracteres',
                                 'complemento.*' => 'O campo complemento deve ter no máximo 100 caracteres',

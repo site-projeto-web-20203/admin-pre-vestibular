@@ -41,7 +41,8 @@
                         <div class="row">
                             <div class="col">
                                 <label for="telefone" class="col-form-label text-md-right">Telefone</label>
-                                <input id="telefone" type="text" value="{{$administrador->telefone}}" class="form-control @error('telefone') is-invalid @enderror" name="telefone" required autofocus/>
+                                <input id="telefone" type="tel" pattern="[({1}][0-9]{2}[){1}] [0-9]{4,5}-[0-9]{4}" value="{{$administrador->telefone}}" class="form-control @error('telefone') is-invalid @enderror" name="telefone" required autofocus/>
+                                <small>Formato: (12) 34567-8901</small>
                                 @error('telefone')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>

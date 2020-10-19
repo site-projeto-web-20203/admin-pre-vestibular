@@ -22,15 +22,15 @@
                             <a href="{{ url('admin/listar/turmas') }}" class="btn2 btn">Listar Turmas</a><br><br>
                         </div>
                         <div class="col">
-                            <a href="{{ url('listar/apostilas') }}" class="btn2 btn">Listar Apostilas</a><br><br>
+                            <a href="{{ url('admin/listar/apostilas') }}" class="btn2 btn">Listar Apostilas</a><br><br>
                             <a href="{{ url('listar/mensagens') }}" class="btn2 btn">Listar Mensagens</a><br><br>
-                            <a href="{{ url('/cadastrar/apostila') }}" class="btn2 btn">Adicionar Apostila</a><br><br>
-                            <a href="{{ url('/cadastrar/turma') }}" class="btn2 btn">Adicionar Turma</a><br><br>
+                            <a href="{{ url('cadastrar/apostila') }}" class="btn2 btn">Adicionar Apostila</a><br><br>
+                            <a href="{{ url('cadastrar/turma') }}" class="btn2 btn">Adicionar Turma</a><br><br>
                         </div>
                         <div class="col">
-                            <a href="{{ url('/cadastrar/administrador') }}" class="btn2 btn">Cadastrar Administrador</a><br><br>
-                            <a href="{{ url('/mensagem/nova') }}" class="btn2 btn">Enviar Mensagem</a><br><br>
-                            <a href="{{ url('/visualizar/administrador/'.$id) }}" class="btn2 btn">Meu Perfil</a><br><br>
+                            <a href="{{ url('cadastrar/administrador') }}" class="btn2 btn">Cadastrar Administrador</a><br><br>
+                            <a href="{{ url('mensagem/nova') }}" class="btn2 btn">Enviar Mensagem</a><br><br>
+                            <a href="{{ url('visualizar/administrador/'.$id) }}" class="btn2 btn">Meu Perfil</a><br><br>
                         </div>
                     </div>
                 </div>

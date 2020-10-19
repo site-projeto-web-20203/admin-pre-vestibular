@@ -23,6 +23,7 @@
                                         <th>Disciplina</th>
                                         <th>Apostila</th>
                                         <th></th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -32,6 +33,7 @@
                                             <td>{{$apostila->disciplina}}</td>
                                             <td>{{$apostila->nome_arq}}</td>
                                             <td><a href="{{url('/download/apostila/'.$apostila->id)}}" class="btn btn-primary">Download</a></td>
+                                            <td><a href="{{url('/remover/apostila/'.$apostila->id)}}" class="btn btn-primary">Remover</a></td>
                                         </tr>
                                     @endforeach
                                 </tbody>

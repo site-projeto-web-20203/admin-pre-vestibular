@@ -14,7 +14,7 @@ class Professor extends Authenticatable
 
 	protected $guard = 'professor';
 
-	protected $fillable = ['nome', 'email', 'telefone', 'data_nascimento', 'ehVoluntario', 'grauInstrucao', 'disponibilidade', 'areasAtuacao'];
+	protected $fillable = ['nome', 'email', 'telefone', 'data_nascimento', 'ehVoluntario', 'grauInstrucao', 'disponibilidade', 'areasAtuacao', 'password'];
 	public static $rules = [
 	    'nome' => 'required|min:5',
         'email' => 'required|email|unique:App\Models\Professor,email',
@@ -32,7 +32,8 @@ class Professor extends Authenticatable
         'ehVoluntario' => 'required',
         'grauInstrucao' => 'required',
         'disponibilidade' => 'required',
-        'areasAtuacao' => 'required'
+        'areasAtuacao' => 'required',
+        'password' => 'required|min:5'
     ];
 	public static $messages = [
 	    'nome.*' => 'O campo nome é obrigatório e deve ter no mínimo 5 caracteres',
@@ -42,7 +43,8 @@ class Professor extends Authenticatable
         'voluntario.*' => 'É obrigatório informar se você é voluntário',
         'grauInstrucao.*' => 'O campo grau de instrução é obrigatório',
         'disponibilidade.*' => 'O campo disponibilidade é obrigatório',
-        'areasAtuacao.*' => 'O campo áreas de atuação é obrigatório'
+        'areasAtuacao.*' => 'O campo áreas de atuação é obrigatório',
+        'password.*' => 'Por favor digite sua senha atual ou uma nova senha com no minimo 5 digitos'
     ];
 
 	protected $hidden = ['senha', 'remember_token'];

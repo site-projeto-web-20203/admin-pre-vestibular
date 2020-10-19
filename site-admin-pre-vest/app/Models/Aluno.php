@@ -19,7 +19,7 @@ class Aluno extends Authenticatable
 
     protected $fillable = ['nome', 'data_nascimento', 'email', 'telefone', 'rua', 'bairro', 'complemento', 'cidade',
                             'numero', 'escola', 'ano_conclusao', 'tipo_escola','fez_enem','nome_responsavel',
-                            'telefone_responsavel', 'email_responsavel'];
+                            'telefone_responsavel', 'email_responsavel', 'password'];
 
     public static $rules = ['nome' => 'required|min:3|max:100',
                             'data_nascimento' => 'required|date',
@@ -52,7 +52,8 @@ class Aluno extends Authenticatable
         'fez_enem' => 'required',
         'nome_responsavel' => 'nullable|min:3|max:100',
         'telefone_responsavel' => 'nullable',
-        'email_responsavel' => 'nullable|email'];
+        'email_responsavel' => 'nullable|email',
+        'password' => 'required|min:5'];
 
 
     public static $messages = ['nome.*' => 'O campo nome é obrigatório e deve ter entre 3 e 100 caracteres',
@@ -68,5 +69,6 @@ class Aluno extends Authenticatable
                                 'ano_conclusao.*' => 'O campo ano de conclusão é obrigatório e deve estar no formato XXXX',
                                 'nome_responsavel.*' => 'Este campo é obrigatório se você for menor de idade e deve ter entre 3 e 100 caracteres',
                                 'telefone_responsavel.*' => 'Este campo é obrigatório se você for menor de idade',
-                                'email_responsavel.*' => 'Este campo é obrigatório se você for menor de idade'];
+                                'email_responsavel.*' => 'Este campo é obrigatório se você for menor de idade',
+                                'password.*' => 'Por favor digite sua senha atual ou uma nova senha com no minimo 5 digitos'];
 }

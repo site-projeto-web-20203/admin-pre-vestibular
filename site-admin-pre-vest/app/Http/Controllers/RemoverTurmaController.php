@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Aluno;
-use DB;
+use App\Models\Turma;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class RemoverAlunoController extends Controller
+class RemoverTurmaController extends Controller
 {
     public function prepararRemocao($id){
         if(Auth::guard('admin')->check()) {
-            $aluno = Aluno::find($id);
-            return view('removerAluno', ['aluno' => $aluno]);
+            $turma = Turma::find($id);
+            return view('removerTurma', ['turma' => $turma]);
         }
         else{
             return view('permissaoNegada');
@@ -20,9 +20,9 @@ class RemoverAlunoController extends Controller
 
     public function remover($id){
         if(Auth::guard('admin')->check()) {
-            $aluno = Aluno::find($id);
-            $aluno->delete();
-            return view("alunoRemovido");
+            $turma = Turma::find($id);
+            $turma->delete();
+            return view("turmaRemovida");
         }
         else{
             return view('permissaoNegada');

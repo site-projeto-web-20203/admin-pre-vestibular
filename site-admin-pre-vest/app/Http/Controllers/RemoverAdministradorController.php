@@ -22,7 +22,7 @@ class RemoverAdministradorController extends Controller
         if(Auth::guard('admin')->check()) {
             $administrador = Administrador::find($id);
             $administrador->delete();
-            return "Administrador removido";
+            return view("administradorRemovido");
         }
         else{
             return view('permissaoNegada');

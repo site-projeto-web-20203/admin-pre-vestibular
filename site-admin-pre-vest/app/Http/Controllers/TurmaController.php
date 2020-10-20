@@ -28,4 +28,9 @@ class TurmaController extends Controller
             return view('permissaoNegada');
         }
     }
+
+    public function visualizar($id){
+        $turma = Turma::find($id);
+        return view('visualizarTurma', ['turma' => $turma]);
+    }
 }

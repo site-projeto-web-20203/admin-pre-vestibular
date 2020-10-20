@@ -32,6 +32,7 @@
                                             <td>{{$mensagem->email}}</td>
                                             <td>{{Carbon\Carbon::parse($mensagem->created_at)->format('d/m/Y - H:i')}}</td>
                                             <td><a href="{{url('/admin/visualizar/mensagem/'.$mensagem->id)}}" class="btn btn-primary">Visualizar</a></td>
+                                            <td><a href="{{url('/remover/mensagem/'.$mensagem->id)}}" class="btn btn-primary">Remover</a></td>
                                         </tr>
                                     </tbody>
                                 @endforeach

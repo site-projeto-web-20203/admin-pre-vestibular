@@ -22,7 +22,7 @@ class RemoverTurmaController extends Controller
         if(Auth::guard('admin')->check()) {
             $turma = Turma::find($id);
             $turma->delete();
-            return "Turma removida";
+            return view("turmaRemovida");
         }
         else{
             return view('permissaoNegada');

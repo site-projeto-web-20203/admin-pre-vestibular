@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EditarTurmaController;
+use App\Http\Controllers\RemoverMensagemController;
 use App\Http\Controllers\RemoverTurmaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -134,6 +135,10 @@ Route::get('/download/apostila/{id}', [ApostilaController::class, 'download'])->
 Route::get('/remover/turma/{id}', [RemoverTurmaController::class, 'prepararRemocao'])->name('turma.remover');
 
 Route::post('/remover/turma/{id}', [RemoverTurmaController::class, 'remover'])->name('turma.delete');
+
+Route::get('/remover/mensagem/{id}', [RemoverMensagemController::class, 'prepararRemocao'])->name('mensagem.remover');
+
+Route::post('/remover/mensagem/{id}', [RemoverMensagemController::class, 'remover'])->name('mensagem.delete');
 
 Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'login']);
 

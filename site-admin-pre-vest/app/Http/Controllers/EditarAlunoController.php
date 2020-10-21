@@ -28,4 +28,22 @@ class EditarAlunoController extends Controller
             return redirect('/editar/aluno/'.$aluno->id)->withErrors($exception->getValidator())->withInput();
         }
     }
+
+    public function adicionarTurma(Request $request, $id){
+        $aluno = Aluno::find($id);
+        $dados = $request->all();
+        $aluno->turma_id = $dados['turma_id'];
+        $aluno->save();
+        return redirect('/editar/turma/'.$aluno->turma_id);
+
+    }
+
+    public function removerTurma($id){
+        $aluno = Aluno::find($id);
+        $turma_id = $aluno->turma_id;
+        $aluno->turma_id = null;
+        $aluno->save();
+        return redirect('/admin/visualizar/turma/'.$turma_id);
+
+    }
 }

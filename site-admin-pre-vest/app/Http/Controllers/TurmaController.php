@@ -31,6 +31,13 @@ class TurmaController extends Controller
 
     public function visualizar($id){
         $turma = Turma::find($id);
-        return view('visualizarTurma', ['turma' => $turma]);
+        $alunos = DB::select("SELECT * FROM alunos WHERE turma_id = $turma->id");
+        return view('visualizarTurma', ['turma' => $turma, 'alunos' => $alunos]);
+    }
+
+    public function visualizarAdmin($id){
+        $turma = Turma::find($id);
+        $alunos = DB::select("SELECT * FROM alunos WHERE turma_id = $turma->id");
+        return view('visualizarTurmaEditarRemover', ['turma' => $turma, 'alunos' => $alunos]);
     }
 }

@@ -104,13 +104,19 @@ Route::get('/editar/turma/{id}', [EditarTurmaController::class, 'prepararAtualiz
 
 Route::post('/editar/turma/{id}', [EditarTurmaController::class, 'atualizar'])->name('turma.update');
 
+Route::post('/editar/turmaaluno/{id}', [EditarAlunoController::class, 'adicionarTurma'])->name('addTurmaAluno.update')->middleware('auth:admin');
+
+Route::post('/remover/turmaaluno/{id}', [EditarAlunoController::class, 'removerTurma'])->name('removeTurmaAluno.update')->middleware('auth:admin');
+
 Route::get('/admin/visualizar/aluno/{id}', [AlunoController::class, 'visualizar'])->name('aluno.visualizar')->middleware('auth:admin');
 
 Route::get('/admin/visualizar/mensagem/{id}', [MensagemController::class, 'visualizar'])->name('mensagem.visualizar')->middleware('auth:admin');
 
 Route::get('/admin/visualizar/professor/{id}', [ProfessorController::class, 'visualizar'])->name('professor.visualizar')->middleware('auth:admin');
 
-Route::get('/admin/visualizar/turma/{id}', [TurmaController::class, 'visualizar'])->name('turma.visualizar')->middleware('auth:admin');
+Route::get('/visualizar/turma/{id}', [TurmaController::class, 'visualizar'])->name('turma.visualizar');
+
+Route::get('/admin/visualizar/turma/{id}', [TurmaController::class, 'visualizarAdmin'])->name('turma.visualizarAdmin')->middleware('auth:admin');
 
 #Route::get('/visualizar/administrador/{id}', [AdministradorController::class, 'visualizar'])->name('administrador.visualizar');
 

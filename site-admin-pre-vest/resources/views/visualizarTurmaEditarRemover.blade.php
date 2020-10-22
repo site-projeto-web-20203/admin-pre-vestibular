@@ -34,6 +34,18 @@
                         </tr>
                         </tbody>
                     </table>
+                    <div class="row">
+                        <div class="col">
+                            <a href="{{url('/editar/turma/'.$turma->id)}}" class="btn btn-primary">Editar Dados</a>
+                        </div>
+                        <div class="col">
+                            <a href="{{url('/admin/visualizar/professorturma/'.$turma->id)}}" class="btn btn-primary">Professores da Turma</a>
+                        </div>
+                        <div class="col">
+                            <a href="{{url('/remover/turma/'.$turma->id)}}" class="btn btn-primary">Remover</a>
+                        </div>
+                    </div>
+                    <br><br>
                     <h3 align="center">Alunos da Turma</h3>
                     <div class="row">
                         <div class="col">
@@ -96,14 +108,6 @@
                             @endforeach
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <a href="{{url('/editar/turma/'.$turma->id)}}" class="btn btn-primary">Editar Dados</a>
-                </div>
-                <div class="col">
-                    <a href="{{url('/remover/turma/'.$turma->id)}}" class="btn btn-primary">Remover</a>
                 </div>
             </div>
         </div>

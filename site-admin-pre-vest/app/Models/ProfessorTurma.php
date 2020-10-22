@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProfessorTurma extends Model
 {
-    use HasFactory;
+    protected $table = 'professor_turma';
+    protected $fillable = ['turma_id','professor_id'];
 }

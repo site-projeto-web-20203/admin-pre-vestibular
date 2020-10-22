@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\EditarProfessorTurmaController;
 use App\Http\Controllers\EditarTurmaController;
+use App\Http\Controllers\ProfessorTurmaController;
 use App\Http\Controllers\RemoverMensagemController;
 use App\Http\Controllers\RemoverTurmaController;
 use Illuminate\Support\Facades\Auth;
@@ -104,6 +106,12 @@ Route::get('/editar/turma/{id}', [EditarTurmaController::class, 'prepararAtualiz
 
 Route::post('/editar/turma/{id}', [EditarTurmaController::class, 'atualizar'])->name('turma.update');
 
+Route::get('/editar/turmaprofessor/{id}', [EditarProfessorTurmaController::class, 'prepararAdicao'])->name('addProfessorTurma.editar');
+
+Route::post('/adicionar/turmaprofessor/{idp}/{idt}', [EditarProfessorTurmaController::class, 'adicionarProfessor'])->name('addProfessorTurma.update');
+
+Route::post('/remover/turmaprofessor/{idp}/{idt}', [EditarProfessorTurmaController::class, 'removerProfessor'])->name('removeProfessorTurma.update')->middleware('auth:admin');
+
 Route::post('/editar/turmaaluno/{id}', [EditarAlunoController::class, 'adicionarTurma'])->name('addTurmaAluno.update')->middleware('auth:admin');
 
 Route::post('/remover/turmaaluno/{id}', [EditarAlunoController::class, 'removerTurma'])->name('removeTurmaAluno.update')->middleware('auth:admin');
@@ -117,6 +125,8 @@ Route::get('/admin/visualizar/professor/{id}', [ProfessorController::class, 'vis
 Route::get('/visualizar/turma/{id}', [TurmaController::class, 'visualizar'])->name('turma.visualizar');
 
 Route::get('/admin/visualizar/turma/{id}', [TurmaController::class, 'visualizarAdmin'])->name('turma.visualizarAdmin')->middleware('auth:admin');
+
+Route::get('/admin/visualizar/professorturma/{id}', [ProfessorTurmaController::class, 'visualizarProfessores'])->name('turma.visualizarProfessores');
 
 #Route::get('/visualizar/administrador/{id}', [AdministradorController::class, 'visualizar'])->name('administrador.visualizar');
 

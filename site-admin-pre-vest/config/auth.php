@@ -129,6 +129,27 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+
+        'administradors' => [
+            'provider' => 'administradors',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'professors' => [
+            'provider' => 'professors',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
+        'alunos' => [
+            'provider' => 'alunos',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
     ],
 
     /*

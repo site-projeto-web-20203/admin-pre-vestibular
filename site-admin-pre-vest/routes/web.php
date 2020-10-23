@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\EditarProfessorTurmaController;
+use App\Http\Controllers\EditarTurmaController;
+use App\Http\Controllers\ProfessorTurmaController;
+use App\Http\Controllers\RemoverMensagemController;
+use App\Http\Controllers\RemoverTurmaController;
+use App\Models\Administrador;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdministradorController;
@@ -21,6 +27,11 @@ use App\Http\Controllers\RemoverAdministradorController;
 use App\Http\Controllers\RemoverApostilaController;
 use App\Http\Controllers\EditarAlunoController;
 use App\Http\Controllers\RemoverAlunoController;
+use Illuminate\Support\Facades\Password;
+use Illuminate\Http\Request;
+use Illuminate\Auth\Events\PasswordReset;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -97,11 +108,31 @@ Route::get('/editar/administrador/{id}', [EditAdministradorController::class, 'p
 
 Route::post('/editar/administrador/{id}', [EditAdministradorController::class, 'atualizar'])->name('administrador.update');
 
+Route::get('/editar/turma/{id}', [EditarTurmaController::class, 'prepararAtualizacao'])->name('turma.editar');
+
+Route::post('/editar/turma/{id}', [EditarTurmaController::class, 'atualizar'])->name('turma.update');
+
+Route::get('/editar/turmaprofessor/{id}', [EditarProfessorTurmaController::class, 'prepararAdicao'])->name('addProfessorTurma.editar');
+
+Route::post('/adicionar/turmaprofessor/{idp}/{idt}', [EditarProfessorTurmaController::class, 'adicionarProfessor'])->name('addProfessorTurma.update');
+
+Route::post('/remover/turmaprofessor/{idp}/{idt}', [EditarProfessorTurmaController::class, 'removerProfessor'])->name('removeProfessorTurma.update')->middleware('auth:admin');
+
+Route::post('/editar/turmaaluno/{id}', [EditarAlunoController::class, 'adicionarTurma'])->name('addTurmaAluno.update')->middleware('auth:admin');
+
+Route::post('/remover/turmaaluno/{id}', [EditarAlunoController::class, 'removerTurma'])->name('removeTurmaAluno.update')->middleware('auth:admin');
+
 Route::get('/admin/visualizar/aluno/{id}', [AlunoController::class, 'visualizar'])->name('aluno.visualizar')->middleware('auth:admin');
 
 Route::get('/admin/visualizar/mensagem/{id}', [MensagemController::class, 'visualizar'])->name('mensagem.visualizar')->middleware('auth:admin');
 
 Route::get('/admin/visualizar/professor/{id}', [ProfessorController::class, 'visualizar'])->name('professor.visualizar')->middleware('auth:admin');
+
+Route::get('/visualizar/turma/{id}', [TurmaController::class, 'visualizar'])->name('turma.visualizar');
+
+Route::get('/admin/visualizar/turma/{id}', [TurmaController::class, 'visualizarAdmin'])->name('turma.visualizarAdmin')->middleware('auth:admin');
+
+Route::get('/admin/visualizar/professorturma/{id}', [ProfessorTurmaController::class, 'visualizarProfessores'])->name('turma.visualizarProfessores');
 
 #Route::get('/visualizar/administrador/{id}', [AdministradorController::class, 'visualizar'])->name('administrador.visualizar');
 
@@ -122,6 +153,14 @@ Route::get('/remover/apostila/{id}', [RemoverApostilaController::class, 'prepara
 Route::post('/remover/apostila/{id}', [RemoverApostilaController::class, 'remover'])->name('apostila.delete');
 
 Route::get('/download/apostila/{id}', [ApostilaController::class, 'download'])->name('apostila.download');
+
+Route::get('/remover/turma/{id}', [RemoverTurmaController::class, 'prepararRemocao'])->name('turma.remover');
+
+Route::post('/remover/turma/{id}', [RemoverTurmaController::class, 'remover'])->name('turma.delete');
+
+Route::get('/remover/mensagem/{id}', [RemoverMensagemController::class, 'prepararRemocao'])->name('mensagem.remover');
+
+Route::post('/remover/mensagem/{id}', [RemoverMensagemController::class, 'remover'])->name('mensagem.delete');
 
 Route::post('/login', [\App\Http\Controllers\Auth\LoginController::class, 'login']);
 
@@ -180,3 +219,7 @@ Route::get('/visualizar/administrador/{administrador}',  function(){
         return view('permissaoNegada');
     }
 });
+
+Route::post('/password/email', [\App\Http\Controllers\Auth\ForgotPasswordController::class, 'sendResetLinkEmail'])->name('new.password.email');
+Route::post('/password/reset', [\App\Http\Controllers\Auth\ResetPasswordController::class, 'showResetForm'])->name('passwords.reset');
+Route::post('/password/reset', [\App\Http\Controllers\Auth\ResetPasswordController::class, 'reset'])->name('passwords.update');

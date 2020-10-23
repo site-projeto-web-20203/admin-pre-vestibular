@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Reset Password') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('password.update') }}">
+                    <form method="POST" action="{{ route('passwords.update') }}">
                         @csrf
 
                         <input type="hidden" name="token" value="{{ $token }}">
@@ -48,6 +48,17 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+                        <div class="row justify-content-center">
+                            <div>
+                                <label for="tipo_conta" class="required">Tipo de Conta</label><br>
+                                <select name="tipo_conta" id="tipo_conta">
+                                    <option value="administradors">Administrador</option>
+                                    <option value="professors">Professor</option>
+                                    <option value="alunos">Aluno</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

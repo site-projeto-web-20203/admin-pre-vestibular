@@ -22,7 +22,7 @@ class RemoverProfessorController extends Controller
         if(Auth::guard('admin')->check()) {
             $professor = Professor::find($id);
             $professor->delete();
-            return "Professor removido";
+            return view("professorRemovido");
         }
         else{
             return view('permissaoNegada');

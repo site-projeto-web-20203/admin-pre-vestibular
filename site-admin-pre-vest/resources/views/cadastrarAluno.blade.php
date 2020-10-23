@@ -161,7 +161,7 @@
                         <div class="row">
                             <div class="col">
                                 <label for="nome_responsavel" class="col-form-label text-md-right">Nome do Responsável</label>
-                                <input id="nome_responsavel" type="text" class="form-control @error('nome_responsavel') is-invalid @enderror"/>
+                                <input id="nome_responsavel" type="text" class="form-control @error('nome_responsavel') is-invalid @enderror" name="nome_responsavel" value="{{old('nome_responsavel')}}" autofocus/>
                                 @error('nome_responsavel')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>

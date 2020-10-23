@@ -34,10 +34,18 @@
                         </tr>
                         </tbody>
                     </table>
+                    <div class="row">
+                        <div class="col">
+                            <a href="{{url('/editar/turmaprofessor/'.$turma->id)}}" class="btn btn-primary">Adicionar Professores</a>
+                        </div>
+                    </div>
+                    <br><br>
                     <h3 align="center">Professores da Turma</h3>
                     <div class="row">
                         <div class="col">
                             @foreach($professores as $professor)
+                                <form method="POST" action="{{url('/remover/turmaprofessor/'.$professor->id.'/'.$turma->id)}}">
+                                    @csrf
                                     <table class="table table-bordered", align="center">
                                         <thead>
                                         <tr>
@@ -56,6 +64,7 @@
                                         </tr>
                                         </tbody>
                                     </table>
+                                    <input type="submit" class="btn btn-primary" value="Remover" />
                                     <br><br>
                                 </form>
                             @endforeach

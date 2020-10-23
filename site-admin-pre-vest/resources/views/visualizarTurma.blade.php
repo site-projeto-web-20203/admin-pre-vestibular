@@ -34,6 +34,12 @@
                         </tr>
                         </tbody>
                     </table>
+                    <div class="row">
+                        <div class="col">
+                            <a href="{{url('/visualizar/professorturma/'.$turma->id)}}" class="btn btn-primary">Professores da Turma</a>
+                        </div>
+                    </div>
+                    <br>
                     <h3 align="center">Alunos da Turma</h3>
                     <div class="row">
                         <div class="col">

@@ -17,7 +17,7 @@
                     <div class="row">
                         <div class="col">
                             <a href="{{ url('/visualizar/aluno/'.$id) }}" class="btn2 btn">Meu Perfil</a><br><br>
-                            <a href="{{ url('/') }}" class="btn2 btn">Minha Turma</a><br><br>
+                            <a href="{{ url('/aluno/visualizar/turma/'.$id) }}" class="btn2 btn">Minha Turma</a><br><br>
                         </div>
                         <div class="col">
                             <a href="{{ url('/mensagem/nova') }}" class="btn2 btn">Enviar Mensagem</a><br><br>

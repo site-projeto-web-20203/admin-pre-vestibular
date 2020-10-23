@@ -93,10 +93,11 @@ class CadastrarTest extends DuskTestCase
                 ->type('nome', 'nome da turma')
                 ->type('dataInicio', '01032020')
                 ->type('dataFim', '26112020')
-                ->type('horarioInicio', '0700')
-                ->type('horarioFim', '1100')
+                ->type('horarioInicio', '0700a')
+                ->type('horarioFim', '1100a')
                 ->pause(2000)
                 ->press('Cadastrar')
+                ->pause(2000)
                 ->assertSee('TURMA CADASTRADA!')
                 ->pause(2000)
                 ->visit('/logout');

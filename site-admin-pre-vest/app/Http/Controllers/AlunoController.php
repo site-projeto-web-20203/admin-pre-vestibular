@@ -40,7 +40,8 @@ class AlunoController extends Controller
         $aluno = Aluno::find($id);
         $turma = Turma::find($aluno->turma_id);
         $alunos = DB::select("SELECT * FROM alunos WHERE turma_id = $turma->id");
-
-        return view('visualizarTurma', ['turma' => $turma, 'alunos' => $alunos]);
+        $professores = DB::select("SELECT * FROM professors WHERE id IN (SELECT professor_id FROM professor_turma WHERE turma_id = $turma->id)");
+        return view('visualizarTurma', ['turma' => $turma, 'alunos' => $alunos, 'professores' => $professores]);
+        return view('visualizarTurma', ['turma' => $turma, 'alunos' => $alunos, 'professores' => $professores]);
     }
 }

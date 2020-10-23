@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <form method="POST" action="{{ route('password.email') }}">
+                    <form method="POST" action="{{ route('new.password.email') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -30,7 +30,17 @@
                                 @enderror
                             </div>
                         </div>
-
+                        <div class="row justify-content-center">
+                            <div>
+                                <label for="tipo_conta" class="required">Tipo de Conta</label><br>
+                                <select name="tipo_conta" id="tipo_conta">
+                                    <option value="admin">Administrador</option>
+                                    <option value="professor">Professor</option>
+                                    <option value="aluno">Aluno</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

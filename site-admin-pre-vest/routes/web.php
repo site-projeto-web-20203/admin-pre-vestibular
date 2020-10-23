@@ -5,6 +5,7 @@ use App\Http\Controllers\EditarTurmaController;
 use App\Http\Controllers\ProfessorTurmaController;
 use App\Http\Controllers\RemoverMensagemController;
 use App\Http\Controllers\RemoverTurmaController;
+use App\Models\Administrador;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdministradorController;
@@ -26,6 +27,11 @@ use App\Http\Controllers\RemoverAdministradorController;
 use App\Http\Controllers\RemoverApostilaController;
 use App\Http\Controllers\EditarAlunoController;
 use App\Http\Controllers\RemoverAlunoController;
+use Illuminate\Support\Facades\Password;
+use Illuminate\Http\Request;
+use Illuminate\Auth\Events\PasswordReset;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -213,3 +219,7 @@ Route::get('/visualizar/administrador/{administrador}',  function(){
         return view('permissaoNegada');
     }
 });
+
+Route::post('/password/email', [\App\Http\Controllers\Auth\ForgotPasswordController::class, 'sendResetLinkEmail'])->name('new.password.email');
+Route::post('/password/reset', [\App\Http\Controllers\Auth\ResetPasswordController::class, 'showResetForm'])->name('passwords.reset');
+Route::post('/password/reset', [\App\Http\Controllers\Auth\ResetPasswordController::class, 'reset'])->name('passwords.update');

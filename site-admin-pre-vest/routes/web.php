@@ -72,6 +72,8 @@ Route::get('/admin/listar/administradores', [AdministradorController::class, 'li
 
 Route::get('/admin/listar/apostilas', [ApostilaController::class, 'listarAdmin']);
 
+Route::get('/prof/listar/apostilas', [ApostilaController::class, 'listarProf']);
+
 Route::get('/cadastrar/administrador', [CadastrarAdministradorController::class, 'prepararCadastro'])->name('administrador.cadastrar');
 
 Route::post('/cadastrar/administrador', [CadastrarAdministradorController::class, 'cadastrar'])->name('administrador.create');

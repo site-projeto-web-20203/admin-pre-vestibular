@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Turma;
 use DB;
 use Illuminate\Support\Facades\Auth;
@@ -38,6 +37,7 @@ class TurmaController extends Controller
     public function visualizarAdmin($id){
         $turma = Turma::find($id);
         $alunos = DB::select("SELECT * FROM alunos WHERE turma_id = $turma->id");
-        return view('visualizarTurmaEditarRemover', ['turma' => $turma, 'alunos' => $alunos]);
+        $professores = DB::select("SELECT * FROM professors WHERE id IN (SELECT professor_id FROM professor_turma WHERE turma_id = $turma->id)");
+        return view('visualizarTurmaEditarRemover', ['turma' => $turma, 'alunos' => $alunos, 'professores' => $professores]);
     }
 }

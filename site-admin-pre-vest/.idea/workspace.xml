@@ -21,9 +21,69 @@
   <component name="ChangeListManager">
     <list default="true" id="26a94090-6685-4bee-b043-1c4433f464c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdministradorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdministradorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AlunoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AlunoController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApostilaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApostilaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CadastrarAdministradorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CadastrarAdministradorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CadastrarAlunoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CadastrarAlunoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CadastrarProfessorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CadastrarProfessorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CadastrarTurmaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CadastrarTurmaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EditAdministradorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EditAdministradorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EditarAlunoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EditarAlunoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EditarProfessorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EditarProfessorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EditarProfessorTurmaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EditarProfessorTurmaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EditarTurmaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EditarTurmaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MensagemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MensagemController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NovaApostilaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NovaApostilaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NovaMensagemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NovaMensagemController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfessorTurmaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfessorTurmaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RemoverAdministradorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RemoverAdministradorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RemoverTurmaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RemoverTurmaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TurmaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TurmaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Apostila.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Apostila.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/adicionarTurmaProfessores.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adicionarTurmaProfessores.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/administradorRemovido.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/administradorRemovido.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/alunoRemovido.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/alunoRemovido.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/apostilaRemovida.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/apostilaRemovida.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/arquivoIndisponivel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/arquivoIndisponivel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cadastrarAdministrador.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cadastrarAdministrador.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cadastrarAluno.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cadastrarAluno.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cadastrarProfessor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cadastrarProfessor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cadastrarTurma.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cadastrarTurma.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/editarAdministrador.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editarAdministrador.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/editarAluno.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editarAluno.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/editarProfessor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editarProfessor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/editarTurma.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editarTurma.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inscricaoConcluida.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inscricaoConcluida.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaAdministradores.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaAdministradores.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaAdministradoresEditarRemover.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaAdministradoresEditarRemover.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaAlunos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaAlunos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaAlunosEditarRemover.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaAlunosEditarRemover.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaApostilas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaApostilas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaApostilasRemover.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaApostilasRemover.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaMensagens.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaMensagens.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaProfessores.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaProfessores.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaProfessoresEditarRemover.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaProfessoresEditarRemover.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaTurmas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaTurmas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/listaTurmasEditarRemover.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/listaTurmasEditarRemover.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/mensagemRemovida.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mensagemRemovida.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/menuAdministrador.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menuAdministrador.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menuAluno.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menuAluno.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/menuProfessor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/menuProfessor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/novaApostila.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/novaApostila.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/novaMensagem.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/novaMensagem.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/permissaoNegada.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/permissaoNegada.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/visualizarTurmaEditarRemover.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/visualizarTurmaEditarRemover.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Browser/CadastrarTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Browser/CadastrarTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/AdministradorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/AdministradorTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/AlunoTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/AlunoTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ProfessorTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ProfessorTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +269,8 @@
       <workItem from="1602648680259" duration="5423000" />
       <workItem from="1602872565768" duration="15048000" />
       <workItem from="1602963433224" duration="7928000" />
-      <workItem from="1603001845004" duration="2648000" />
+      <workItem from="1603001845004" duration="3307000" />
+      <workItem from="1603430673016" duration="18118000" />
     </task>
     <servers />
   </component>
@@ -233,19 +294,14 @@
       <screen x="0" y="27" width="1366" height="684" />
     </state>
     <state x="416" y="117" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1366.684@0.27.1366.684" timestamp="1602619668657" />
-    <state x="416" y="126" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603003794065">
+    <state x="416" y="126" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603443462546">
       <screen x="0" y="27" width="1366" height="684" />
     </state>
-    <state x="416" y="126" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.684@0.27.1366.684" timestamp="1603003794065" />
+    <state x="416" y="126" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.684@0.27.1366.684" timestamp="1603443462546" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/includes/head.blade.php</url>
-          <line>170</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/visualizarMensagem.blade.php</url>
           <line>38</line>

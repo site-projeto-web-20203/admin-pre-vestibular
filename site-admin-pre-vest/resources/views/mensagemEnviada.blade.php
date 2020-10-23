@@ -13,9 +13,9 @@
 <div class="container justify-content-center">
     <div class="card justify-content-center">
         <div class="container pt-3">
-            <h3>Aluno Removido!</h3>
+            <h3>Sua Mensagem Foi Enviada!</h3>
             <br>
-            <a href="{{ url('admin/listar/alunos') }}" class="btn btn2">Voltar aos Alunos</a>
+            <a href="{{ url('/') }}" class="btn btn2">Voltar ao Início</a>
         </div>
     </div>
 </div>

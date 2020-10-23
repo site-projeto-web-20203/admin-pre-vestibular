@@ -8,13 +8,10 @@ use Illuminate\Http\Request;
 use App\Models\Administrador;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Foundation\Auth\RegistersUsers;
-
 
 class CadastrarAdministradorController extends Controller
 {
-
     use RegistersUsers;
 
     protected $redirectTo = RouteServiceProvider::HOME;
@@ -34,12 +31,9 @@ class CadastrarAdministradorController extends Controller
                 AdministradorValidator::validate($request->all());
                 $dados = $request->all();
                 Administrador::create($dados);
-                #return "Administrador criado";
                 return view("inscricaoConcluida");
             } catch (ValidationException $exception) {
-                return redirect('/cadastrar/administrador')
-                    ->withErrors($exception->getValidator())
-                    ->withInput();
+                return redirect('/cadastrar/administrador')->withErrors($exception->getValidator())->withInput();
             }
         }
         else{

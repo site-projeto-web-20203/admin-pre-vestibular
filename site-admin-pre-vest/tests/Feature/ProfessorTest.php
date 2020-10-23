@@ -92,6 +92,6 @@ class ProfessorTest extends TestCase
         $admin = Administrador::factory()->make();
         $response = $this->actingAs($admin, 'admin')->get('/admin/listar/professores');
         $response->assertStatus(200);
-        $response->assertSee('Lista de Professores', $escaped = true);
+        $response->assertSee('Professores', $escaped = true);
     }
 }

@@ -4,17 +4,17 @@
         @include('includes.head')
     </head>
     <body>
-        <div class="container-fluid p-0" align="center">
+        <div class="container-fluid p-0 justify-content-center">
             <header class="row">
                 @include('includes.header')
             </header>
         </div>
         <br>
-        <div class="container" align="center">
+        <div class="container justify-content-center">
             <form method="POST" action="{{url('/cadastrar/aluno')}}">
                 @csrf
-                <div class="card" align="center">
-                    <h3 align="center">Cadastrar Aluno</h3>
+                <div class="card justify-content-center">
+                    <h3>Cadastrar Aluno</h3>
                     <div class="container pt-3" align="left">
                         <div class="row">
                             <div class="col">
@@ -71,7 +71,7 @@
                             </div>
                             <div class="col">
                                 <label for="bairro" class="col-form-label text-md-right required">Bairro</label>
-                                <input id="bairro" type="text" class="form-control @error('bairro') is-invalid @enderror" name="bairro" value="{{old('bairro')}}" required autofocs/>
+                                <input id="bairro" type="text" class="form-control @error('bairro') is-invalid @enderror" name="bairro" value="{{old('bairro')}}" required autofocus/>
                                 @error('bairro')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>
@@ -83,7 +83,7 @@
                         <div class="row">
                             <div class="col">
                                 <label for="cidade" class="col-form-label text-md-right required">Cidade</label>
-                                <input id="cidade" type="text" class="form-control @error('cidade') is-invalid @enderror" name="cidade" value="{{old('cidade')}}" required autofocs/>
+                                <input id="cidade" type="text" class="form-control @error('cidade') is-invalid @enderror" name="cidade" value="{{old('cidade')}}" required autofocus/>
                                 @error('cidade')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>
@@ -92,7 +92,7 @@
                             </div>
                             <div class="col">
                                 <label for="numero" class="col-form-label text-md-right required">Numero</label>
-                                <input id="numero" type="text" class="form-control @error('numero') is-invalid @enderror" name="numero" value="{{old('numero')}}" required autofocs/>
+                                <input id="numero" type="text" class="form-control @error('numero') is-invalid @enderror" name="numero" value="{{old('numero')}}" required autofocus/>
                                 @error('numero')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>
@@ -113,7 +113,7 @@
                         <div class="row">
                             <div class="col">
                                 <label for="escola" class="col-form-label text-md-right required">Escola (Ensino Médio)</label>
-                                <input id="escola" type="text" class="form-control @error('escola') is-invalid @enderror" name="escola" value="{{old('escola')}}" required autofocs/>
+                                <input id="escola" type="text" class="form-control @error('escola') is-invalid @enderror" name="escola" value="{{old('escola')}}" required autofocus/>
                                 @error('escola')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>
@@ -122,7 +122,7 @@
                             </div>
                             <div class="col">
                                 <label for="ano_conclusao" class="col-form-label text-md-right required">Ano de Conclusão (Ensino Médio)</label>
-                                <input id="ano_conclusao" type="text" class="form-control @error('ano_conclusao') is-invalid @enderror" name="ano_conclusao" value="{{old('ano_conclusao')}}" required autofocs/>
+                                <input id="ano_conclusao" type="text" class="form-control @error('ano_conclusao') is-invalid @enderror" name="ano_conclusao" value="{{old('ano_conclusao')}}" required autofocus/>
                                 @error('ano_conclusao')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>
@@ -192,12 +192,14 @@
                         </div>
                         <br>
                     </div>
-                    <input type="submit" class="btn btn-primary" value="Cadastrar" />
+                    <div class="row justify-content-center">
+                        <input type="submit" class="btn btn-primary" value="Cadastrar" />
+                    </div>
                 </div>
             </form>
         </div>
         <br>
-        <div class="container-fluid p-0" align="center">
+        <div class="container-fluid p-0 justify-content-center">
             <footer class="row">
                 @include('includes.footer')
             </footer>

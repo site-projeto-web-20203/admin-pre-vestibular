@@ -3,9 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use App\Models\Apostila;
 
 class NovaApostilaController extends Controller
@@ -25,10 +23,16 @@ class NovaApostilaController extends Controller
                 \App\Validator\ApostilaValidator::validate($request->all());
                 $dados = $request->all();
                 $dados['nome_arq'] = $dados['arq']->getClientOriginalName();
+                if(Auth::guard('admin')->check()){
+                    $dados['administrador_id'] = (Auth::guard('admin')->user())->id;
+                }
+                else{
+                    $dados['professor_id'] = (Auth::guard('professor')->user())->id;
+                }
                 $apostila = Apostila::create($dados);
                 $extensao = pathinfo($apostila['nome_arq'], PATHINFO_EXTENSION);
                 $dados['arq']->storePubliclyAs('/public/Apostilas', $apostila->id . '.' . $extensao);
-                return "Apostila adicionada";
+                return view('apostilaAdicionada');
             } catch (\App\Validator\ValidationException $exception) {
                 return redirect('/cadastrar/apostila')->withErrors($exception->getValidator())->withInput();
             }

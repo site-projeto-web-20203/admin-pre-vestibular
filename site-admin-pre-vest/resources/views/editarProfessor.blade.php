@@ -4,17 +4,17 @@
         @include('includes.head')
     </head>
     <body>
-        <div class="container-fluid p-0" align="center">
+        <div class="container-fluid p-0 justify-content-center">
             <header class="row">
                 @include('includes.header')
             </header>
         </div>
         <br>
-        <div class="container" align="center">
+        <div class="container justify-content-center">
             <form method="POST" action="{{url('/editar/professor/'.$professor->id)}}">
                 @csrf
-                <div class="card" align="center">
-                    <h3 align="center">Editar Professor</h3>
+                <div class="card justify-content-center">
+                    <h3>Editar Professor</h3>
                     <div class="container pt-3" align="left">
                         <div class="row">
                             <div class="col">
@@ -63,7 +63,7 @@
                         <div class="row">
                             <div class="col">
                                 <label for="ehVoluntario">Você é Voluntário?</label><br>
-                                <select name="ehVoluntario" id="ehVoluntario" claass="form-control @error('ehVoluntario') is-invalid @enderror">
+                                <select name="ehVoluntario" id="ehVoluntario" class="form-control @error('ehVoluntario') is-invalid @enderror">
                                     <option value="Sim">Sim</option>
                                     <option value="Não">Não</option>
                                 </select>
@@ -160,12 +160,14 @@
                         </form>
                     </div>
                     <br>
-                    <input type="submit" class="btn btn-primary" value="Editar" align="center" />
+                    <div class="row justify-content-center">
+                        <input type="submit" class="btn btn-primary" value="Editar"/>
+                    </div>
                 </div>
             </form>
         </div>
         <br>
-        <div class="container-fluid p-0" align="center">
+        <div class="container-fluid p-0 justify-content-center">
             <footer class="row">
                 @include('includes.footer')
             </footer>

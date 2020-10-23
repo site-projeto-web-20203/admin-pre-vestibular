@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Turma;
 use Illuminate\Http\Request;
 use App\Models\Aluno;
@@ -30,7 +31,6 @@ class AlunoController extends Controller
         }
     }
 
-    //falta esse pq tem q permitir para qlqr admin e para o aluno que estiver logado e tiver o mesmo id q quer ver
     public function visualizar($id){
         $aluno = Aluno::find($id);
         return view('visualizarAluno', ['aluno' => $aluno]);

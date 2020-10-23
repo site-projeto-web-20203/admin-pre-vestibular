@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use App\Models\Professor;
 
 //td mundo pode cadastrar professores
@@ -24,7 +23,6 @@ class CadastrarProfessorController extends Controller
 		}
 		catch(\App\Validator\ValidationException $exception){
 			return redirect('/cadastrar/professor')->withErrors($exception->getValidator())->withInput();
-
 		}
 	}
 }

@@ -19,9 +19,7 @@ class CadastrarAlunoController extends Controller
             \App\Models\Aluno::create($dados);
             return view("inscricaoConcluida");
         } catch(\App\Validator\ValidationException $exception){
-            return redirect('/cadastrar/aluno')
-                ->withErrors($exception->getValidator())
-                ->withInput();
+            return redirect('/cadastrar/aluno')->withErrors($exception->getValidator())->withInput();
         }
     }
 }

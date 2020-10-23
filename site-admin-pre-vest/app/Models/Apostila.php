@@ -14,8 +14,7 @@ class Apostila extends Authenticatable
     use HasFactory;
     use Notifiable;
 
-    protected $fillable = ['disciplina', 'nome_arq'];
-    //professor_id, administrador_id
+    protected $fillable = ['disciplina', 'nome_arq', 'professor_id', 'administrador_id'];
 
     public static $rules = ['disciplina' => 'required',
                             'arq' => 'required'];

@@ -4,18 +4,18 @@
         @include('includes.head')
     </head>
     <body>
-        <div class="container-fluid p-0" align="center">
+        <div class="container-fluid p-0 justify-content-center">
             <header class="row">
                 @include('includes.header')
             </header>
         </div>
         <br>
-        <div class="container" align="center">
+        <div class="container justify-content-center">
             <form method="POST" action="{{url('/mensagem/nova')}}">
                 @csrf
-                <div class="card" align="center">
-                    <h3 align="center">Enviar Mensagem</h3>
-                    <div class="container pt-3" align="left">
+                <div class="card justify-content-center">
+                    <h3>Enviar Mensagem</h3>
+                    <div class="container pt-3 justify-content-center">
                         <div class="row">
                             <div class="col">
                                 <label for="remetente" class="col-form-label text-md-right">Seu Nome</label>
@@ -45,12 +45,14 @@
                         </div>
                         <br>
                     </div>
-                    <input type="submit" class="btn btn-primary" value="Enviar" />
+                    <div class="row justify-content-center">
+                        <input type="submit" class="btn btn-primary" value="Enviar" />
+                    </div>
                 </div>
             </form>
         </div>
         <br>
-        <div class="container-fluid p-0" align="center">
+        <div class="container-fluid p-0 justify-content-center">
             <footer class="row">
                 @include('includes.footer')
             </footer>

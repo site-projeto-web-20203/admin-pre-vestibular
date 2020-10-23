@@ -94,6 +94,6 @@ class AlunoTest extends TestCase
         $admin = Administrador::factory()->make();
         $response = $this->actingAs($admin, 'admin')->get('/admin/listar/alunos');
         $response->assertStatus(200);
-        $response->assertSee('Lista de Alunos', $escaped = true);
+        $response->assertSee('Alunos', $escaped = true);
     }
 }

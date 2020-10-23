@@ -4,14 +4,14 @@
         @include('includes.head')
     </head>
     <body>
-        <div class="container-fluid p-0" align="center">
+        <div class="container-fluid p-0 justify-content-center">
             <header class="row">
                 @include('includes.header')
             </header>
         </div>
         <br>
-        <div class="container" align="center">
-            <div class="card" align="center">
+        <div class="container justify-content-center">
+            <div class="card justify-content-center">
                 <div class="container pt-3">
                     <h3>Apostila Removida!</h3>
                     <br>
@@ -22,7 +22,7 @@
         <br>
         @include('includes.faleConosco')
         <br>
-        <div class="container-fluid p-0" align="center">
+        <div class="container-fluid p-0 justify-content-center">
             <footer class="row">
                 @include('includes.footer')
             </footer>

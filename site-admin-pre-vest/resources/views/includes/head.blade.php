@@ -207,6 +207,10 @@
         border:1px solid black;
     }
 
+    .justify-content-center {
+        text-align: center;
+    }
+
     .nav div.main_list ul {
         width: 100%;
         height: 65px;

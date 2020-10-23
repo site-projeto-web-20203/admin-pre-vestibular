@@ -90,7 +90,7 @@ class AdministradorTest extends TestCase
         $administrador = Administrador::factory()->make();
         $response = $this->actingAs($administrador, 'admin')->get('/admin/listar/administradores');
         $response->assertStatus(200);
-        $response->assertSee('Lista de Administradores', $escaped = true);
+        $response->assertSee('Administradores', $escaped = true);
     }
 
      #ACESSAR O PERFIL CORRETO CAUSA ERRO 500 AS VEZES

@@ -4,17 +4,17 @@
         @include('includes.head')
     </head>
     <body>
-        <div class="container-fluid p-0" align="center">
+        <div class="container-fluid p-0 justify-content-center">
             <header class="row">
                 @include('includes.header')
             </header>
         </div>
         <br>
-        <div class="container" align="center">
+        <div class="container justify-content-center">
             <form method="POST" action="{{url('/cadastrar/turma')}}">
                 @csrf
                 <div class="card" align="center">
-                    <h3 align="center">Cadastrar Turma</h3>
+                    <h3>Cadastrar Turma</h3>
                     <div class="container pt-3" align="left">
                         <div class="row">
                             <div class="col">
@@ -75,7 +75,7 @@
             </form>
         </div>
         <br>
-        <div class="container-fluid p-0" align="center">
+        <div class="container-fluid p-0 justify-content-center">
             <footer class="row">
                 @include('includes.footer')
             </footer>

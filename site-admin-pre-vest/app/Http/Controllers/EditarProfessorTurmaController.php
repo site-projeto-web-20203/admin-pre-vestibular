@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ProfessorTurma;
 use App\Models\Turma;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use DB;
 
 class EditarProfessorTurmaController extends Controller
@@ -44,14 +42,4 @@ class EditarProfessorTurmaController extends Controller
             return view('permissaoNegada');
         }
     }
-    /*public function remover($id){
-        if(Auth::guard('admin')->check()) {
-            $mensagem = Mensagem::find($id);
-            $mensagem->delete();
-            return view("mensagemRemovida");
-        }
-        else{
-            return view('permissaoNegada');
-        }
-    }*/
 }

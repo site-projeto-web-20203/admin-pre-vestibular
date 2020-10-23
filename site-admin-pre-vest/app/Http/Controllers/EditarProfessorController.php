@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Validator\ProfessorValidator;
 use App\Models\Professor;
@@ -24,8 +25,13 @@ class EditarProfessorController extends Controller
             $dados['areasAtuacao'] = implode(', ', $dados['areasAtuacao']);
             $dados['password'] = Hash::make($dados['password']);
 			$professor->update($dados);
-			return "Professor atualizado";
-		}
+            if(Auth::guard('admin')->check()) {
+                return redirect('admin/visualizar/professor/' . $professor->id);
+            }
+            else{
+                return redirect('visualizar/professor/' . $professor->id);
+            }
+        }
 		catch(\App\Validator\ValidationException $exception){
 			return redirect('/editar/professor/'.$professor->id)->withErrors($exception->getValidator())->withInput();
 		}

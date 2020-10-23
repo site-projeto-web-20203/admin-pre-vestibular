@@ -2,9 +2,11 @@
 
 namespace Tests\Browser;
 
+use Carbon\Carbon;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use App\Models\Administrador;
+use App\Models\Turma;
 use App\Models\Professor;
 use App\Models\Aluno;
 use Tests\DuskTestCase;
@@ -71,6 +73,31 @@ class CadastrarTest extends DuskTestCase
                 ->pause(2000)
                 ->press('Cadastrar')
                 ->assertSee('SUA INSCRIÇÃO FOI REALIZADA COM SUCESSO!')
+                ->pause(2000)
+                ->visit('/logout');
+        });
+    }
+
+    public function testCadastroTurma(){
+        $administrador = Administrador::find(random_int(1,5));
+        $this->browse(function(Browser $browser) use ($administrador){
+            $browser->visit('/login')
+                ->type('email', $administrador->email)
+                ->type('password', '12345')
+                ->pause(2000)
+                ->press('Login')
+                ->assertPathIs('/menu/administrador')
+                ->pause(2000)
+                ->visit('/cadastrar/turma')
+                ->assertPathIs('/cadastrar/turma')
+                ->type('nome', 'nome da turma')
+                ->type('dataInicio', '01032020')
+                ->type('dataFim', '26112020')
+                ->type('horarioInicio', '0700')
+                ->type('horarioFim', '1100')
+                ->pause(2000)
+                ->press('Cadastrar')
+                ->assertSee('TURMA CADASTRADA!')
                 ->pause(2000)
                 ->visit('/logout');
         });

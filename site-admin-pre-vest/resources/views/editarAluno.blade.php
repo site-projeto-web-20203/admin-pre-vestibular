@@ -161,7 +161,7 @@
                 <div class="row">
                     <div class="col">
                         <label for="nome_responsavel" class="col-form-label text-md-right">Nome do Responsável</label>
-                        <input id="nome_responsavel" type="text" value="{{$aluno->nome_responsavel}}" class="form-control @error('nome_responsavel') is-invalid @enderror"/>
+                        <input id="nome_responsavel" type="text" value="{{$aluno->nome_responsavel}}" class="form-control @error('nome_responsavel') is-invalid @enderror" name="nome_responsavel" value="{{old('nome_responsavel')}}" required autofocus/>
                         @error('nome_responsavel')
                         <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>
@@ -170,7 +170,7 @@
                     </div>
                     <div class="col">
                         <label for="telefone_responsavel" class="col-form-label text-md-right">Telefone do Responsável</label>
-                        <input id="telefone_responsavel" type="text" value="{{$aluno->telefone_responsavel}}" class="form-control @error('telefone_responsavel') is-invalid @enderror"/>
+                        <input id="telefone_responsavel" type="text" value="{{$aluno->telefone_responsavel}}" class="form-control @error('telefone_responsavel') is-invalid @enderror" name="telefone_responsavel" value="{{old('telefone_responsavel')}}" required autofocus/>
                         @error('telefone_responsavel')
                         <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>
@@ -182,7 +182,7 @@
                 <div class="row">
                     <div class="col col-md-6">
                         <label for="email_responsavel" class="col-form-label text-md-right">E-mail do Responsável</label>
-                        <input id="email_responsavel" type="email" value="{{$aluno->email_responsavel}}" class="form-control @error('email_responsavel') is-invalid @enderror"/>
+                        <input id="email_responsavel" type="email" value="{{$aluno->email_responsavel}}" class="form-control @error('email_responsavel') is-invalid @enderror" name="email_responsavel" value="{{old('email_responsavel')}}" required autofocus/>
                         @error('email_responsavel')
                         <span class="invalid-feedback" role="alert">
                                     <strong>{{$message}}</strong>

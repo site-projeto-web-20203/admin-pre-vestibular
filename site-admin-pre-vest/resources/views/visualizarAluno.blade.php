@@ -91,7 +91,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <a href="{{url('/')}}" class="btn btn-primary">Editar Dados</a>
+                            <a href="{{url('/editar/aluno/'.$aluno->id)}}" class="btn btn-primary">Editar Dados</a>
                         </div>
                     </div>
                 </div>

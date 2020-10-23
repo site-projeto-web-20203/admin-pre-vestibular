@@ -4,24 +4,25 @@
         @include('includes.head')
     </head>
     <body>
-        <div class="container-fluid p-0" align="center">
+        <div class="container-fluid p-0 justify-content-center">
             <header class="row">
                 @include('includes.header')
             </header>
         </div>
         <br>
-        <div class="container" align="center">
-            <div class="card" align="center">
-                <h3 align="center">Mensagens Recebidas</h3>
+        <div class="container justify-content-center">
+            <div class="card justify-content-center">
+                <h3>Mensagens Recebidas</h3>
                 <div class="container pt-3">
                     <div class="row">
                         <div class="col">
-                            <table class="table table-borderless", align="center", style="border-spacing: 0.5em">
+                            <table class="table table-borderless justify-content-center" style="border-spacing: 0.5em">
                                 <thead>
                                     <tr>
                                         <th>Remetente</th>
                                         <th>E-mail</th>
                                         <th>Recebida Em</th>
+                                        <th></th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -43,7 +44,7 @@
             </div>
         </div>
         <br>
-        <div class="container-fluid p-0" align="center">
+        <div class="container-fluid p-0 justify-content-center">
             <footer class="row">
                 @include('includes.footer')
             </footer>

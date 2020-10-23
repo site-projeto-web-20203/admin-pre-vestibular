@@ -25,6 +25,18 @@ class ApostilaController extends Controller
         }
     }
 
+    //listando todas as apostilas do prof atual com opcao de remover
+    public function listarProf(){
+        if(Auth::guard('professor')->check()){
+            $professor = Auth::guard('professor')->user();
+            $apostilas = DB::select("SELECT * FROM apostilas WHERE professor_id = $professor->id");
+            return view('listaApostilasRemover', ['apostilas' => $apostilas]);
+        }
+        else{
+            return view('permissaoNegada');
+        }
+    }
+
     //td mundo pode baixar as apostilas
     public function download($id){
         $apostila = Apostila::find($id);

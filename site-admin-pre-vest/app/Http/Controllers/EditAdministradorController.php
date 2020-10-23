@@ -10,7 +10,6 @@ use App\Models\Administrador;
 
 class EditAdministradorController extends Controller
 {
-    //acho que aqui seria bom colocar para so o admin com o id $id poder alterar os proprios dados
     public function prepararAtualizacao($id){
         if(Auth::guard('admin')->check()) {
             $administrador = Administrador::find($id);
@@ -29,7 +28,7 @@ class EditAdministradorController extends Controller
                 AdministradorValidator::validateEditar($dados);
                 $dados['password'] = Hash::make($dados['password']);
                 $administrador->update($dados);
-                return "Administrador atualizado";
+                return redirect('/visualizar/administrador/' . $administrador->id);
             } catch (\App\Validator\ValidationException $exception) {
                 return redirect('/editar/administrador/' . $administrador->id)->withErrors($exception->getValidator())->withInput();
             }

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use App\Models\Turma;
 
 class CadastrarTurmaController extends Controller
@@ -24,10 +23,9 @@ class CadastrarTurmaController extends Controller
                 \App\Validator\TurmaValidator::validate($request->all());
                 $dados = $request->all();
                 Turma::create($dados);
-                return "Turma cadastrada";
+                return view('turmaCadastrada');
             } catch (\App\Validator\ValidationException $exception) {
                 return redirect('/turma/cadastrar')->withErrors($exception->getValidator())->withInput();
-
             }
         }
         else{

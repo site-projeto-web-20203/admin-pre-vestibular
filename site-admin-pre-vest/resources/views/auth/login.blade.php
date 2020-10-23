@@ -14,7 +14,7 @@
             <form method="POST" action="{{ route('login') }}">
                 @csrf
                 <div class="card" align="center">
-                    <h3 align="center">Login</h3>
+                    <h3 align="center">Login</h3><br>
                     <div class="row">
                         <div class="col-md-6 offset-md-3">
                             <label for="email" class="col-form-label text-md-right">{{ __('E-Mail') }}</label>

@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\Turma;
+use Illuminate\Http\Request;
 use App\Models\Aluno;
 use DB;
 use Illuminate\Support\Facades\Auth;
@@ -31,5 +34,13 @@ class AlunoController extends Controller
     public function visualizar($id){
         $aluno = Aluno::find($id);
         return view('visualizarAluno', ['aluno' => $aluno]);
+    }
+
+    public function visualizarTurma($id){
+        $aluno = Aluno::find($id);
+        $turma = Turma::find($aluno->turma_id);
+        $alunos = DB::select("SELECT * FROM alunos WHERE turma_id = $turma->id");
+
+        return view('visualizarTurma', ['turma' => $turma, 'alunos' => $alunos]);
     }
 }

@@ -134,7 +134,11 @@ Route::get('/visualizar/turma/{id}', [TurmaController::class, 'visualizar'])->na
 
 Route::get('/admin/visualizar/turma/{id}', [TurmaController::class, 'visualizarAdmin'])->name('turma.visualizarAdmin')->middleware('auth:admin');
 
-Route::get('/admin/visualizar/professorturma/{id}', [ProfessorTurmaController::class, 'visualizarProfessores'])->name('turma.visualizarProfessores');
+Route::get('/aluno/visualizar/turma/{id}', [AlunoController::class, 'visualizarTurma'])->name('turma.visualizarAluno');
+
+Route::get('/visualizar/professorturma/{id}', [ProfessorTurmaController::class, 'visualizarProfessores'])->name('turma.visualizarProfessores');
+
+Route::get('/admin/visualizar/professorturma/{id}', [ProfessorTurmaController::class, 'visualizarProfessoresAdmin'])->name('turma.visualizarProfessoresAdmin')->middleware('auth:admin');
 
 #Route::get('/visualizar/administrador/{id}', [AdministradorController::class, 'visualizar'])->name('administrador.visualizar');
 

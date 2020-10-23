@@ -13,4 +13,11 @@ class ProfessorTurmaController extends Controller
         $professores = DB::select("SELECT * FROM professors WHERE id IN (SELECT professor_id FROM professor_turma WHERE turma_id = $turma->id)");
         return view('visualizarTurmaProfessores', ['turma' => $turma, 'professores' => $professores]);
     }
+
+    public function visualizarProfessoresAdmin($id){
+        $turma = Turma::find($id);
+        $professores = DB::select("SELECT * FROM professors WHERE id IN (SELECT professor_id FROM professor_turma WHERE turma_id = $turma->id)");
+        return view('visualizarTurmaProfessoresEditarRemover', ['turma' => $turma, 'professores' => $professores]);
+    }
+
 }
